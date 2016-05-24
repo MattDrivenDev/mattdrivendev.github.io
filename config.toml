@@ -1,0 +1,9 @@
+baseurl = "http://mattdrivendev.github.io/"
+languageCode = "en-gb"
+title = "strongly-typed"
+
+[author]
+name = "Matt Ball"
+twitter = "MattDrivenDev"
+github = "MattDrivenDev"
+linkedin = "matt-ball-98120940"

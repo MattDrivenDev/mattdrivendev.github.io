@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>strongly-typed</title>
+
+  <meta name="author" content="Matt Ball" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.15" />
+
+  <link rel="alternate" href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml" title="strongly-typed">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="strongly-typed" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="//" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://mattdrivendev.github.io/">strongly-typed</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <header class="header-section ">
+      <div class="intro-header no-img">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="page-heading">
+                <h1>strongly-typed</h1>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div role="main" class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="posts-list">
+            
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/10-things-i-learned-from-my-first-hackathon/">
+          	  <h2 class="post-title">10 things I learned from my first hackathon</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on May 24, 2016
+              </p>
+            
+              <div class="post-entry">
+                <p>Or rather: 10 excuses why I failed.</p>
+
+<p>So today I took part in (and I guess, ran) my first full hackathon - <a href="https://github.com/IWDev/coffeehack">IWDev Crimbo Coffeehack</a>. We kicked off at 9am today, and finished at 4pm and apparently threw some code together in the middle of it. We had a <em>random</em> theme which we announced shortly after getting together and then flew at it. Since it was our first hack day at a coffee shop - we rolled with <strong>coffee</strong> as the theme.</p>
+
+<p>So I learned a few things, and thought that I&rsquo;d dump them down here:</p>
+
+<p>(for future reference - duh!)</p>
+
+          	  <a href="http://mattdrivendev.github.io/post/10-things-i-learned-from-my-first-hackathon/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/test-first-fsharp-with-acceptance-tests-and-the-repl/">
+          	  <h2 class="post-title">Test-first F# with Acceptance tests and the REPL</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on October 15, 2013
+              </p>
+            
+              <div class="post-entry">
+                <p>Lunchtime blogging strikes again - this post has probably been brought to you over the course of a few lunch times.</p>
+
+<p>Like most of my posts on the subject of <code>F#</code> there really isn&rsquo;t much I&rsquo;m adding to the wealth of the community, but I feel as if contributing to the community in blog posts from an <em>average .NET developer&rsquo;s</em> perspective does have value. F# is pegged and marketed as a great language for niche problem domains (just look at the <a href="http://www.tryfsharp.org/Learn">Try F#: Learn page</a>) - but I&rsquo;m all about using F# as a great general purpose language, instead of C# or VB.NET.</p>
+
+<p>This post is probably a long time coming since I&rsquo;m really enthusiastic about both <em>test-first</em> software development and F#. I&rsquo;ve been mostly prompted to write my thoughts and findings down in response to seeing <a href="https://twitter.com/RobAshton">RobAston</a>&rsquo;s blog post - <a href="http://codeofrob.com/entries/on-testing-and-the-repl-in-clojure.html">On testing and the REPL in Clojure</a>; who I&rsquo;ve been following (which as I can see from Twitter, most of the developer community does!) while he adopts <a href="http://clojure.org/">Clojure</a>.</p>
+
+<p>So what am I going to be writing about? Basically how using F# makes it easy for me to drop some of the dogma and get on with it. I&rsquo;ve done a few projects now at work which involved writing F#, and this kind of outlines the <em>how I work</em> while doing it.</p>
+
+          	  <a href="http://mattdrivendev.github.io/post/test-first-fsharp-with-acceptance-tests-and-the-repl/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/adopting-fsharp-03/">
+          	  <h2 class="post-title">Adopting F#, part 3</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on October 10, 2013
+              </p>
+            
+              <div class="post-entry">
+                <p>Back in January when I blogged <a href="/2013/01/adopting-fsharp.html">Adopting F#</a> - I didn&rsquo;t really anticipate it being something of a series; but before too long I blogged again <a href="/2013/01/adopting-fsharp.html">Adopting F#, part II</a>. As it goes I think it is interesting to document the journey I&rsquo;ve been able to take from <code>C#</code> to <code>F#</code> as my bread-and-butter language.</p>
+
+<p>Since I started <strong>part II</strong> with a <em>&rdquo;&hellip;what has changed since&hellip;&rdquo;</em>, I don&rsquo;t see much of a problem in doing the same again:</p>
+
+<ul>
+<li>Got married (life part 1).</li>
+<li>Sold a flat. Bought a house. Moved. <a href="2012/10/moving-house-dot-dot-dot.html">This time for real&hellip;</a> (life part 2).</li>
+<li>More F# tools and scripts.</li>
+<li>Fixed <strong>zero bugs</strong> in my <a href="/2013/01/adopting-fsharp.html">first production service written in F#</a>.</li>
+<li>Helped a few colleagues and friends learn some F#.</li>
+<li>Learned a heap more about software development.</li>
+<li>Played around with <a href="/2013/07/service-stack-fsharp-mono-fastcgi-nginx.html">F# on Linux with Mono</a> etc</li>
+<li>Spent a couple of nights creating a <a href="https://github.com/saxonmatt/Fsssss">clone of Snake with F#</a>.</li>
+</ul>
+
+          	  <a href="http://mattdrivendev.github.io/post/adopting-fsharp-03/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/continuous-deployment-with-fake-and-octopus-deploy/">
+          	  <h2 class="post-title">Continuous Deployment with FAKE and Octopus Deploy</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on July 26, 2013
+              </p>
+            
+              <div class="post-entry">
+                <p>It&rsquo;s a nice day today, and I&rsquo;ve just sat outside for a short break while the other guys ate their lunch (I don&rsquo;t eat during the day, mostly). It struck me that I&rsquo;ve not been blogging much of late, and that I&rsquo;ve managed to use my lunch times to get some content out on the web before; so I&rsquo;m back at my desk and hammering <code>rake new_post</code> again.</p>
+
+<p>So in recent-ish times I&rsquo;ve been evaluating <a href="http://octopusdeploy.com/">Octpus Deploy</a>:</p>
+
+<p><img alt="Octopus deploy dashboard" width="527" height="219" src="/images/octopus-dashboard-big.png" /></p>
+
+<p>If you&rsquo;re in the business deploying web/service based .NET systems to Windows environments - do yourself a favour and take a look; I think it is a really sound product.</p>
+
+          	  <a href="http://mattdrivendev.github.io/post/continuous-deployment-with-fake-and-octopus-deploy/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/service-stack-fsharp-mono-fastcgi-nginx/">
+          	  <h2 class="post-title">F# Service Stack using Mono and NGinx</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on July 9, 2013
+              </p>
+            
+              <div class="post-entry">
+                <p>Man am I busy right now! I&rsquo;ve a <strong>todo</strong> list a mile long. Mosty self-inflicted, and entirely a life choice for me. I can&rsquo;t (won&rsquo;t, rather) go into it all - most of it has more to do with <em>life</em> than cutting code or lifting weights (not that I&rsquo;m doing much of the latter, I can tell you!).</p>
+
+<p>One thing that I have been doing is messing around with <a href="http://www.servicestack.net/">Service Stack</a> some more - obviously using <a href="http://fsharp.org/">F#</a>. Very nice.</p>
+
+<p>There is a <a href="https://github.com/ServiceStack/ServiceStack/wiki/Run-ServiceStack-in-Fastcgi-hosted-on-nginx">little guide</a> for running Service Stack with <code>fastcgi</code>, <code>mono</code> hosted on <code>nginx</code>. But getting that up and running felt a little dirty.</p>
+
+<p>So I needed to find some homeless guy to help me out&hellip;</p>
+
+          	  <a href="http://mattdrivendev.github.io/post/service-stack-fsharp-mono-fastcgi-nginx/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/fsharp-wsdl-typeprovider-and-untrusted-server-certificates/">
+          	  <h2 class="post-title">F# WSDL Type Provider and untrusted SSL certificates</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on April 22, 2013
+              </p>
+            
+              <div class="post-entry">
+                <p>I came across something of a pain while using the Microsoft Wsdl Type Provider (<code>Microsoft.FSharp.Data.TypeProviders.WsdlService</code>) at work yesterday.</p>
+
+<p>The problem that I was facing was that the Wsdl Type Provider just would not play ball with one of our web services. The reason as it turns out was the fact that it used <code>https</code> and the certification isn&rsquo;t properly signed.</p>
+
+<p>So when working with the Type Provider in code - using the default method of just pointing at the service&rsquo;s Wsdl; just doesn&rsquo;t do the trick. Documentation for a fix was a little thin on the ground - and it wasn&rsquo;t until I did a <code>#fsharp</code> shout out on Twitter that I got some clues.</p>
+
+          	  <a href="http://mattdrivendev.github.io/post/fsharp-wsdl-typeprovider-and-untrusted-server-certificates/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/fake-it-until-you-make-it/">
+          	  <h2 class="post-title">Fake it until you make it!</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on April 22, 2013
+              </p>
+            
+              <div class="post-entry">
+                <p>This is a post that I&rsquo;ve had floating around in my head for a long time. The title might be a little misleading, but I hope that the content remains somewhat relevant to it in some ways (that will hopefully become clear as you read through).</p>
+
+<p>I want to talk (write?) about how similar powerlifting (or any strength sports, I guess) is to software development.</p>
+
+<p>&ldquo;You must be mad!&rdquo;, you&rsquo;re thinking. You might be right.</p>
+
+<p>Read on if you <strike>dare</strike> care.</p>
+
+          	  <a href="http://mattdrivendev.github.io/post/fake-it-until-you-make-it/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/a-csharp-fsharp-code-comparison/">
+          	  <h2 class="post-title">Code Comparison: C# v.s. F#</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on April 3, 2013
+              </p>
+            
+              <div class="post-entry">
+                <p>Since I found using yesterday&rsquo;s lunchtime to write a blog post so good - I&rsquo;m following that up with another lunchtime blog post.</p>
+
+<p>Yesterday I continued what I think will slowly become something of an anecdotal series on adopting <code>F#</code>, in which I briefly talked about a new service I&rsquo;d worked on using F# (see <a href="/2013/04/adopting-fsharp-part-ii.html">Adopting F#, Part II</a>).</p>
+
+<p>Inspired by <a href="http://www.simontylercousins.net/journal/2013/2/22/does-the-language-you-choose-make-a-difference.html">&lsquo;Does the language you choose make a difference?&rsquo; by simontcousins</a> I&rsquo;m throwing up a comparison of lines of code.</p>
+
+          	  <a href="http://mattdrivendev.github.io/post/a-csharp-fsharp-code-comparison/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/adopting-fsharp-02/">
+          	  <h2 class="post-title">Adopting F#, part 2</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on April 2, 2013
+              </p>
+            
+              <div class="post-entry">
+                <p>This post has been a long time coming. I&rsquo;ve a few floating around in various <em>draft</em> states and some that exist only in my head at the moment. But I&rsquo;ve decided to use today&rsquo;s lunchtime to try and drive this one home.</p>
+
+<p>I&rsquo;ve <a href="/2013/01/adopting-fsharp.html">previously talked about my journey so far with adopting F#</a>, and have decided that as things for me have moved on some since then; it was worth me writing a follow-up.</p>
+
+<p>So what has changed since January?</p>
+
+<ul>
+<li>Written a new web service in <code>F#</code> and seen it deployed to a production environment</li>
+<li>Spent a day doing some pair-programming to help a colleague learn some more about <code>F#</code></li>
+<li>Written a few more <code>F#</code> ETL processes that help us slice-and-dice data and move it around</li>
+<li>Written a couple of very little tools in <code>F#</code> that help automate and/or provide self-serve functionality to others.</li>
+</ul>
+
+          	  <a href="http://mattdrivendev.github.io/post/adopting-fsharp-02/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+            <article class="post-preview">
+              <a href="http://mattdrivendev.github.io/post/agile-process-improvement/">
+          	  <h2 class="post-title">An agile process improvement braindump</h2>
+          	
+          	    
+              </a>
+
+              <p class="post-meta">
+                Posted on April 2, 2013
+              </p>
+            
+              <div class="post-entry">
+                <p>At work, I&rsquo;m trying (where I can) to help push process improvement all the time. When things are slow, inefficient and painful I get grumpy. I&rsquo;m not the only one, and I have the privilege to work with some great people with great minds and ideas. Together we are making, and have made some good progress.</p>
+
+<p>I&rsquo;ve been meaning to write something about continuous integration and/or delivery, agile methods etc. General development/software processes etc. How to do things right. But I don&rsquo;t think I am yet qualified to write with any authority on these subjects - so I am going to settle for this&hellip;</p>
+
+          	  <a href="http://mattdrivendev.github.io/post/agile-process-improvement/" class="post-read-more">[Read&nbsp;More]</a>
+              </div>
+            
+             </article>
+            
+          </div>
+
+          
+          <ul class="pager main-pager">
+            
+            
+            <li class="next">
+              <a href="/page/2">Older Posts &rarr;</a>
+            </li>
+            
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/MattDrivenDev" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://twitter.com/MattDrivenDev" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+		      
+          <li>
+            <a href="https://uk.linkedin.com/in/matt-ball-98120940" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          
+          
+
+    		  <li>
+      			<a href="http://mattdrivendev.github.io/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  Matt Ball
+    		  &nbsp;&bull;&nbsp;
+    		  2016
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="http://mattdrivendev.github.io/">strongly-typed</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://mattdrivendev.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/bootstrap.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/main.js"></script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Continuous Deployment with FAKE and Octopus Deploy</title>
+
+  <meta name="author" content="Matt Ball" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.15" />
+
+  <link rel="alternate" href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml" title="strongly-typed">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="Continuous Deployment with FAKE and Octopus Deploy" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://mattdrivendev.github.io/">strongly-typed</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Continuous Deployment with FAKE and Octopus Deploy</h1>
+      
+      
+      
+      <span class="post-meta">Posted on July 26, 2013</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+          
+
+<p>It&rsquo;s a nice day today, and I&rsquo;ve just sat outside for a short break while the other guys ate their lunch (I don&rsquo;t eat during the day, mostly). It struck me that I&rsquo;ve not been blogging much of late, and that I&rsquo;ve managed to use my lunch times to get some content out on the web before; so I&rsquo;m back at my desk and hammering <code>rake new_post</code> again.</p>
+
+<p>So in recent-ish times I&rsquo;ve been evaluating <a href="http://octopusdeploy.com/">Octpus Deploy</a>:</p>
+
+<p><img alt="Octopus deploy dashboard" width="527" height="219" src="/images/octopus-dashboard-big.png" /></p>
+
+<p>If you&rsquo;re in the business deploying web/service based .NET systems to Windows environments - do yourself a favour and take a look; I think it is a really sound product.</p>
+
+<h2 id="octopus-tools:f3a33c9c4bdd027c93e331fcf65b559c">Octopus Tools</h2>
+
+<p>One of the great things about the product, is the RESTful API that is exposed that allows you to control software releases and deployments remotely. There is a toolset out of the box for doing so: <strong>Octopus Tools</strong> (available on <a href="https://github.com/OctopusDeploy/Octopus-Tools">GitHub</a> and <a href="http://www.nuget.org/packages/OctopusTools/">NuGet</a>) - all from the command line.</p>
+
+<p>This has been great and I&rsquo;ve been using this with various <code>.cmd</code> scripts to automate release and deployment from <a href="http://www.jetbrains.com/teamcity/">TeamCity</a> build steps.</p>
+
+<h2 id="but:f3a33c9c4bdd027c93e331fcf65b559c">but&hellip;</h2>
+
+<ol>
+<li>I don&rsquo;t like having too many build steps set-up in my CI server. I like a CI server to be the system of build automation (scheduling, permissions, selecting the correct source code etc). But I prefer to have the process by which it all happens to be in 1 single script file, that can be properly versioned etc - and could be repeatable by a human on another machine if the CI server were to go <strong>pop!</strong> one day&hellip; of if we want to move to another CI system.</li>
+<li>I wanted to do some automated testing against deployed applications and services - as they are hosted; in a <em>production-like environment</em>, where systems are connected to one another and we can get a feeling of how healthy a system is <em>as a whole</em>. <strong>BUT</strong> I didn&rsquo;t want my build script to finish, use a separate process to deploy, and then jump back into a second script to run more tests. I want it in one script, fired off in one process (parametized, of course for granular control).</li>
+<li>I use <a href="http://fsharp.org/">F#</a> and <a href="http://fsharp.github.io/FAKE/">FAKE</a> for doing such things, and saw no reason why this should escape too!</li>
+</ol>
+
+<h2 id="and-so:f3a33c9c4bdd027c93e331fcf65b559c">&hellip;and so</h2>
+
+<p>A couple of hours later I was able to open a pull request back to the FAKE repo on GitHub, and am able to add a few more <code>Target</code>&rsquo;s to my build scripts:</p>
+
+<pre><code>Target &quot;Clean&quot; (fun _ -&gt;
+    // Clean build output folders.
+)
+
+Target &quot;BuildService&quot; (fun _ -&gt;
+    // Build the web service from source.
+)
+
+Target &quot;BuildUnitTestSuite&quot; (fun _ -&gt;
+    // Build the unit test suite from source.
+)
+
+Target &quot;RunUnitTestSuite&quot; (fun _ -&gt;
+    // Run the Unit Test suite using your favourite test runner.
+    // These tests directly interact with the production code.
+)
+
+Target &quot;NuGetPackageAndPublish&quot; (fun _ -&gt;
+    // Package and Publish the web service with NuGet to some kind of NuGet
+    // repository somewhere.
+)
+
+Target &quot;ReleaseAndDeployToTestEnv&quot; (fun _ -&gt;
+
+    let release = { releaseOptions with Project = &quot;My Web Service&quot; }
+    let deploy  = { deployOptions with DeployTo = &quot;TestEnv&quot; }    
+
+    Octo (fun octoParams -&gt; 
+        { octoParams with
+                     ToolPath = &quot;./packages/octopustools&quot;;
+                     Server = { Server = &quot;http://octopus.com/api&quot;; ApiKey = &quot;YOUR-CI-API-KEY-HERE&quot; };
+                     Command = CreateRelease (release, Some deploy); }
+    ) 
+
+)
+
+Target &quot;BuildIntegrationTestSuite&quot; (fun _ -&gt;
+    // Build the integration test suite from source.
+)
+
+Target &quot;RunIntegrationTestSuite&quot; (fun _ -&gt;
+    // Run the Integration Test suite using your favourite test runner.
+    // These tests talk the the system as a whole, interacting with the service
+    // in the &quot;TestEnv&quot;.
+)
+
+Target &quot;ReleaseAndDeployToUatEnv&quot; (fun _ -&gt;
+
+    let deploy  = { deployOptions with Project = &quot;My Web Service&quot;; DeployTo = &quot;UatEnv&quot; }    
+
+    Octo (fun octoParams -&gt; 
+        { octoParams with
+                     ToolPath = &quot;./packages/octopustools&quot;;
+                     Server = { Server = &quot;http://octopus.com/api&quot;; ApiKey = &quot;YOUR-CI-API-KEY-HERE&quot; };
+                     Command = DeployRelease deploy; }
+    ) 
+
+)
+
+Target &quot;DeveloperBuild&quot; (fun _ -&gt;
+    // Empty target for a developer build
+)
+
+Target &quot;CIBuild&quot; (fun _ -&gt;
+    // Empty target for a CI build
+)
+
+&quot;Clean&quot;
+    ==&gt; &quot;BuildService&quot;
+    ==&gt; &quot;BuildUnitTestSuite&quot;
+    ==&gt; &quot;RunUnitTestSuite&quot;
+    ==&gt; &quot;DeveloperBuild&quot;
+    ==&gt; &quot;NuGetPackageAndPublish&quot;
+    ==&gt; &quot;ReleaseAndDeployToTestEnv&quot;
+    ==&gt; &quot;BuildIntegrationTestSuite&quot;
+    ==&gt; &quot;RunIntegrationTestSuite&quot;
+    ==&gt; &quot;CIBuild&quot;
+
+RunParameterTargetOrDefault &quot;target&quot; &quot;DeveloperBuild&quot;
+</code></pre>
+
+<h2 id="give-it-a-go:f3a33c9c4bdd027c93e331fcf65b559c">Give it a go</h2>
+
+<p>You&rsquo;ll need <a href="http://www.nuget.org/packages/FAKE/1.74.215.0">FAKE version 1.74.214+</a> (not sure if it is included in the version 2 alphas - probably not) to make use of the <code>OctoTools</code> helper module.</p>
+
+<h2 id="thanks:f3a33c9c4bdd027c93e331fcf65b559c">Thanks</h2>
+
+<p>Thanks really goes to <a href="https://twitter.com/sforkmann">sforkmann</a> for maintaining FAKE so well - it is super easy to contribute to the project; and the deployment pipeline to NuGet is seamless and fast. I pulled the latest build from NuGet less than 10 minutes after opening the pull request.</p>
+
+<p>Awesome.</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="http://mattdrivendev.github.io/post/service-stack-fsharp-mono-fastcgi-nginx/" data-toggle="tooltip" data-placement="top" title="F# Service Stack using Mono and NGinx">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="http://mattdrivendev.github.io/post/adopting-fsharp-03/" data-toggle="tooltip" data-placement="top" title="Adopting F#, part 3">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/MattDrivenDev" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://twitter.com/MattDrivenDev" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+		      
+          <li>
+            <a href="https://uk.linkedin.com/in/matt-ball-98120940" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          
+          
+
+    		  <li>
+      			<a href="http://mattdrivendev.github.io/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  Matt Ball
+    		  &nbsp;&bull;&nbsp;
+    		  2016
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="http://mattdrivendev.github.io/">strongly-typed</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://mattdrivendev.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/bootstrap.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/main.js"></script>
+
+
+
+  </body>
+</html>

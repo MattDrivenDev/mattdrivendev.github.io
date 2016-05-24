@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Adopting F#, part 1</title>
+
+  <meta name="author" content="Matt Ball" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.15" />
+
+  <link rel="alternate" href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml" title="strongly-typed">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="Adopting F#, part 1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://mattdrivendev.github.io/">strongly-typed</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Adopting F#, part 1</h1>
+      
+      
+      
+      <span class="post-meta">Posted on January 13, 2013</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+          
+
+<p>A second blog post of the day? Barely - I ran <code>rake new_post</code> at 23:59. Odd. Anyway&hellip;</p>
+
+<p>I&rsquo;ve been thinking a little about my foray into the world of function programming, specifically F# - and thought it might be potentially useful to others <strong>how *I</strong>* have progressed from knowing nothing; to the point that I (and others) feel confident that I can ship production code in the work place using the language.</p>
+
+<p>I&rsquo;m <strong>not</strong> really going to cover the following:</p>
+
+<ul>
+<li>Benefits of Functional Programming &amp; F#</li>
+<li>How-2-F#</li>
+</ul>
+
+<p>&hellip;largely because there are a great many resources out there for those that want to know more about what it all is, why you should care and how you go about learning it. A great starting place for that sort of information is the <a href="http://fsharp.org">F# Software Foundation</a>.</p>
+
+<p>What I will focus on is how I&rsquo;ve gone from the point of learning, to the point of using.</p>
+
+<p>The main thing arch that I&rsquo;ve followed is trying to avoid biting off more than I can chew. To that end I stayed away from building anything resembling an application in F# to begin with (although the temptation was certainly there). Instead I decided to use it for those little scripting jobs that I needed - instead of using Powershell or whatever.</p>
+
+<p>F# is a great language for tackling those &ldquo;little jobs&rdquo;. Why? Firstly it can be used as a scripting language instead/as well as a compiled code base (<code>.fsx</code> files can be run through the F# Interative executable). Secondly it lacks the required code structuring that a language like C# has - you don&rsquo;t have to build up classes etc; you can get straight in there write a few functions and call it. Thirdly due to the nature of the language and the compiler - duff code simply doesn&rsquo;t work, and it shouts at you before running; this makes it safer (and by the time you&rsquo;re done working on it, it&rsquo;s likely to work perfectly).</p>
+
+<h3 id="1-build-scripts:7dd996412ffd0879ace8f51c9f58e29f">1. Build Scripts</h3>
+
+<p>My first adventure into using F# for something &ldquo;real&rdquo; was build/test scripting, and subsequently automation in a CI server (TeamCity for those that care). I won&rsquo;t go into why build/test scripts are important - that&rsquo;s a whole different topic and obviously other people will have covered that better than I can.</p>
+
+<p>I&rsquo;d been told about <a href="http://fsharp.github.com/FAKE/">FAKE (F# Make)</a> - so looked into it and started using it on the project that I was working on at the time. It was simple to read, quick to get up off the ground and had next to no code &ldquo;noise&rdquo; (like XML markup). Take a look at <a href="https://github.com/fsharp/FAKE/blob/develop/Samples/Calculator/completeBuild.fsx">this example build script</a> - Clean. Concise. Human readable.</p>
+
+<p>Because FAKE is nice and extensible - I was able to do some extra bits that I needed as well. Some of which has been pushed back into the OSS project (SpecFlow helper code) and some of it that needs to stay in-house at work and really is bespoke for our needs (CSV-to-Gherkin work that helped our software testers easily generate 1000 tests that would re-use my own acceptance test code). But this gave me a little more exposure to F# as a language - and was still a small enough component that I didn&rsquo;t get lost.</p>
+
+<p>Since then I&rsquo;ve retro-fitted FAKE build scripts on almost all of our .NET projects at work, and used it personally as well. Normally with something new the FAKE build scripts are in the 2nd or 3rd commit, without fail.</p>
+
+<h3 id="2-non-etl-scripts:7dd996412ffd0879ace8f51c9f58e29f">2. Non-ETL Scripts</h3>
+
+<p>I&rsquo;ve dubbed them Non-ETL scripts because they are not really ETL scripts as we know from SQL land - but they do the same job. Grab some data, transform it and load it elsewhere. But I was dealing with SOAP web services as a data source, XSL transformations and pushing the output to wherever it was needed (either another SOAP web service or a document repository).</p>
+
+<p>Again F# scripts were perfect for this job. I could leverage all the power of the .NET framework - while making something that was compact, clear, concise, human readable and very easy to configure (inline rather than config files). Wrap them with a <code>.bat</code> file and allow operations to set up scheduled tasks using their favourite task scheduler.</p>
+
+<p>The result was generally 1 main script that does the heavy lifting, generally with 1 entry point function with some params as the single variable - and 1 wrapper script that had configuration that created the params and called the function.</p>
+
+<p>Since then I&rsquo;ve done about a half-dozen of these little jobs - and I have to say that F# is now my go-to scripting language without a doubt.</p>
+
+<h3 id="3-tests:7dd996412ffd0879ace8f51c9f58e29f">3. Tests</h3>
+
+<p>I&rsquo;ve now taken to writing my tests with F#. A few reasons: firstly I like writing F#, secondly because it is clear and concise and very easy to read the code of each test and see what is going on and finally because of the ability to name types and functions with string values (wrapped in double back-ticks) <a href="https://github.com/saxonmatt/HouseViewing/blob/master/HouseViewing/HouseViewingTests/Health.fs">example (crude, but shows what I mean)</a>.</p>
+
+<p>This final point allows you to better express your test code as readable requirements - and helps others read your test results and better see your intentions etc.</p>
+
+<p>I&rsquo;m now quite interested in using some of the F# Type Providers (go Google that) to help use F# test frameworks to test code that doesn&rsquo;t necessarily lend itself to be otherwise easily tested.</p>
+
+<p>E.g. testing ETL jobs (real ones) - using the SQL Type Provider to quickly (and very cheaply) just query the loaded data to assert everything is in order. Or using the Wsdl type provider to quickly (and very cheaply) check to make sure that changes to a system are correctly exposed in a web service.</p>
+
+<h3 id="onwards:7dd996412ffd0879ace8f51c9f58e29f">Onwards</h3>
+
+<p>I&rsquo;m looking forwards to this year - we&rsquo;re now looking at projects coming up and identifying parts that can easily be separated out into components; and seriously considering using F# instead of C#.</p>
+
+<p>The things that most interest me now are trying to learn how to:</p>
+
+<ul>
+<li>Refactor F# code&hellip; because it just feels a little different to refactoring OO code. I&rsquo;m sure the answer is with currying/partial application and/or composition.</li>
+<li>Application structure&hellip; when to use modules and namespaces, how to separate out responsibilities etc. Again it feels a little different to structuring an OO application code base.</li>
+</ul>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="http://mattdrivendev.github.io/post/iwdev-04/" data-toggle="tooltip" data-placement="top" title="#IWDev 4">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="http://mattdrivendev.github.io/post/agile-process-improvement/" data-toggle="tooltip" data-placement="top" title="An agile process improvement braindump">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/MattDrivenDev" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://twitter.com/MattDrivenDev" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+		      
+          <li>
+            <a href="https://uk.linkedin.com/in/matt-ball-98120940" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          
+          
+
+    		  <li>
+      			<a href="http://mattdrivendev.github.io/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  Matt Ball
+    		  &nbsp;&bull;&nbsp;
+    		  2016
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="http://mattdrivendev.github.io/">strongly-typed</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://mattdrivendev.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/bootstrap.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/main.js"></script>
+
+
+
+  </body>
+</html>

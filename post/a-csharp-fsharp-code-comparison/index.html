@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Code Comparison: C# v.s. F#</title>
+
+  <meta name="author" content="Matt Ball" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.15" />
+
+  <link rel="alternate" href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml" title="strongly-typed">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="Code Comparison: C# v.s. F#" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://mattdrivendev.github.io/">strongly-typed</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Code Comparison: C# v.s. F#</h1>
+      
+      
+      
+      <span class="post-meta">Posted on April 3, 2013</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+          
+
+<p>Since I found using yesterday&rsquo;s lunchtime to write a blog post so good - I&rsquo;m following that up with another lunchtime blog post.</p>
+
+<p>Yesterday I continued what I think will slowly become something of an anecdotal series on adopting <code>F#</code>, in which I briefly talked about a new service I&rsquo;d worked on using F# (see <a href="/2013/04/adopting-fsharp-part-ii.html">Adopting F#, Part II</a>).</p>
+
+<p>Inspired by <a href="http://www.simontylercousins.net/journal/2013/2/22/does-the-language-you-choose-make-a-difference.html">&lsquo;Does the language you choose make a difference?&rsquo; by simontcousins</a> I&rsquo;m throwing up a comparison of lines of code.</p>
+
+<h3 id="first-with-some-charts:e4fa2d2ca089e1f513761cabca3923b2">First with some charts:</h3>
+
+<p><img alt="CSharp Chart" width="684" height="662" src="/images/code.comparison.csharp.jpg" /></p>
+
+<p><img alt="FSharp Chart" width="684" height="662" src="/images/code.comparison.fsharp.jpg" /></p>
+
+<h3 id="now-for-some-numbers:e4fa2d2ca089e1f513761cabca3923b2">Now for some numbers:</h3>
+
+<table>
+    <thead>
+        <td><strong>Metric</strong></td>
+        <td><strong>C#</strong></td>
+        <td><strong>F#</strong></td>
+        <td><strong>The F# difference</strong></td>
+    </thead>
+    <tr>
+        <td>Useful lines</td>
+        <td>6548</td>
+        <td>1004</td>
+        <td>6x</td>
+    </tr>
+    <tr>
+        <td>Comment lines</td>
+        <td>3496</td>
+        <td>7</td>
+        <td>350x</td>
+    </tr>
+    <tr>
+        <td>Null check lines</td>
+        <td>137</td>
+        <td>4</td>
+        <td>34x</td>
+    </tr>
+    <tr>
+        <td>Blank lines</td>
+        <td>2283</td>
+        <td>182</td>
+        <td>12x</td>
+    </tr>
+    <tr>
+        <td>Brace lines</td>
+        <td>3066</td>
+        <td>0</td>
+        <td>n/a</td>
+    </tr>
+    <tr>
+        <td><strong>TOTALS:</strong></td>
+        <td><strong>15530</strong></td>
+        <td><strong>1197</strong></td>
+        <td><strong>12x</strong></td>
+    </tr>
+</table>
+
+<p>(Unlike Simon&rsquo;s post I&rsquo;m not comparing team size, bugs and time taken - there are way too many process/people/priority changes involved to paint an accurate picture.)</p>
+
+<h3 id="what-does-it-all-mean:e4fa2d2ca089e1f513761cabca3923b2">What does it all mean?</h3>
+
+<p>Well you should probably take this comparison with a pinch of salt. Code comparisons are normally laced with some bias.</p>
+
+<p>But there are a few key points that you should note:</p>
+
+<ul>
+<li>This is a fairly small service.</li>
+<li>The <code>C#</code> code base <strong>should</strong> be larger because that is where all the XSD generated classes live, and there is some additional code for configuration etc. BUT! I think even if you half those <code>C#</code> numbers above, and assume that the ratios (the chart) stay the same - then the comparision is still rather stark.</li>
+<li>The <code>F#</code> code does have some extra weight to make interop with the calling <code>C#</code> code easier - to the tally of maybe ~100 lines.</li>
+<li>Both code bases essentially deliver 3 business requirements/behaviours (which are obviously broken down into lots of smaller requirements).</li>
+</ul>
+
+<p>It is fair to say that so far as developing solutions is concerned, <code>C#</code> will work <em>just fine</em> and there is nothing you cannot deliver in <code>F#</code> that you cannot do in <code>C#</code> (or Assembler for that matter!). The key here is really that <code>F#</code> is just another language - a tool for delivering value to somebody (in this case a business); and I think that this rather anecdotal comparison helps show that <code>F#</code> can be a more efficient tool available for the job.</p>
+
+<p>Thanks to <em>Kit Eason</em> for his cool <a href="http://fssnip.net/h4">Count noise-lines script</a>!</p>
+
+<p>If you&rsquo;re interested in learning more about <code>F#</code> I urge you to take a look at <a href="http://fsharp.org/">The F# Software Foundation</a> and <a href="http://fsharpforfunandprofit.com/">F# for Fun and Profit</a>.</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="http://mattdrivendev.github.io/post/adopting-fsharp-02/" data-toggle="tooltip" data-placement="top" title="Adopting F#, part 2">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="http://mattdrivendev.github.io/post/fake-it-until-you-make-it/" data-toggle="tooltip" data-placement="top" title="Fake it until you make it!">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/MattDrivenDev" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://twitter.com/MattDrivenDev" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+		      
+          <li>
+            <a href="https://uk.linkedin.com/in/matt-ball-98120940" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          
+          
+
+    		  <li>
+      			<a href="http://mattdrivendev.github.io/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  Matt Ball
+    		  &nbsp;&bull;&nbsp;
+    		  2016
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="http://mattdrivendev.github.io/">strongly-typed</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://mattdrivendev.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/bootstrap.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/main.js"></script>
+
+
+
+  </body>
+</html>

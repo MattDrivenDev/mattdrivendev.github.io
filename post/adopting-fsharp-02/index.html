@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Adopting F#, part 2</title>
+
+  <meta name="author" content="Matt Ball" />
+  
+  
+
+  <meta name="generator" content="Hugo 0.15" />
+
+  <link rel="alternate" href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml" title="strongly-typed">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/main.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/pygment_highlights.css" />
+  
+  
+  <meta property="og:title" content="Adopting F#, part 2" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="" />
+  
+</head>
+
+
+  <body>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://mattdrivendev.github.io/">strongly-typed</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+      </ul>
+    </div>
+
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+      
+	  </div>
+	</div>
+
+  </div>
+</nav>
+
+
+    <div role="main" class="container main-content">
+
+      
+        
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Adopting F#, part 2</h1>
+      
+      
+      
+      <span class="post-meta">Posted on April 2, 2013</span>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+          
+
+<p>This post has been a long time coming. I&rsquo;ve a few floating around in various <em>draft</em> states and some that exist only in my head at the moment. But I&rsquo;ve decided to use today&rsquo;s lunchtime to try and drive this one home.</p>
+
+<p>I&rsquo;ve <a href="/2013/01/adopting-fsharp.html">previously talked about my journey so far with adopting F#</a>, and have decided that as things for me have moved on some since then; it was worth me writing a follow-up.</p>
+
+<p>So what has changed since January?</p>
+
+<ul>
+<li>Written a new web service in <code>F#</code> and seen it deployed to a production environment</li>
+<li>Spent a day doing some pair-programming to help a colleague learn some more about <code>F#</code></li>
+<li>Written a few more <code>F#</code> ETL processes that help us slice-and-dice data and move it around</li>
+<li>Written a couple of very little tools in <code>F#</code> that help automate and/or provide self-serve functionality to others.</li>
+</ul>
+
+<h3 id="new-web-service:f8515298ee398a941b8459d727532535">New Web Service</h3>
+
+<p>Or rather a new component (or logical service) within an existing web service (or physical service, I guess). Here is a little technical information:</p>
+
+<ul>
+<li>New component (or logical service interface) completely written in <code>F#</code> that lives inside an existing <code>C#</code> SOAP web service.</li>
+<li>Service is stateless (except for a few health/monitoring counters).</li>
+<li>Service is required to be high-performant.</li>
+<li>Message-based SOAP API.</li>
+<li>Requirements/behaviour(s) documented and automated in Gherkin with SpecFlow, coupled with a fairly extensive unit testing suite.</li>
+<li>Built using <code>FAKE</code> and automated with TeamCity.</li>
+</ul>
+
+<p>The development process was quite interesting, using some of the <a href="/2013/02/agile-process-improvement-brain-dump.html">process improvement</a> methods we&rsquo;ve identified and committed to - we (me and the guy developing the first client code to use the new service) decided to front-load all the hard parts. I spent 2 of the of the 3 week sprint building supporting tools (self-serve, ETL etc) and it wasn&rsquo;t until the final week that I actually got on to the service code itself.</p>
+
+<p>One whole day of the final week developing the <code>F#</code> service was also done as pair-programming with a 3rd member of the team who is also learning the language. We worked in from some requirements written gherkin and ended up with a completed piece of functionality. That was a great experience as well, and we should certainly commit more time to things like this.</p>
+
+<p>The new service was deployed just over a month ago now, and has been stable and without bugs since (I know it is still <em>really</em> early days, but I&rsquo;m confident).</p>
+
+<p>I did have some interesting observations, some which I&rsquo;ve seen and read about elsewhere - but worth repeating:</p>
+
+<ul>
+<li>Writing <code>F#</code> code as part of a test-driven process breaks that process, but in a good way. By the time you&rsquo;ve thought about your domain model and have everything in place - when the code finally compiles it normally passes the first test first time. By the time we got around to hoooking up further tests, it all went green without making any changes. As it is still early days I decided to really look into it as I didn&rsquo;t <em>fully</em> trust it - but my distrust was proven misplaced and everything was fine.</li>
+<li>Because we were working in a world without <code>null</code>&rsquo;s and with a very strict type system - we actually uncovered a few nasty bugs in existing/surrounding <code>C#</code> code.</li>
+<li>It was rather easy to build a kind of fluent DSL of modules and functions that allowed us to compose the over-arching functionality in a way that was very readable and easy to follow - and in places even read like some of the requirements.</li>
+</ul>
+
+<p>This is our first <em>production ready</em> <code>F#</code> application code, used as something of a pilot to test the waters (we&rsquo;re already really fond of the language and use it personally, but we needed to prove to the business that it would be of benefit).</p>
+
+<p>So far, so good. And I think it&rsquo;ll be the first of many new <code>F#</code> developments.</p>
+
+<h3 id="etl-and-other-little-tools:f8515298ee398a941b8459d727532535">ETL and other little tools</h3>
+
+<p>I&rsquo;ll skim over this topic rather as it is generally more of the same as I mentioned in the first part of this &lsquo;series&rsquo;.</p>
+
+<p>The interesting new part for me here is that we&rsquo;ve agreed that for little tools like this (i.e. non-mission critial), we&rsquo;re happy to make use of some of the new Type Provider work being done:</p>
+
+<ul>
+<li>WSDL Type Provider (<a href="http://msdn.microsoft.com/en-gb/library/hh362328.aspx">read more</a>)</li>
+<li>CSV Type Provider (<a href="http://tpetricek.github.com/FSharp.Data/">read more</a>)</li>
+</ul>
+
+<p>I&rsquo;ve found that <code>F#</code> is the perfect lanugage to do some of this work. You can get a lot done, quite cleanly in very little code. You&rsquo;ve the option of packaging it up as a little application, using it as a library or just rolling out scripts (with batch files etc). And with the Type Providers you can get a whole lot done in a very short space of time.</p>
+
+<p>Most of the scripted tools come with a <code>config.fsx</code> as well, which is very easily read/edited by anyone with technical knowledge (even if they don&rsquo;t have any experience with <code>F#</code>).</p>
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        <li class="previous">
+          <a href="http://mattdrivendev.github.io/post/agile-process-improvement/" data-toggle="tooltip" data-placement="top" title="An agile process improvement braindump">&larr; Previous Post</a>
+        </li>
+        
+        
+        <li class="next">
+          <a href="http://mattdrivendev.github.io/post/a-csharp-fsharp-code-comparison/" data-toggle="tooltip" data-placement="top" title="Code Comparison: C# v.s. F#">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+
+    </div>
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+          <li>
+            <a href="https://github.com/MattDrivenDev" title="GitHub">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+          <li>
+            <a href="https://twitter.com/MattDrivenDev" title="Twitter">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+		      
+		      
+          <li>
+            <a href="https://uk.linkedin.com/in/matt-ball-98120940" title="LinkedIn">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+	    	  
+          
+          
+
+    		  <li>
+      			<a href="http://mattdrivendev.github.io/index.xml" title="RSS">
+      			  <span class="fa-stack fa-lg">
+        				<i class="fa fa-circle fa-stack-2x"></i>
+        				<i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+      			  </span>
+      			</a>
+    		  </li>		
+
+        </ul>
+        <p class="copyright text-muted">
+    		  Matt Ball
+    		  &nbsp;&bull;&nbsp;
+    		  2016
+    		  
+    		  
+    		  &nbsp;&bull;&nbsp;
+    		  <a href="http://mattdrivendev.github.io/">strongly-typed</a>
+    		  
+  	    </p>
+  	        
+    		<p class="theme-by text-muted">
+    		  Theme by
+    		  <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    		</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="http://mattdrivendev.github.io/js/jquery-1.11.2.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/bootstrap.min.js"></script>
+<script src="http://mattdrivendev.github.io/js/main.js"></script>
+
+
+
+  </body>
+</html>

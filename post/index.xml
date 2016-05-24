@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on strongly-typed</title>
+    <link>http://mattdrivendev.github.io/post/</link>
+    <description>Recent content in Posts on strongly-typed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Tue, 24 May 2016 22:43:27 +0100</lastBuildDate>
+    <atom:link href="http://mattdrivendev.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>10 things I learned from my first hackathon</title>
+      <link>http://mattdrivendev.github.io/post/10-things-i-learned-from-my-first-hackathon/</link>
+      <pubDate>Tue, 24 May 2016 22:43:27 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/10-things-i-learned-from-my-first-hackathon/</guid>
+      <description>
+
+&lt;p&gt;Or rather: 10 excuses why I failed.&lt;/p&gt;
+
+&lt;p&gt;So today I took part in (and I guess, ran) my first full hackathon - &lt;a href=&#34;https://github.com/IWDev/coffeehack&#34;&gt;IWDev Crimbo Coffeehack&lt;/a&gt;. We kicked off at 9am today, and finished at 4pm and apparently threw some code together in the middle of it. We had a &lt;em&gt;random&lt;/em&gt; theme which we announced shortly after getting together and then flew at it. Since it was our first hack day at a coffee shop - we rolled with &lt;strong&gt;coffee&lt;/strong&gt; as the theme.&lt;/p&gt;
+
+&lt;p&gt;So I learned a few things, and thought that I&amp;rsquo;d dump them down here:&lt;/p&gt;
+
+&lt;p&gt;(for future reference - duh!)&lt;/p&gt;
+
+&lt;h2 id=&#34;1-have-a-good-internet-conneciton:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;1) Have a good internet conneciton&lt;/h2&gt;
+
+&lt;p&gt;By good I mean both reliable and fast, but most importantly reliable.&lt;/p&gt;
+
+&lt;p&gt;We were not really blessed on this - but it would seem that whatever tech was being used as the router wasn&amp;rsquo;t playing well with the Apple tech (both one other guy and I were using a MacBook, and we had a really bad connection).&lt;/p&gt;
+
+&lt;p&gt;This caused me a lot of pain struggling to pull/push commits to Github etc. - but also made looking up API documentation pretty hard, especially when using/learning completely new stuff (see also point 2).&lt;/p&gt;
+
+&lt;p&gt;This wasn&amp;rsquo;t really the fault of the venue - they had the kit but never had to cater for a group like ours.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-don-t-try-and-learn-a-new-x-y-or-z:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;2) Don&amp;rsquo;t try and learn a new X, Y or Z&lt;/h2&gt;
+
+&lt;p&gt;Our team (4 guys) had 3 devs and 1 graphics guy. We decided to build a HTML/JavaScript/node/websockets multiplayer game.&lt;/p&gt;
+
+&lt;p&gt;One of the devs (&lt;a href=&#34;https://twitter.com/garethiw&#34;&gt;GarethIW&lt;/a&gt;) had done a couple of games using a JavaScript stack this year, so the the client part of the game was sort of &amp;ldquo;in the bag&amp;rdquo;. But I&amp;rsquo;ve not touched JavaScript properly for quite a few years now, neither had the other dev.&lt;/p&gt;
+
+&lt;p&gt;But also - node, websockets and JavaScript games dev; were all new ground to a couple of us. So yeah - learning during a hackathon is a little too hard. In a 7 hour hackathon? It was near impossible, particularly when trying to find API docs was so hard (see point 1).&lt;/p&gt;
+
+&lt;p&gt;It was a great excuse to get some exposure to something new, and to spike my knowledge on a few new topics&amp;hellip; but if I cared about the competition I would choose something I &lt;strong&gt;know&lt;/strong&gt; in future.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-don-t-ignore-best-practise:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;3) Don&amp;rsquo;t ignore &amp;lsquo;best practise&amp;rsquo;&lt;/h2&gt;
+
+&lt;p&gt;I don&amp;rsquo;t think I was alone in the team to fall into the &lt;strong&gt;Panic Driven Development&lt;/strong&gt; mode:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bad code (hard to reason about)&lt;/li&gt;
+&lt;li&gt;Zero testing (hard to refactor into code you can reason about)&lt;/li&gt;
+&lt;li&gt;Monolithic files (harder to work on as a team)&lt;/li&gt;
+&lt;li&gt;Working harder (not smarter)&lt;/li&gt;
+&lt;li&gt;Didn&amp;rsquo;t spend enough time setting up a nice dev/test environment (for fast feedback)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We spend a lot of our careers as developers learning that all of this is actually quite important, particularly when working in teams trying to meet deadlines. They all take some time to do properly&amp;hellip; but ignoring them seems to be a false economy.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-talk-to-your-team-mates:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;4) Talk to your team-mates&lt;/h2&gt;
+
+&lt;p&gt;No brainer huh!?&lt;/p&gt;
+
+&lt;p&gt;We spent at least 50% of the time working in silence almost, completely siloed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bad&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-taking-part-is-insanely-fun:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;5) Taking part is INSANELY fun&lt;/h2&gt;
+
+&lt;p&gt;Regardless of what you manage to aceive.&lt;/p&gt;
+
+&lt;p&gt;I would totally recommend hackathons - and although hard to say since I&amp;rsquo;ve only done one of them; doing so as a team is all the better:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hone your focus (on a single task, to meet a short deadline)&lt;/li&gt;
+&lt;li&gt;Hone your team-play skills (working with a new team is fun)&lt;/li&gt;
+&lt;li&gt;Nice to see things shape up fast&lt;/li&gt;
+&lt;li&gt;Fun to be part of a dev event&lt;/li&gt;
+&lt;li&gt;Awesome to see how many great little projects people come up with (loads of ideas)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;6-games-dev-is-best-dev:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;6) Games-dev is best-dev&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ve done a little games development now - and every time I enjoy it more than the last time. It&amp;rsquo;s such a refreshing break from the normal line-of-business development.&lt;/p&gt;
+
+&lt;h2 id=&#34;7-don-t-overload-the-caffeine-intake:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;7) Don&amp;rsquo;t overload the caffeine intake&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;It seems like a good idea - you need to think fast, act fast and keep alert and awake; but too much will break your concentration and you&amp;rsquo;ll be all over the place until you can &lt;em&gt;come down&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;8-figure-out-your-workflow:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;8) Figure out your workflow&lt;/h2&gt;
+
+&lt;p&gt;Really important if you&amp;rsquo;re working in a team.&lt;/p&gt;
+
+&lt;p&gt;Obviously you&amp;rsquo;ll be trying to avoid lengthy commit conflicts in your code, so in a fit of paranoia you spend time trying to avoid working in the same files etc&amp;hellip; which also leads to a sink in time as well, and some people can get locked out of adding-value for a while. This is &lt;em&gt;really bad&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;It is probably worth spending some time:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Structuring your project/solution/repo.&lt;/li&gt;
+&lt;li&gt;Figuring out who is responsible for what.&lt;/li&gt;
+&lt;li&gt;Finding a way you can all get a dev/test environment locally.&lt;/li&gt;
+&lt;li&gt;Ensuring you are all totally up-to-speed with basic git usage.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;9-always-take-a-graphics-guy-with-you:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;9) Always take a graphics guy with you&lt;/h2&gt;
+
+&lt;p&gt;Adding some &lt;strong&gt;polish&lt;/strong&gt; to any project is hard when you&amp;rsquo;re completely ignorant to graphics/design/ux etc. (just like me!). To get some &lt;strong&gt;WOW!&lt;/strong&gt; factor from others, make sure you have somebody on board that &lt;em&gt;gets it&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;ll make you feel better.&lt;/p&gt;
+
+&lt;h2 id=&#34;10-always-take-a-domain-expert-with-you:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;10) Always take a domain expert with you&lt;/h2&gt;
+
+&lt;p&gt;Or maybe, don&amp;rsquo;t try and build something that &lt;em&gt;nobody understands&lt;/em&gt; in your team. It&amp;rsquo;ll be a massive time sink much like point 2 (above).&lt;/p&gt;
+
+&lt;h2 id=&#34;closing-thoughts:8da33f1c228f8a5aed7b05273e3c38e6&#34;&gt;Closing thoughts&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;It was a great way to finish a year of some great developemt fun.&lt;/p&gt;
+
+&lt;p&gt;We joked during the start of the event that we should have been plumbers - and then took the joke futher, wondering if plumbers would use some of their Christmas holiday to hang out with other plumbers and plumb an entire house in a few hours&amp;hellip; in the name of fun!&lt;/p&gt;
+
+&lt;p&gt;Probably not - it seems a completely crazy idea.&lt;/p&gt;
+
+&lt;p&gt;So I guess as software developers - we&amp;rsquo;re pretty blessed; we do something that earns money, that we rather enjoy.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Test-first F# with Acceptance tests and the REPL</title>
+      <link>http://mattdrivendev.github.io/post/test-first-fsharp-with-acceptance-tests-and-the-repl/</link>
+      <pubDate>Tue, 15 Oct 2013 22:29:48 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/test-first-fsharp-with-acceptance-tests-and-the-repl/</guid>
+      <description>
+
+&lt;p&gt;Lunchtime blogging strikes again - this post has probably been brought to you over the course of a few lunch times.&lt;/p&gt;
+
+&lt;p&gt;Like most of my posts on the subject of &lt;code&gt;F#&lt;/code&gt; there really isn&amp;rsquo;t much I&amp;rsquo;m adding to the wealth of the community, but I feel as if contributing to the community in blog posts from an &lt;em&gt;average .NET developer&amp;rsquo;s&lt;/em&gt; perspective does have value. F# is pegged and marketed as a great language for niche problem domains (just look at the &lt;a href=&#34;http://www.tryfsharp.org/Learn&#34;&gt;Try F#: Learn page&lt;/a&gt;) - but I&amp;rsquo;m all about using F# as a great general purpose language, instead of C# or VB.NET.&lt;/p&gt;
+
+&lt;p&gt;This post is probably a long time coming since I&amp;rsquo;m really enthusiastic about both &lt;em&gt;test-first&lt;/em&gt; software development and F#. I&amp;rsquo;ve been mostly prompted to write my thoughts and findings down in response to seeing &lt;a href=&#34;https://twitter.com/RobAshton&#34;&gt;RobAston&lt;/a&gt;&amp;rsquo;s blog post - &lt;a href=&#34;http://codeofrob.com/entries/on-testing-and-the-repl-in-clojure.html&#34;&gt;On testing and the REPL in Clojure&lt;/a&gt;; who I&amp;rsquo;ve been following (which as I can see from Twitter, most of the developer community does!) while he adopts &lt;a href=&#34;http://clojure.org/&#34;&gt;Clojure&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So what am I going to be writing about? Basically how using F# makes it easy for me to drop some of the dogma and get on with it. I&amp;rsquo;ve done a few projects now at work which involved writing F#, and this kind of outlines the &lt;em&gt;how I work&lt;/em&gt; while doing it.&lt;/p&gt;
+
+&lt;h2 id=&#34;1-requirements:7a030898070f84c64c2d6892be780dc1&#34;&gt;1. Requirements&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ll skim over this, because it really should be a no-brainer. Like most good tests it all tends to start with a requirement - verbal, written, whatever; which we&amp;rsquo;re going to boil down condense into some executable form.&lt;/p&gt;
+
+&lt;h2 id=&#34;2-outside-in:7a030898070f84c64c2d6892be780dc1&#34;&gt;2. Outside-in&lt;/h2&gt;
+
+&lt;p&gt;I almost exclusively work outside-in, for a multitude of reasons that are explained at great length elsewhere. Go Google it.&lt;/p&gt;
+
+&lt;p&gt;So my main tests are going to be running from the outside, based on requirements. Acceptance tests I guess.&lt;/p&gt;
+
+&lt;h2 id=&#34;3-tests:7a030898070f84c64c2d6892be780dc1&#34;&gt;3. Tests!&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Read as: executable requirements documents&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve toyed with fluent libraries, Gherkin (Cucumber/SpecFlow), building my own &lt;em&gt;readable&lt;/em&gt; API in my test harness and more recently - just using F# with the double-back-tick syntax. The key here is that I&amp;rsquo;m directly creating tests that are mapped to requirements - using real examples, stuff that other people can understand (not necessarily the stakeholders, but just other team members is a great start); hopefully the aim is to create tests that simply describe expected &lt;strong&gt;behaviours&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;re thinking about the problem. Thinking about how you&amp;rsquo;re going to know that you&amp;rsquo;ve solved the problem correctly - without actually thinking about solving the problem&amp;hellip; if you follow me. The, &lt;em&gt;thinking about how you&amp;rsquo;re going to know that you&amp;rsquo;ve solved the problem correctly&lt;/em&gt; is a key part - which is how you&amp;rsquo;re going to make the code easily testable. Some requirements have less obvious answers, answers that perhaps are only visible in downstream systems etc (end-to-end systems/integration testing anyone?) - this is often a sign where you should put some good logging that can tell people who care, what the system is doing.&lt;/p&gt;
+
+&lt;h2 id=&#34;4-api:7a030898070f84c64c2d6892be780dc1&#34;&gt;4. API&lt;/h2&gt;
+
+&lt;p&gt;Chances are at this point I&amp;rsquo;ll need some new things to talk to from my test code. Interfaces/Schemas/Contracts/API - whatever. Something that I can call from the outside world (outside-in remember) - passing in everything that it needs to know.&lt;/p&gt;
+
+&lt;h2 id=&#34;5-make-it-green:7a030898070f84c64c2d6892be780dc1&#34;&gt;5. Make it green&lt;/h2&gt;
+
+&lt;p&gt;Making the first test pass is often the longest part. There is often a large body of &lt;em&gt;stuff&lt;/em&gt; that needs to be built up, just to get that &lt;em&gt;skeleton&lt;/em&gt; of an application in place.&lt;/p&gt;
+
+&lt;p&gt;Sometimes the solutions present themselves very easily, it&amp;rsquo;s a known problem with well suited known methods to solve them. No brainers. At this stage I wouldn&amp;rsquo;t get too caught up with creating smaller tests to explore how the implementation of the solution will fit together. I would just invest the time in solving the problem how I know best - any tests you create at this point would be expensive to maintain, brittle and essentially you should just end up deleting them later anyway.&lt;/p&gt;
+
+&lt;p&gt;But what happens when I don&amp;rsquo;t know what to do. It doesn&amp;rsquo;t necessarily need to be a problem that isn&amp;rsquo;t solved by the community at large - but a problem that you (and your team) haven&amp;rsquo;t encountered before (probably some weird business process/logic that you&amp;rsquo;re automating). In a stricter TDD world I&amp;rsquo;d be guided by tests here - fleshing out little parts from the outside-inwards with test cases discovering and designing the internals of the application. Until such a time, that you hopefully - make the first real test that matters, pass (and go green). Some folks call this &lt;em&gt;changing down gears&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;But with F# you have other options&amp;hellip;&lt;/p&gt;
+
+&lt;h3 id=&#34;5-make-it-green-with-added-repl:7a030898070f84c64c2d6892be780dc1&#34;&gt;5. &amp;hellip;make it green, with added REPL!&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;m not experienced enough with functional programming to simply &lt;em&gt;know&lt;/em&gt; the solution yet, I&amp;rsquo;m sure with time this might come. I&amp;rsquo;m starting to recognise a few patterns, and a few ideas like &lt;em&gt;choice types&lt;/em&gt; and &lt;em&gt;map/reduce&lt;/em&gt; can solve a huge number of things, as I&amp;rsquo;ve seen. But I&amp;rsquo;m equally sure that even when I do feel as if I &lt;em&gt;know&lt;/em&gt; the solutions - I won&amp;rsquo;t change the way that I work&amp;hellip; which is essentially to live in the REPL.&lt;/p&gt;
+
+&lt;p&gt;In the land of &lt;code&gt;F#&lt;/code&gt; we&amp;rsquo;re using the F# Interactive as our REPL - embedded in an IDE like Visual Studio, Xamarin Studio, Emacs, Sublime Text etc; or just running it from the command line (&lt;code&gt;fsi&lt;/code&gt;, or &lt;code&gt;fsharpi&lt;/code&gt; in the Mono world). I&amp;rsquo;ll either be feeling my way through in a F# script file (&lt;code&gt;.fsx&lt;/code&gt; files), or any other source file and using whatever &lt;em&gt;send to interactive/repl&lt;/em&gt; commands I have available - and less frequently, even just directly in the REPL itself.&lt;/p&gt;
+
+&lt;p&gt;With this tool it is very easily to discover the solution, building one small function at a time - and then composing them together, or just using them as part of other functions.&lt;/p&gt;
+
+&lt;p&gt;The great thing here, particularly with a functional language like F# - is that working in this way kind of forces you to write code that is both pure and testable:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Stateless&lt;/li&gt;
+&lt;li&gt;Free from side effects&lt;/li&gt;
+&lt;li&gt;Values in - values out&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;An added benefit of a functional codebase is that in order to test your functions - you&amp;rsquo;re not having to jump through hoops building up some kind of objects with &lt;em&gt;setup&lt;/em&gt; and &lt;em&gt;teardown&lt;/em&gt; test hooks. Test cases become little more than values and expected values.&lt;/p&gt;
+
+&lt;p&gt;The key here is that running code in the REPL is fast. This makes it really cheap.&lt;/p&gt;
+
+&lt;p&gt;Once you discover that solution, and you&amp;rsquo;re happy with the results - just cut &amp;amp; paste that code straight into your production source code. Job done.&lt;/p&gt;
+
+&lt;p&gt;I don&amp;rsquo;t tend to keep that code in a script file, or even move it to a smaller test elsewhere. If I&amp;rsquo;ve &lt;a href=&#34;http://fsharpforfunandprofit.com/category/DDD/&#34;&gt;designed my types properly&lt;/a&gt; I really don&amp;rsquo;t need to. &lt;em&gt;But if I did want to keep&lt;/em&gt; those test cases (remember, they&amp;rsquo;re just values) - I&amp;rsquo;d keep them in a &lt;code&gt;test.fsx&lt;/code&gt; file in the project, which isn&amp;rsquo;t compiled into the application code anyway - and they&amp;rsquo;re certainly not key for the build/test run to complete properly (which means that they are zero cost to maintain, if you don&amp;rsquo;t want to).&lt;/p&gt;
+
+&lt;p&gt;So the REPL really is just a form of test-first development - but one that lets me go faster than building up unit tests.&lt;/p&gt;
+
+&lt;h2 id=&#34;6-refactoring:7a030898070f84c64c2d6892be780dc1&#34;&gt;6. Refactoring&lt;/h2&gt;
+
+&lt;p&gt;There should be some hard fast rules to refactoring:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t over-engineer.&lt;/li&gt;
+&lt;li&gt;Refactor away only the pain-points.&lt;/li&gt;
+&lt;li&gt;Reduce LOC (maintenance overhead).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Point one there is the most important to me - I&amp;rsquo;ve picked up a few codebases in my time where the amount of abstraction far outweighs any benefit to the value of the system, and any perceived extensibility etc.&lt;/p&gt;
+
+&lt;p&gt;Sometimes you should really &lt;strong&gt;Keep it &lt;del&gt;Simple&lt;/del&gt; Slayer Stupid&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Whilst F# currently lacks some really smart tooling for refactoring in fun automated ways (though I am pretty sure some people are some great work in that space) - we again have the REPL!&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll have your top-level acceptance tests to lean on to ensure no regression - but you can feel your way to a more elegant, less expensive way of expressing your solution in a REPL environment. Again, as you&amp;rsquo;re happy with the results - just replace existing code in the production codebase with the new bits.&lt;/p&gt;
+
+&lt;p&gt;Simple as that.&lt;/p&gt;
+
+&lt;h2 id=&#34;7-write-another-test-watch-it-fail:7a030898070f84c64c2d6892be780dc1&#34;&gt;7. Write another test, watch it fail&amp;hellip;&lt;/h2&gt;
+
+&lt;p&gt;Uh-oh! I&amp;rsquo;ve broken the process.&lt;/p&gt;
+
+&lt;p&gt;Sometimes I&amp;rsquo;ve noticed that I often write another test (or rather, another concrete example that leans on a certain requirement) - and it passes first time. Don&amp;rsquo;t worry - this is perfectly normal. I used to distrust it and would do a little stepping through the code in the debugger. But it always proved to be a fruitless waste of time. Logging has replaced that (with good logs being written, you can quickly skim over those).&lt;/p&gt;
+
+&lt;p&gt;So that saves some time, right?&lt;/p&gt;
+
+&lt;p&gt;But why did it happen? Probably because of the F# type system. The compiler is a hard task master, and tends to like to make you &lt;strong&gt;think&lt;/strong&gt; quite hard about the solution up-front. It doesn&amp;rsquo;t like you leaving &lt;em&gt;i&amp;rsquo;s&lt;/em&gt; un-dotted, and &lt;em&gt;t&amp;rsquo;s&lt;/em&gt; un-crossed. You aren&amp;rsquo;t writing statements that just &lt;em&gt;do things&lt;/em&gt; (like modifying internal state) - you&amp;rsquo;re writing expressions - and the types of those expressions need to all tie up nicely.&lt;/p&gt;
+
+&lt;p&gt;The downside is that it normally takes a whole bunch of time to get things compiled - but funnily enough; when they do, they almost always work first time (and stay working).&lt;/p&gt;
+
+&lt;p&gt;Hopefully you&amp;rsquo;re not too adversed to &lt;em&gt;thinking&lt;/em&gt; and &lt;strong&gt;not&lt;/strong&gt; taking &lt;em&gt;shortcuts&lt;/em&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;f-go-faster-stripes:7a030898070f84c64c2d6892be780dc1&#34;&gt;F# go-faster stripes&lt;/h2&gt;
+
+&lt;p&gt;So hopefully I&amp;rsquo;ve documented my process well enough to convey my thoughts on it - but just in case; here are some bullet points:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Functional programming (F#) using a REPL (F# Interactive) lets me drop the dogma.&lt;/li&gt;
+&lt;li&gt;Dropping the dogma lets me go faster.&lt;/li&gt;
+&lt;li&gt;The type system lets me stop making silly mistakes and helps solve more problems, more quickly.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adopting F#, part 3</title>
+      <link>http://mattdrivendev.github.io/post/adopting-fsharp-03/</link>
+      <pubDate>Thu, 10 Oct 2013 22:17:34 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/adopting-fsharp-03/</guid>
+      <description>
+
+&lt;p&gt;Back in January when I blogged &lt;a href=&#34;http://mattdrivendev.github.io/2013/01/adopting-fsharp.html&#34;&gt;Adopting F#&lt;/a&gt; - I didn&amp;rsquo;t really anticipate it being something of a series; but before too long I blogged again &lt;a href=&#34;http://mattdrivendev.github.io/2013/01/adopting-fsharp.html&#34;&gt;Adopting F#, part II&lt;/a&gt;. As it goes I think it is interesting to document the journey I&amp;rsquo;ve been able to take from &lt;code&gt;C#&lt;/code&gt; to &lt;code&gt;F#&lt;/code&gt; as my bread-and-butter language.&lt;/p&gt;
+
+&lt;p&gt;Since I started &lt;strong&gt;part II&lt;/strong&gt; with a &lt;em&gt;&amp;rdquo;&amp;hellip;what has changed since&amp;hellip;&amp;rdquo;&lt;/em&gt;, I don&amp;rsquo;t see much of a problem in doing the same again:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Got married (life part 1).&lt;/li&gt;
+&lt;li&gt;Sold a flat. Bought a house. Moved. &lt;a href=&#34;2012/10/moving-house-dot-dot-dot.html&#34;&gt;This time for real&amp;hellip;&lt;/a&gt; (life part 2).&lt;/li&gt;
+&lt;li&gt;More F# tools and scripts.&lt;/li&gt;
+&lt;li&gt;Fixed &lt;strong&gt;zero bugs&lt;/strong&gt; in my &lt;a href=&#34;http://mattdrivendev.github.io/2013/01/adopting-fsharp.html&#34;&gt;first production service written in F#&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Helped a few colleagues and friends learn some F#.&lt;/li&gt;
+&lt;li&gt;Learned a heap more about software development.&lt;/li&gt;
+&lt;li&gt;Played around with &lt;a href=&#34;http://mattdrivendev.github.io/2013/07/service-stack-fsharp-mono-fastcgi-nginx.html&#34;&gt;F# on Linux with Mono&lt;/a&gt; etc&lt;/li&gt;
+&lt;li&gt;Spent a couple of nights creating a &lt;a href=&#34;https://github.com/saxonmatt/Fsssss&#34;&gt;clone of Snake with F#&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;f-tools-and-scripts:9688a2f27df8a12df639b79fba0c62e2&#34;&gt;F# tools and scripts&lt;/h3&gt;
+
+&lt;p&gt;I thought I&amp;rsquo;d delve into scripting a little more since I absolutely believe that one of the best features of &lt;code&gt;F#&lt;/code&gt; is the interative experience - both as a &lt;a href=&#34;http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop&#34;&gt;REPL&lt;/a&gt; while developing code; and as a way of running F# script files (&lt;code&gt;.fsx&lt;/code&gt;). I also think it is worth giving a bit of a shout out to some of the libraries and tools that I&amp;rsquo;ve used both privately and as part of my working life.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve now lost count of the number of scripts that I have knocked up to do some of the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ETL&lt;/li&gt;
+&lt;li&gt;SQL script generation&lt;/li&gt;
+&lt;li&gt;Build/Test/Deployment automation&lt;/li&gt;
+&lt;li&gt;Command line tools&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;hellip;using some of the following libraries etc:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;WSDL Type Providers (see: &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/vstudio/hh362328.aspx&#34;&gt;official&lt;/a&gt;, and: &lt;a href=&#34;http://mattdrivendev.github.io/2013/01/fsharp-wsdl-typeprovider-and-untrusted-server-certificates.html&#34;&gt;more&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;JSON, XML and CSV Type Providers (see: &lt;a href=&#34;http://fsharp.github.io/FSharp.Data/&#34;&gt;FSharp.Data&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;FAKE - F# Make (see: &lt;a href=&#34;http://fsharp.github.io/FAKE/&#34;&gt;official&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;SQL Generation/CI (see: &lt;a href=&#34;https://github.com/saxonmatt/DbProject/tree/tools&#34;&gt;tools&lt;/a&gt;, makes heavy use of FAKE above)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Basically my go to language for any scripting work is F#.&lt;/p&gt;
+
+&lt;h3 id=&#34;games-dev:9688a2f27df8a12df639b79fba0c62e2&#34;&gt;Games dev&lt;/h3&gt;
+
+&lt;p&gt;I played around for a couple of evenings with F# as a lanuage to do some games development, using the XNA framework. Largely inspired by &lt;a href=&#34;https://twitter.com/GarethIW&#34;&gt;GarethIW&amp;rsquo;s&lt;/a&gt; efforts for &lt;a href=&#34;http://www.garethpw.co.uk/search/label/1GAM&#34;&gt;1 Game a Month&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So I built a little clone of Snake. XNA was completely overkill for the occasion - but I really want to get into XNA/MonoGame more - so the more exposure I get to it, the better.&lt;/p&gt;
+
+&lt;p&gt;One of the more interesting things for me was how the memory allocation would affect performance. Turns out that the performance tools built into Visual Studio 2012 are pretty reasonable and was able to track down some performance issues (or rather, unnecessary memory allocation issues) in the following lines of code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/// Collision detection between the head and tail of the snake.
+let touchingSelf (Snakey (direction, body, eating)) = 
+    body.Tail |&amp;gt; List.map(fun part -&amp;gt;
+        body.Head.Intersects(part)
+    )
+    |&amp;gt; List.reduce (||)  
+
+/// Collision detection between the snake and the garden wall.
+let touchingWall (Snakey (direction, body, eating)) wall = 
+    wall |&amp;gt; List.map(fun brick -&amp;gt;
+        body.Head.Intersects(brick)
+    )
+    |&amp;gt; List.reduce (||)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/saxonmatt/Fsssss/blob/master/src/Fsssss/Snake.fs#L127-L139&#34;&gt;source&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I also talked about my efforts at an &lt;a href=&#34;http://mattdrivendev.github.io/iwdev/&#34;&gt;#IWDev&lt;/a&gt; meet in October:&lt;/p&gt;
+
+&lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;218a81300cc501310c903a30d744b908&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;I&amp;rsquo;m trying to build another game now with it, again something incredibly simple - but struggling to find the time.&lt;/p&gt;
+
+&lt;h3 id=&#34;part-4:9688a2f27df8a12df639b79fba0c62e2&#34;&gt;Part 4?&lt;/h3&gt;
+
+&lt;p&gt;Maybe&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Continuous Deployment with FAKE and Octopus Deploy</title>
+      <link>http://mattdrivendev.github.io/post/continuous-deployment-with-fake-and-octopus-deploy/</link>
+      <pubDate>Fri, 26 Jul 2013 22:22:22 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/continuous-deployment-with-fake-and-octopus-deploy/</guid>
+      <description>
+
+&lt;p&gt;It&amp;rsquo;s a nice day today, and I&amp;rsquo;ve just sat outside for a short break while the other guys ate their lunch (I don&amp;rsquo;t eat during the day, mostly). It struck me that I&amp;rsquo;ve not been blogging much of late, and that I&amp;rsquo;ve managed to use my lunch times to get some content out on the web before; so I&amp;rsquo;m back at my desk and hammering &lt;code&gt;rake new_post&lt;/code&gt; again.&lt;/p&gt;
+
+&lt;p&gt;So in recent-ish times I&amp;rsquo;ve been evaluating &lt;a href=&#34;http://octopusdeploy.com/&#34;&gt;Octpus Deploy&lt;/a&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&#34;Octopus deploy dashboard&#34; width=&#34;527&#34; height=&#34;219&#34; src=&#34;http://mattdrivendev.github.io/images/octopus-dashboard-big.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re in the business deploying web/service based .NET systems to Windows environments - do yourself a favour and take a look; I think it is a really sound product.&lt;/p&gt;
+
+&lt;h2 id=&#34;octopus-tools:f3a33c9c4bdd027c93e331fcf65b559c&#34;&gt;Octopus Tools&lt;/h2&gt;
+
+&lt;p&gt;One of the great things about the product, is the RESTful API that is exposed that allows you to control software releases and deployments remotely. There is a toolset out of the box for doing so: &lt;strong&gt;Octopus Tools&lt;/strong&gt; (available on &lt;a href=&#34;https://github.com/OctopusDeploy/Octopus-Tools&#34;&gt;GitHub&lt;/a&gt; and &lt;a href=&#34;http://www.nuget.org/packages/OctopusTools/&#34;&gt;NuGet&lt;/a&gt;) - all from the command line.&lt;/p&gt;
+
+&lt;p&gt;This has been great and I&amp;rsquo;ve been using this with various &lt;code&gt;.cmd&lt;/code&gt; scripts to automate release and deployment from &lt;a href=&#34;http://www.jetbrains.com/teamcity/&#34;&gt;TeamCity&lt;/a&gt; build steps.&lt;/p&gt;
+
+&lt;h2 id=&#34;but:f3a33c9c4bdd027c93e331fcf65b559c&#34;&gt;but&amp;hellip;&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I don&amp;rsquo;t like having too many build steps set-up in my CI server. I like a CI server to be the system of build automation (scheduling, permissions, selecting the correct source code etc). But I prefer to have the process by which it all happens to be in 1 single script file, that can be properly versioned etc - and could be repeatable by a human on another machine if the CI server were to go &lt;strong&gt;pop!&lt;/strong&gt; one day&amp;hellip; of if we want to move to another CI system.&lt;/li&gt;
+&lt;li&gt;I wanted to do some automated testing against deployed applications and services - as they are hosted; in a &lt;em&gt;production-like environment&lt;/em&gt;, where systems are connected to one another and we can get a feeling of how healthy a system is &lt;em&gt;as a whole&lt;/em&gt;. &lt;strong&gt;BUT&lt;/strong&gt; I didn&amp;rsquo;t want my build script to finish, use a separate process to deploy, and then jump back into a second script to run more tests. I want it in one script, fired off in one process (parametized, of course for granular control).&lt;/li&gt;
+&lt;li&gt;I use &lt;a href=&#34;http://fsharp.org/&#34;&gt;F#&lt;/a&gt; and &lt;a href=&#34;http://fsharp.github.io/FAKE/&#34;&gt;FAKE&lt;/a&gt; for doing such things, and saw no reason why this should escape too!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;and-so:f3a33c9c4bdd027c93e331fcf65b559c&#34;&gt;&amp;hellip;and so&lt;/h2&gt;
+
+&lt;p&gt;A couple of hours later I was able to open a pull request back to the FAKE repo on GitHub, and am able to add a few more &lt;code&gt;Target&lt;/code&gt;&amp;rsquo;s to my build scripts:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Target &amp;quot;Clean&amp;quot; (fun _ -&amp;gt;
+    // Clean build output folders.
+)
+
+Target &amp;quot;BuildService&amp;quot; (fun _ -&amp;gt;
+    // Build the web service from source.
+)
+
+Target &amp;quot;BuildUnitTestSuite&amp;quot; (fun _ -&amp;gt;
+    // Build the unit test suite from source.
+)
+
+Target &amp;quot;RunUnitTestSuite&amp;quot; (fun _ -&amp;gt;
+    // Run the Unit Test suite using your favourite test runner.
+    // These tests directly interact with the production code.
+)
+
+Target &amp;quot;NuGetPackageAndPublish&amp;quot; (fun _ -&amp;gt;
+    // Package and Publish the web service with NuGet to some kind of NuGet
+    // repository somewhere.
+)
+
+Target &amp;quot;ReleaseAndDeployToTestEnv&amp;quot; (fun _ -&amp;gt;
+
+    let release = { releaseOptions with Project = &amp;quot;My Web Service&amp;quot; }
+    let deploy  = { deployOptions with DeployTo = &amp;quot;TestEnv&amp;quot; }    
+
+    Octo (fun octoParams -&amp;gt; 
+        { octoParams with
+                     ToolPath = &amp;quot;./packages/octopustools&amp;quot;;
+                     Server = { Server = &amp;quot;http://octopus.com/api&amp;quot;; ApiKey = &amp;quot;YOUR-CI-API-KEY-HERE&amp;quot; };
+                     Command = CreateRelease (release, Some deploy); }
+    ) 
+
+)
+
+Target &amp;quot;BuildIntegrationTestSuite&amp;quot; (fun _ -&amp;gt;
+    // Build the integration test suite from source.
+)
+
+Target &amp;quot;RunIntegrationTestSuite&amp;quot; (fun _ -&amp;gt;
+    // Run the Integration Test suite using your favourite test runner.
+    // These tests talk the the system as a whole, interacting with the service
+    // in the &amp;quot;TestEnv&amp;quot;.
+)
+
+Target &amp;quot;ReleaseAndDeployToUatEnv&amp;quot; (fun _ -&amp;gt;
+
+    let deploy  = { deployOptions with Project = &amp;quot;My Web Service&amp;quot;; DeployTo = &amp;quot;UatEnv&amp;quot; }    
+
+    Octo (fun octoParams -&amp;gt; 
+        { octoParams with
+                     ToolPath = &amp;quot;./packages/octopustools&amp;quot;;
+                     Server = { Server = &amp;quot;http://octopus.com/api&amp;quot;; ApiKey = &amp;quot;YOUR-CI-API-KEY-HERE&amp;quot; };
+                     Command = DeployRelease deploy; }
+    ) 
+
+)
+
+Target &amp;quot;DeveloperBuild&amp;quot; (fun _ -&amp;gt;
+    // Empty target for a developer build
+)
+
+Target &amp;quot;CIBuild&amp;quot; (fun _ -&amp;gt;
+    // Empty target for a CI build
+)
+
+&amp;quot;Clean&amp;quot;
+    ==&amp;gt; &amp;quot;BuildService&amp;quot;
+    ==&amp;gt; &amp;quot;BuildUnitTestSuite&amp;quot;
+    ==&amp;gt; &amp;quot;RunUnitTestSuite&amp;quot;
+    ==&amp;gt; &amp;quot;DeveloperBuild&amp;quot;
+    ==&amp;gt; &amp;quot;NuGetPackageAndPublish&amp;quot;
+    ==&amp;gt; &amp;quot;ReleaseAndDeployToTestEnv&amp;quot;
+    ==&amp;gt; &amp;quot;BuildIntegrationTestSuite&amp;quot;
+    ==&amp;gt; &amp;quot;RunIntegrationTestSuite&amp;quot;
+    ==&amp;gt; &amp;quot;CIBuild&amp;quot;
+
+RunParameterTargetOrDefault &amp;quot;target&amp;quot; &amp;quot;DeveloperBuild&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;give-it-a-go:f3a33c9c4bdd027c93e331fcf65b559c&#34;&gt;Give it a go&lt;/h2&gt;
+
+&lt;p&gt;You&amp;rsquo;ll need &lt;a href=&#34;http://www.nuget.org/packages/FAKE/1.74.215.0&#34;&gt;FAKE version 1.74.214+&lt;/a&gt; (not sure if it is included in the version 2 alphas - probably not) to make use of the &lt;code&gt;OctoTools&lt;/code&gt; helper module.&lt;/p&gt;
+
+&lt;h2 id=&#34;thanks:f3a33c9c4bdd027c93e331fcf65b559c&#34;&gt;Thanks&lt;/h2&gt;
+
+&lt;p&gt;Thanks really goes to &lt;a href=&#34;https://twitter.com/sforkmann&#34;&gt;sforkmann&lt;/a&gt; for maintaining FAKE so well - it is super easy to contribute to the project; and the deployment pipeline to NuGet is seamless and fast. I pulled the latest build from NuGet less than 10 minutes after opening the pull request.&lt;/p&gt;
+
+&lt;p&gt;Awesome.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>F# Service Stack using Mono and NGinx</title>
+      <link>http://mattdrivendev.github.io/post/service-stack-fsharp-mono-fastcgi-nginx/</link>
+      <pubDate>Tue, 09 Jul 2013 22:27:36 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/service-stack-fsharp-mono-fastcgi-nginx/</guid>
+      <description>
+
+&lt;p&gt;Man am I busy right now! I&amp;rsquo;ve a &lt;strong&gt;todo&lt;/strong&gt; list a mile long. Mosty self-inflicted, and entirely a life choice for me. I can&amp;rsquo;t (won&amp;rsquo;t, rather) go into it all - most of it has more to do with &lt;em&gt;life&lt;/em&gt; than cutting code or lifting weights (not that I&amp;rsquo;m doing much of the latter, I can tell you!).&lt;/p&gt;
+
+&lt;p&gt;One thing that I have been doing is messing around with &lt;a href=&#34;http://www.servicestack.net/&#34;&gt;Service Stack&lt;/a&gt; some more - obviously using &lt;a href=&#34;http://fsharp.org/&#34;&gt;F#&lt;/a&gt;. Very nice.&lt;/p&gt;
+
+&lt;p&gt;There is a &lt;a href=&#34;https://github.com/ServiceStack/ServiceStack/wiki/Run-ServiceStack-in-Fastcgi-hosted-on-nginx&#34;&gt;little guide&lt;/a&gt; for running Service Stack with &lt;code&gt;fastcgi&lt;/code&gt;, &lt;code&gt;mono&lt;/code&gt; hosted on &lt;code&gt;nginx&lt;/code&gt;. But getting that up and running felt a little dirty.&lt;/p&gt;
+
+&lt;p&gt;So I needed to find some homeless guy to help me out&amp;hellip;&lt;/p&gt;
+
+&lt;h2 id=&#34;vagrant-up:0463ca2d9c71d9a73f5b1f68c587540c&#34;&gt;vagrant up!&lt;/h2&gt;
+
+&lt;p&gt;I&amp;rsquo;ve encountered &lt;a href=&#34;http://www.vagrantup.com/&#34;&gt;Vagrant&lt;/a&gt; a few times over the course of the past year - and I&amp;rsquo;ve toyed with it here and there; but have more recently invested a bit more time with it. Mainly because I&amp;rsquo;m using it for a personal project and I like using the same toolkit for development, testing (VirtualBox or VMWare) and production (&lt;a href=&#34;https://github.com/smdahlen/vagrant-digitalocean&#34;&gt;Vagrant Plugin for Digital Ocean&lt;/a&gt; or &lt;a href=&#34;https://github.com/mitchellh/vagrant-aws&#34;&gt;Vagrant Plugin for AWS&lt;/a&gt;) - and the concept of &lt;a href=&#34;http://martinfowler.com/bliki/ImmutableServer.html&#34;&gt;Immutable Servers&lt;/a&gt; really appeals to me as well.&lt;/p&gt;
+
+&lt;p&gt;I got things up and running with said private project - but have spent a little time tonight extracting a kind of &lt;em&gt;template&lt;/em&gt; from it for others, as there were a couple of little bits that were tricky to get right.&lt;/p&gt;
+
+&lt;p&gt;You can grab the template from Github: &lt;a href=&#34;https://github.com/saxonmatt/FSharp.ServiceStack.Mono&#34;&gt;FSharp.ServiceStack.Mono&lt;/a&gt; - it could do with a bit more love from a Mono/Xamarin developer; but overall it kind of just works.&lt;/p&gt;
+
+&lt;p&gt;The most tricky part was trying to figure out how to use &lt;a href=&#34;https://puppetlabs.com/&#34;&gt;Puppet&lt;/a&gt; to start &lt;code&gt;fastcgi-mono-server4&lt;/code&gt; &lt;strong&gt;and&lt;/strong&gt; have the correct permissions for the &lt;code&gt;/tmp/SOCK-ServiceStack&lt;/code&gt; file it was using to talk with nginx. I settled on the following, with some help from my colleague &lt;a href=&#34;http://pipe-devnull.com/&#34;&gt;pipe-devnull&lt;/a&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;exec { &amp;quot;start-fastcgi-mono-server4&amp;quot;:
+    logoutput =&amp;gt; &amp;quot;on_failure&amp;quot;,
+    group =&amp;gt; &#39;www-data&#39;,
+    user =&amp;gt; &#39;www-data&#39;,
+    command =&amp;gt; &amp;quot;/usr/bin/fastcgi-mono-server4 /applications=/:/var/www /filename=/tmp/SOCK-ServiceStack /socket=unix &amp;amp;&amp;quot;,
+    require =&amp;gt; File[&amp;quot;vagrant-nginx&amp;quot;],
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Also note the &lt;code&gt;&amp;amp;&lt;/code&gt; on the end of the &lt;code&gt;command&lt;/code&gt;, to run it as a background task, else it won&amp;rsquo;t release the shell back to vagrant and finish provisioning your server.&lt;/p&gt;
+
+&lt;h2 id=&#34;so-what-did-i-learn:0463ca2d9c71d9a73f5b1f68c587540c&#34;&gt;So what did I learn?&lt;/h2&gt;
+
+&lt;p&gt;That I need to &lt;strong&gt;learn-2-bash&lt;/strong&gt; (or whatever) some more - any time I struggled it was due to a lack of knowledge of how to do x, y or z in a Linux environment.&lt;/p&gt;
+
+&lt;p&gt;This was the first time that I did any provisioning using Puppet scripts for Vagrant - really great.&lt;/p&gt;
+
+&lt;p&gt;There is room for a &lt;code&gt;vagrant helper&lt;/code&gt; in &lt;a href=&#34;http://fsharp.github.io/FAKE/&#34;&gt;FAKE&lt;/a&gt; (which I&amp;rsquo;m trying to find some time for) and a &lt;code&gt;fastcgi-mono-server4 module&lt;/code&gt; for Puppet.&lt;/p&gt;
+
+&lt;h2 id=&#34;interested:0463ca2d9c71d9a73f5b1f68c587540c&#34;&gt;Interested?&lt;/h2&gt;
+
+&lt;p&gt;If you want to have a play, instructions and source are all in the Github repo: &lt;a href=&#34;https://github.com/saxonmatt/FSharp.ServiceStack.Mono&#34;&gt;FSharp.ServiceStack.Mono&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>F# WSDL Type Provider and untrusted SSL certificates</title>
+      <link>http://mattdrivendev.github.io/post/fsharp-wsdl-typeprovider-and-untrusted-server-certificates/</link>
+      <pubDate>Mon, 22 Apr 2013 22:25:46 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/fsharp-wsdl-typeprovider-and-untrusted-server-certificates/</guid>
+      <description>&lt;p&gt;I came across something of a pain while using the Microsoft Wsdl Type Provider (&lt;code&gt;Microsoft.FSharp.Data.TypeProviders.WsdlService&lt;/code&gt;) at work yesterday.&lt;/p&gt;
+
+&lt;p&gt;The problem that I was facing was that the Wsdl Type Provider just would not play ball with one of our web services. The reason as it turns out was the fact that it used &lt;code&gt;https&lt;/code&gt; and the certification isn&amp;rsquo;t properly signed.&lt;/p&gt;
+
+&lt;p&gt;So when working with the Type Provider in code - using the default method of just pointing at the service&amp;rsquo;s Wsdl; just doesn&amp;rsquo;t do the trick. Documentation for a fix was a little thin on the ground - and it wasn&amp;rsquo;t until I did a &lt;code&gt;#fsharp&lt;/code&gt; shout out on Twitter that I got some clues.&lt;/p&gt;
+
+&lt;p&gt;Thankfully &lt;a href=&#34;https://twitter.com/sergey_tihon&#34;&gt;Sergey Tihon&lt;/a&gt; responded to my call for help, and pointed me to one of his &lt;a href=&#34;http://sergeytihon.wordpress.com/2013/01/07/f-and-fast-search-for-sharepoint-2010/&#34;&gt;blog posts&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In particular, his use of the &lt;code&gt;BasicHttpBinding&lt;/code&gt; which alongside a different &lt;code&gt;EndpointAddress&lt;/code&gt;, gets passed into the Service client was most useful. Couple that with setting the &lt;code&gt;ServerCertificateValidationCallback&lt;/code&gt; on the &lt;code&gt;System.Net.ServicePointManager&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;But despite making these changes I still couldn&amp;rsquo;t get the Wsdl Type Provider to provide me anything in &lt;em&gt;design time&lt;/em&gt; (i.e. script file in VS212). Hovering over the red squiggly line under the &lt;code&gt;WsdlService&lt;/code&gt; type declaration told me it still couldn&amp;rsquo;t access the service.&lt;/p&gt;
+
+&lt;p&gt;Sadly there is no way (to my knowledge) to tell the Type Provider (as it runs in the VS2012 runtime) to do any of this stuff.&lt;/p&gt;
+
+&lt;p&gt;The answer involves a little more manual work than I should like - but hey, that&amp;rsquo;s fine. At least the resulting code base isn&amp;rsquo;t littered with generated code etc.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Use your browser to go and grab the Wsdl from the web service - using whatever credentials you need to and accepting the untrusted server certificate.&lt;/li&gt;
+&lt;li&gt;Save that Wsdl into a file you can access from your F# app/script, it&amp;rsquo;ll need a &lt;code&gt;.wsdlschema&lt;/code&gt; file extension (e.g. &lt;code&gt;myservice.wsdlschema&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Declare your Type Provider service type in F# using the service url, and the additional optional parameters &lt;code&gt;LocalSchemaFile&lt;/code&gt; (pointing at your &lt;code&gt;.wsdlschema&lt;/code&gt; file) and &lt;code&gt;ForceUpdate&lt;/code&gt; set to &lt;code&gt;false&lt;/code&gt; (defaults to &lt;code&gt;true&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Then when using the new service type, we can alter the bindings etc, set up authentication/credentials and force the untrusted server certificate to be accepted.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Here&amp;rsquo;s an example of where I&amp;rsquo;ve ended up:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#r &amp;quot;System.ServiceModel&amp;quot;
+#r &amp;quot;System.Runtime.Serialization&amp;quot;
+#r &amp;quot;FSharp.Data.TypeProviders&amp;quot;
+
+open System.Net
+open System.Net.Security
+open System.ServiceModel
+open Microsoft.FSharp.Data.TypeProviders
+
+ServicePointManager.ServerCertificateValidationCallback &amp;lt;- new RemoteCertificateValidationCallback(fun _ _ _ _ -&amp;gt; true)
+
+[&amp;lt;Literal&amp;gt;]
+let ServiceUrl = &amp;quot;https://our.domain.org/web.application/MyService.asmx&amp;quot;
+[&amp;lt;Literal&amp;gt;]
+let SchemaFile = &amp;quot;MyService.wsdlschema&amp;quot;
+
+// Note the LocalSchemaFile and ForceUpdate parameters
+type MyService = WsdlService&amp;lt;ServiceUrl, LocalSchemaFile=SchemaFile, ForceUpdate=false&amp;gt;
+
+let binding = 
+    let mutable b = new BasicHttpBinding()
+    b.MaxReceivedMessageSize &amp;lt;- 10000000L
+    b.Security.Mode &amp;lt;- BasicHttpSecurityMode.Transport
+    b.Security.Transport.ClientCredentialType &amp;lt;- HttpClientCredentialType.Ntlm    
+    b
+
+let serviceClient = 
+    let mutable s = new MyService.ServiceTypes.MyServiceClient(binding, EndpointAddress(ServiceUrl))
+    s.ClientCredentials.Windows.ClientCredential &amp;lt;- (Net.NetworkCredential(&amp;quot;UserName&amp;quot;, &amp;quot;Password&amp;quot;))
+    s.ClientCredentials.Windows.AllowedImpersonationLevel &amp;lt;- System.Security.Principal.TokenImpersonationLevel.Delegation
+    s
+
+let request = 
+    let mutable r = MyService.ServiceTypes.MyServiceMethodRequest()
+    r.Parameter1 &amp;lt;- &amp;quot;Some value&amp;quot;
+    r
+
+let response = serviceClient.MyServiceMethod(request)
+
+let myQuery = query { for x in response.Items do
+                      where (x.Name.Contains(&amp;quot;Matt&amp;quot;))
+                      sortBy x.Name
+                      select x }
+
+myQuery
+|&amp;gt; Seq.iter (fun x -&amp;gt; printfn &amp;quot;%s&amp;quot; x.Name)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The result? Not &lt;em&gt;quite&lt;/em&gt; as simple as it said on the tin&amp;hellip; but you know what? Its sill 100 times better than the non-TypeProvider route.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Fake it until you make it!</title>
+      <link>http://mattdrivendev.github.io/post/fake-it-until-you-make-it/</link>
+      <pubDate>Mon, 22 Apr 2013 22:24:21 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/fake-it-until-you-make-it/</guid>
+      <description>
+
+&lt;p&gt;This is a post that I&amp;rsquo;ve had floating around in my head for a long time. The title might be a little misleading, but I hope that the content remains somewhat relevant to it in some ways (that will hopefully become clear as you read through).&lt;/p&gt;
+
+&lt;p&gt;I want to talk (write?) about how similar powerlifting (or any strength sports, I guess) is to software development.&lt;/p&gt;
+
+&lt;p&gt;&amp;ldquo;You must be mad!&amp;rdquo;, you&amp;rsquo;re thinking. You might be right.&lt;/p&gt;
+
+&lt;p&gt;Read on if you &lt;strike&gt;dare&lt;/strike&gt; care.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not a great developer - sure I know how to fling some code together, write some tests and automate a whole bunch of tedious tasks; but I&amp;rsquo;m not one of the &amp;lsquo;greats&amp;rsquo;. What I do take pride in though, is not being one of these unfortunate guys that builds &amp;lsquo;code inventory&amp;rsquo;. I like to ship software that works, within agreed time frames. That makes me happy.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m not a great powerlifter (actually I barely even consider myself a powerlifter at all at the moment, but that is a different story) - sure I know how squat to depth, touch my chest with a bar and lift double my own (reasonably considerable) body weight; but I&amp;rsquo;m not one of the &amp;lsquo;greats&amp;rsquo;. What I do take pride in though, is not being one of these unfortunate guys that hits the gym several times a week for years, without making any significant gains (be it size or strength). I like to put in time under the bar and get stronger. That makes me happy.&lt;/p&gt;
+
+&lt;p&gt;My desire to get better at both of these important things in my life actually took on a very similar tact - and I&amp;rsquo;m going to share that secret with you now: &lt;strong&gt;&lt;em&gt;surround yourself in people better than you, be the guy you want to be and not the guy you are&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;getting-stronger:1f4946eb7621b34053f7ffded5287179&#34;&gt;Getting stronger&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Stopped training by myself, and at home - joined a &amp;lsquo;spit and sawdust&amp;rsquo; gym with plenty of serious meat-heads.&lt;/li&gt;
+&lt;li&gt;Read &lt;strong&gt;everything&lt;/strong&gt; I could on getting bigger and stronger (from training journals, white-papers and scientific research, nutrition etc).&lt;/li&gt;
+&lt;li&gt;Talked to seriously big and strong guys online and in the gym, shutting up and learning from their experience.&lt;/li&gt;
+&lt;li&gt;Ate literally everything in sight (I&amp;rsquo;m not a lean guy naturally, I used food as a tool to reach my goals).&lt;/li&gt;
+&lt;li&gt;Trained like a powerlifter, with powerlifters.&lt;/li&gt;
+&lt;li&gt;Signed up for a powerlifting competition.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;building-better-software:1f4946eb7621b34053f7ffded5287179&#34;&gt;Building better software&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Changed my job so that I wasn&amp;rsquo;t the sole developer, working alone.&lt;/li&gt;
+&lt;li&gt;Read &lt;strong&gt;everything&lt;/strong&gt; I could on a development subject that interested me (for me it was TDD, Silverlight/WPF and MVVM).&lt;/li&gt;
+&lt;li&gt;Talked to some great minds about software and code online (hey Twitter!) and at work, shutting up and learning from their experience.&lt;/li&gt;
+&lt;li&gt;Got involved in almost every chat/discussion in the office that I could.&lt;/li&gt;
+&lt;li&gt;Used techniques I&amp;rsquo;d only read about, in my every day working life.&lt;/li&gt;
+&lt;li&gt;Started a community (user group&amp;rsquo;ish thing) which I would have to talk/preach at.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;in-summary:1f4946eb7621b34053f7ffded5287179&#34;&gt;In summary&lt;/h3&gt;
+
+&lt;p&gt;The key here is that if you&amp;rsquo;re the biggest, fastest fish in your pond - you won&amp;rsquo;t get any bigger and faster. It is time to find another pond.&lt;/p&gt;
+
+&lt;p&gt;When you get to your new pond, don&amp;rsquo;t just act like a small, slow fish. Act enough like the other fish, and you&amp;rsquo;ll soon be a lot more like them for real.&lt;/p&gt;
+
+&lt;p&gt;Fake it, until you make it.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Code Comparison: C# v.s. F#</title>
+      <link>http://mattdrivendev.github.io/post/a-csharp-fsharp-code-comparison/</link>
+      <pubDate>Wed, 03 Apr 2013 22:11:15 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/a-csharp-fsharp-code-comparison/</guid>
+      <description>
+
+&lt;p&gt;Since I found using yesterday&amp;rsquo;s lunchtime to write a blog post so good - I&amp;rsquo;m following that up with another lunchtime blog post.&lt;/p&gt;
+
+&lt;p&gt;Yesterday I continued what I think will slowly become something of an anecdotal series on adopting &lt;code&gt;F#&lt;/code&gt;, in which I briefly talked about a new service I&amp;rsquo;d worked on using F# (see &lt;a href=&#34;http://mattdrivendev.github.io/2013/04/adopting-fsharp-part-ii.html&#34;&gt;Adopting F#, Part II&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Inspired by &lt;a href=&#34;http://www.simontylercousins.net/journal/2013/2/22/does-the-language-you-choose-make-a-difference.html&#34;&gt;&amp;lsquo;Does the language you choose make a difference?&amp;rsquo; by simontcousins&lt;/a&gt; I&amp;rsquo;m throwing up a comparison of lines of code.&lt;/p&gt;
+
+&lt;h3 id=&#34;first-with-some-charts:e4fa2d2ca089e1f513761cabca3923b2&#34;&gt;First with some charts:&lt;/h3&gt;
+
+&lt;p&gt;&lt;img alt=&#34;CSharp Chart&#34; width=&#34;684&#34; height=&#34;662&#34; src=&#34;http://mattdrivendev.github.io/images/code.comparison.csharp.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt=&#34;FSharp Chart&#34; width=&#34;684&#34; height=&#34;662&#34; src=&#34;http://mattdrivendev.github.io/images/code.comparison.fsharp.jpg&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;now-for-some-numbers:e4fa2d2ca089e1f513761cabca3923b2&#34;&gt;Now for some numbers:&lt;/h3&gt;
+
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;td&gt;&lt;strong&gt;Metric&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;C#&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;F#&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;The F# difference&lt;/strong&gt;&lt;/td&gt;
+    &lt;/thead&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Useful lines&lt;/td&gt;
+        &lt;td&gt;6548&lt;/td&gt;
+        &lt;td&gt;1004&lt;/td&gt;
+        &lt;td&gt;6x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Comment lines&lt;/td&gt;
+        &lt;td&gt;3496&lt;/td&gt;
+        &lt;td&gt;7&lt;/td&gt;
+        &lt;td&gt;350x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Null check lines&lt;/td&gt;
+        &lt;td&gt;137&lt;/td&gt;
+        &lt;td&gt;4&lt;/td&gt;
+        &lt;td&gt;34x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Blank lines&lt;/td&gt;
+        &lt;td&gt;2283&lt;/td&gt;
+        &lt;td&gt;182&lt;/td&gt;
+        &lt;td&gt;12x&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Brace lines&lt;/td&gt;
+        &lt;td&gt;3066&lt;/td&gt;
+        &lt;td&gt;0&lt;/td&gt;
+        &lt;td&gt;n/a&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;strong&gt;TOTALS:&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;15530&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;1197&lt;/strong&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;strong&gt;12x&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+
+&lt;p&gt;(Unlike Simon&amp;rsquo;s post I&amp;rsquo;m not comparing team size, bugs and time taken - there are way too many process/people/priority changes involved to paint an accurate picture.)&lt;/p&gt;
+
+&lt;h3 id=&#34;what-does-it-all-mean:e4fa2d2ca089e1f513761cabca3923b2&#34;&gt;What does it all mean?&lt;/h3&gt;
+
+&lt;p&gt;Well you should probably take this comparison with a pinch of salt. Code comparisons are normally laced with some bias.&lt;/p&gt;
+
+&lt;p&gt;But there are a few key points that you should note:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;This is a fairly small service.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;C#&lt;/code&gt; code base &lt;strong&gt;should&lt;/strong&gt; be larger because that is where all the XSD generated classes live, and there is some additional code for configuration etc. BUT! I think even if you half those &lt;code&gt;C#&lt;/code&gt; numbers above, and assume that the ratios (the chart) stay the same - then the comparision is still rather stark.&lt;/li&gt;
+&lt;li&gt;The &lt;code&gt;F#&lt;/code&gt; code does have some extra weight to make interop with the calling &lt;code&gt;C#&lt;/code&gt; code easier - to the tally of maybe ~100 lines.&lt;/li&gt;
+&lt;li&gt;Both code bases essentially deliver 3 business requirements/behaviours (which are obviously broken down into lots of smaller requirements).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It is fair to say that so far as developing solutions is concerned, &lt;code&gt;C#&lt;/code&gt; will work &lt;em&gt;just fine&lt;/em&gt; and there is nothing you cannot deliver in &lt;code&gt;F#&lt;/code&gt; that you cannot do in &lt;code&gt;C#&lt;/code&gt; (or Assembler for that matter!). The key here is really that &lt;code&gt;F#&lt;/code&gt; is just another language - a tool for delivering value to somebody (in this case a business); and I think that this rather anecdotal comparison helps show that &lt;code&gt;F#&lt;/code&gt; can be a more efficient tool available for the job.&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;em&gt;Kit Eason&lt;/em&gt; for his cool &lt;a href=&#34;http://fssnip.net/h4&#34;&gt;Count noise-lines script&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re interested in learning more about &lt;code&gt;F#&lt;/code&gt; I urge you to take a look at &lt;a href=&#34;http://fsharp.org/&#34;&gt;The F# Software Foundation&lt;/a&gt; and &lt;a href=&#34;http://fsharpforfunandprofit.com/&#34;&gt;F# for Fun and Profit&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adopting F#, part 2</title>
+      <link>http://mattdrivendev.github.io/post/adopting-fsharp-02/</link>
+      <pubDate>Tue, 02 Apr 2013 22:15:56 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/adopting-fsharp-02/</guid>
+      <description>
+
+&lt;p&gt;This post has been a long time coming. I&amp;rsquo;ve a few floating around in various &lt;em&gt;draft&lt;/em&gt; states and some that exist only in my head at the moment. But I&amp;rsquo;ve decided to use today&amp;rsquo;s lunchtime to try and drive this one home.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve &lt;a href=&#34;http://mattdrivendev.github.io/2013/01/adopting-fsharp.html&#34;&gt;previously talked about my journey so far with adopting F#&lt;/a&gt;, and have decided that as things for me have moved on some since then; it was worth me writing a follow-up.&lt;/p&gt;
+
+&lt;p&gt;So what has changed since January?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Written a new web service in &lt;code&gt;F#&lt;/code&gt; and seen it deployed to a production environment&lt;/li&gt;
+&lt;li&gt;Spent a day doing some pair-programming to help a colleague learn some more about &lt;code&gt;F#&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Written a few more &lt;code&gt;F#&lt;/code&gt; ETL processes that help us slice-and-dice data and move it around&lt;/li&gt;
+&lt;li&gt;Written a couple of very little tools in &lt;code&gt;F#&lt;/code&gt; that help automate and/or provide self-serve functionality to others.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;new-web-service:f8515298ee398a941b8459d727532535&#34;&gt;New Web Service&lt;/h3&gt;
+
+&lt;p&gt;Or rather a new component (or logical service) within an existing web service (or physical service, I guess). Here is a little technical information:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;New component (or logical service interface) completely written in &lt;code&gt;F#&lt;/code&gt; that lives inside an existing &lt;code&gt;C#&lt;/code&gt; SOAP web service.&lt;/li&gt;
+&lt;li&gt;Service is stateless (except for a few health/monitoring counters).&lt;/li&gt;
+&lt;li&gt;Service is required to be high-performant.&lt;/li&gt;
+&lt;li&gt;Message-based SOAP API.&lt;/li&gt;
+&lt;li&gt;Requirements/behaviour(s) documented and automated in Gherkin with SpecFlow, coupled with a fairly extensive unit testing suite.&lt;/li&gt;
+&lt;li&gt;Built using &lt;code&gt;FAKE&lt;/code&gt; and automated with TeamCity.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The development process was quite interesting, using some of the &lt;a href=&#34;http://mattdrivendev.github.io/2013/02/agile-process-improvement-brain-dump.html&#34;&gt;process improvement&lt;/a&gt; methods we&amp;rsquo;ve identified and committed to - we (me and the guy developing the first client code to use the new service) decided to front-load all the hard parts. I spent 2 of the of the 3 week sprint building supporting tools (self-serve, ETL etc) and it wasn&amp;rsquo;t until the final week that I actually got on to the service code itself.&lt;/p&gt;
+
+&lt;p&gt;One whole day of the final week developing the &lt;code&gt;F#&lt;/code&gt; service was also done as pair-programming with a 3rd member of the team who is also learning the language. We worked in from some requirements written gherkin and ended up with a completed piece of functionality. That was a great experience as well, and we should certainly commit more time to things like this.&lt;/p&gt;
+
+&lt;p&gt;The new service was deployed just over a month ago now, and has been stable and without bugs since (I know it is still &lt;em&gt;really&lt;/em&gt; early days, but I&amp;rsquo;m confident).&lt;/p&gt;
+
+&lt;p&gt;I did have some interesting observations, some which I&amp;rsquo;ve seen and read about elsewhere - but worth repeating:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Writing &lt;code&gt;F#&lt;/code&gt; code as part of a test-driven process breaks that process, but in a good way. By the time you&amp;rsquo;ve thought about your domain model and have everything in place - when the code finally compiles it normally passes the first test first time. By the time we got around to hoooking up further tests, it all went green without making any changes. As it is still early days I decided to really look into it as I didn&amp;rsquo;t &lt;em&gt;fully&lt;/em&gt; trust it - but my distrust was proven misplaced and everything was fine.&lt;/li&gt;
+&lt;li&gt;Because we were working in a world without &lt;code&gt;null&lt;/code&gt;&amp;rsquo;s and with a very strict type system - we actually uncovered a few nasty bugs in existing/surrounding &lt;code&gt;C#&lt;/code&gt; code.&lt;/li&gt;
+&lt;li&gt;It was rather easy to build a kind of fluent DSL of modules and functions that allowed us to compose the over-arching functionality in a way that was very readable and easy to follow - and in places even read like some of the requirements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is our first &lt;em&gt;production ready&lt;/em&gt; &lt;code&gt;F#&lt;/code&gt; application code, used as something of a pilot to test the waters (we&amp;rsquo;re already really fond of the language and use it personally, but we needed to prove to the business that it would be of benefit).&lt;/p&gt;
+
+&lt;p&gt;So far, so good. And I think it&amp;rsquo;ll be the first of many new &lt;code&gt;F#&lt;/code&gt; developments.&lt;/p&gt;
+
+&lt;h3 id=&#34;etl-and-other-little-tools:f8515298ee398a941b8459d727532535&#34;&gt;ETL and other little tools&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;ll skim over this topic rather as it is generally more of the same as I mentioned in the first part of this &amp;lsquo;series&amp;rsquo;.&lt;/p&gt;
+
+&lt;p&gt;The interesting new part for me here is that we&amp;rsquo;ve agreed that for little tools like this (i.e. non-mission critial), we&amp;rsquo;re happy to make use of some of the new Type Provider work being done:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;WSDL Type Provider (&lt;a href=&#34;http://msdn.microsoft.com/en-gb/library/hh362328.aspx&#34;&gt;read more&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;CSV Type Provider (&lt;a href=&#34;http://tpetricek.github.com/FSharp.Data/&#34;&gt;read more&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I&amp;rsquo;ve found that &lt;code&gt;F#&lt;/code&gt; is the perfect lanugage to do some of this work. You can get a lot done, quite cleanly in very little code. You&amp;rsquo;ve the option of packaging it up as a little application, using it as a library or just rolling out scripts (with batch files etc). And with the Type Providers you can get a whole lot done in a very short space of time.&lt;/p&gt;
+
+&lt;p&gt;Most of the scripted tools come with a &lt;code&gt;config.fsx&lt;/code&gt; as well, which is very easily read/edited by anyone with technical knowledge (even if they don&amp;rsquo;t have any experience with &lt;code&gt;F#&lt;/code&gt;).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>An agile process improvement braindump</title>
+      <link>http://mattdrivendev.github.io/post/agile-process-improvement/</link>
+      <pubDate>Tue, 02 Apr 2013 21:19:49 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/agile-process-improvement/</guid>
+      <description>&lt;p&gt;At work, I&amp;rsquo;m trying (where I can) to help push process improvement all the time. When things are slow, inefficient and painful I get grumpy. I&amp;rsquo;m not the only one, and I have the privilege to work with some great people with great minds and ideas. Together we are making, and have made some good progress.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been meaning to write something about continuous integration and/or delivery, agile methods etc. General development/software processes etc. How to do things right. But I don&amp;rsquo;t think I am yet qualified to write with any authority on these subjects - so I am going to settle for this&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Warning to the reader - this is nothing but a brain dump&amp;hellip; Just a list of (no-brainers) things that I&amp;rsquo;ve been involved in as part of process improvement that have proven to be really successful to-date:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Requirements are a business requirement&lt;/strong&gt;: No brainer, right?&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Everyone is a customer&lt;/strong&gt; (or stakeholder): our customers, the business, the helpdesk/support team, operations/infrastructure team, data/reporting services, the testing team and us - the developers. We &lt;em&gt;all&lt;/em&gt; have first-class requirements. Even technical requirements end up being business requirements if it helps a system running smoothly.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Test First Approach&lt;/strong&gt;: call it whatever you want, it should involve as much as time can afford and include anything you can justify automating. Testing functionality, behaviours, requirements, performance, logging, application black-box, end-2-end systems and integration. Do whatever you can to get the most bang for your buck.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Peer-review of code&lt;/strong&gt;: okay not every line of code needs to be looked at. But if you focus on some of the following, you&amp;rsquo;ll do well from it: schemas/contracts/interfaces, automated test cases, algorithms (the real meat of the matter parts). Try using a Pull Request in git to force this as part of the development process.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;A good version control process&lt;/strong&gt;: version control should be considered the back-bone of a good development process. Without it you&amp;rsquo;re dead in the water. There are no excuses in this day and age. But you should (as a team) take the time to discover a process/workflow that suits you and your projects, document it, understand it and use it to your advantage.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Continuous integration&lt;/strong&gt;: I don&amp;rsquo;t just mean installing a CI server somewhere and automating builds. Don&amp;rsquo;t be scared of introducing new functionality (or removing it in fact). Don&amp;rsquo;t work on something new all alone and then struggle for a week trying to re-integrate that work into the main development line. Understand how to introduce changes without breaking the software and do it as often as possible.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Practice Failover and Rollback&lt;/strong&gt;: Things shouldn&amp;rsquo;t go wrong - but when they do, how you respond is incredibly important. Have understood failure and rollback plans in place - and actively test them. If you have plans and are too scared to test them on your production systems, then you obviously are not confident that they work. If failover and rollback are fast and seamless - you will appear error free.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Monitoring and Logging&lt;/strong&gt;: are first-class business requirements. You need to know what is going on, and when. If (or rather when) your systems fail (and you&amp;rsquo;ve handled it with a failover or rollback plan!) - it is incredibly important to be able to look at the reasons why.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Script everything&lt;/strong&gt;: If you do something once, fine, manually is okay. If you do something twice - write a script for it already. Even if you don&amp;rsquo;t use the script again, or it is broken by the next time you come to it - it will at least serve as a method of documenting how and what you did.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;No process is perfect&lt;/strong&gt;: Review and question what and how you do everything - every week you should aim to be better than last week. Review existing processes - pick something that is bad, and try and make them better. Don&amp;rsquo;t always strive for perfection - take baby steps; every single week. Given a few months and you&amp;rsquo;ll be in a better place.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Adopting F#, part 1</title>
+      <link>http://mattdrivendev.github.io/post/adopting-fsharp-01/</link>
+      <pubDate>Sun, 13 Jan 2013 22:14:03 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/adopting-fsharp-01/</guid>
+      <description>
+
+&lt;p&gt;A second blog post of the day? Barely - I ran &lt;code&gt;rake new_post&lt;/code&gt; at 23:59. Odd. Anyway&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been thinking a little about my foray into the world of function programming, specifically F# - and thought it might be potentially useful to others &lt;strong&gt;how *I&lt;/strong&gt;* have progressed from knowing nothing; to the point that I (and others) feel confident that I can ship production code in the work place using the language.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m &lt;strong&gt;not&lt;/strong&gt; really going to cover the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Benefits of Functional Programming &amp;amp; F#&lt;/li&gt;
+&lt;li&gt;How-2-F#&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;hellip;largely because there are a great many resources out there for those that want to know more about what it all is, why you should care and how you go about learning it. A great starting place for that sort of information is the &lt;a href=&#34;http://fsharp.org&#34;&gt;F# Software Foundation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What I will focus on is how I&amp;rsquo;ve gone from the point of learning, to the point of using.&lt;/p&gt;
+
+&lt;p&gt;The main thing arch that I&amp;rsquo;ve followed is trying to avoid biting off more than I can chew. To that end I stayed away from building anything resembling an application in F# to begin with (although the temptation was certainly there). Instead I decided to use it for those little scripting jobs that I needed - instead of using Powershell or whatever.&lt;/p&gt;
+
+&lt;p&gt;F# is a great language for tackling those &amp;ldquo;little jobs&amp;rdquo;. Why? Firstly it can be used as a scripting language instead/as well as a compiled code base (&lt;code&gt;.fsx&lt;/code&gt; files can be run through the F# Interative executable). Secondly it lacks the required code structuring that a language like C# has - you don&amp;rsquo;t have to build up classes etc; you can get straight in there write a few functions and call it. Thirdly due to the nature of the language and the compiler - duff code simply doesn&amp;rsquo;t work, and it shouts at you before running; this makes it safer (and by the time you&amp;rsquo;re done working on it, it&amp;rsquo;s likely to work perfectly).&lt;/p&gt;
+
+&lt;h3 id=&#34;1-build-scripts:7dd996412ffd0879ace8f51c9f58e29f&#34;&gt;1. Build Scripts&lt;/h3&gt;
+
+&lt;p&gt;My first adventure into using F# for something &amp;ldquo;real&amp;rdquo; was build/test scripting, and subsequently automation in a CI server (TeamCity for those that care). I won&amp;rsquo;t go into why build/test scripts are important - that&amp;rsquo;s a whole different topic and obviously other people will have covered that better than I can.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;d been told about &lt;a href=&#34;http://fsharp.github.com/FAKE/&#34;&gt;FAKE (F# Make)&lt;/a&gt; - so looked into it and started using it on the project that I was working on at the time. It was simple to read, quick to get up off the ground and had next to no code &amp;ldquo;noise&amp;rdquo; (like XML markup). Take a look at &lt;a href=&#34;https://github.com/fsharp/FAKE/blob/develop/Samples/Calculator/completeBuild.fsx&#34;&gt;this example build script&lt;/a&gt; - Clean. Concise. Human readable.&lt;/p&gt;
+
+&lt;p&gt;Because FAKE is nice and extensible - I was able to do some extra bits that I needed as well. Some of which has been pushed back into the OSS project (SpecFlow helper code) and some of it that needs to stay in-house at work and really is bespoke for our needs (CSV-to-Gherkin work that helped our software testers easily generate 1000 tests that would re-use my own acceptance test code). But this gave me a little more exposure to F# as a language - and was still a small enough component that I didn&amp;rsquo;t get lost.&lt;/p&gt;
+
+&lt;p&gt;Since then I&amp;rsquo;ve retro-fitted FAKE build scripts on almost all of our .NET projects at work, and used it personally as well. Normally with something new the FAKE build scripts are in the 2nd or 3rd commit, without fail.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-non-etl-scripts:7dd996412ffd0879ace8f51c9f58e29f&#34;&gt;2. Non-ETL Scripts&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;ve dubbed them Non-ETL scripts because they are not really ETL scripts as we know from SQL land - but they do the same job. Grab some data, transform it and load it elsewhere. But I was dealing with SOAP web services as a data source, XSL transformations and pushing the output to wherever it was needed (either another SOAP web service or a document repository).&lt;/p&gt;
+
+&lt;p&gt;Again F# scripts were perfect for this job. I could leverage all the power of the .NET framework - while making something that was compact, clear, concise, human readable and very easy to configure (inline rather than config files). Wrap them with a &lt;code&gt;.bat&lt;/code&gt; file and allow operations to set up scheduled tasks using their favourite task scheduler.&lt;/p&gt;
+
+&lt;p&gt;The result was generally 1 main script that does the heavy lifting, generally with 1 entry point function with some params as the single variable - and 1 wrapper script that had configuration that created the params and called the function.&lt;/p&gt;
+
+&lt;p&gt;Since then I&amp;rsquo;ve done about a half-dozen of these little jobs - and I have to say that F# is now my go-to scripting language without a doubt.&lt;/p&gt;
+
+&lt;h3 id=&#34;3-tests:7dd996412ffd0879ace8f51c9f58e29f&#34;&gt;3. Tests&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;ve now taken to writing my tests with F#. A few reasons: firstly I like writing F#, secondly because it is clear and concise and very easy to read the code of each test and see what is going on and finally because of the ability to name types and functions with string values (wrapped in double back-ticks) &lt;a href=&#34;https://github.com/saxonmatt/HouseViewing/blob/master/HouseViewing/HouseViewingTests/Health.fs&#34;&gt;example (crude, but shows what I mean)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This final point allows you to better express your test code as readable requirements - and helps others read your test results and better see your intentions etc.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m now quite interested in using some of the F# Type Providers (go Google that) to help use F# test frameworks to test code that doesn&amp;rsquo;t necessarily lend itself to be otherwise easily tested.&lt;/p&gt;
+
+&lt;p&gt;E.g. testing ETL jobs (real ones) - using the SQL Type Provider to quickly (and very cheaply) just query the loaded data to assert everything is in order. Or using the Wsdl type provider to quickly (and very cheaply) check to make sure that changes to a system are correctly exposed in a web service.&lt;/p&gt;
+
+&lt;h3 id=&#34;onwards:7dd996412ffd0879ace8f51c9f58e29f&#34;&gt;Onwards&lt;/h3&gt;
+
+&lt;p&gt;I&amp;rsquo;m looking forwards to this year - we&amp;rsquo;re now looking at projects coming up and identifying parts that can easily be separated out into components; and seriously considering using F# instead of C#.&lt;/p&gt;
+
+&lt;p&gt;The things that most interest me now are trying to learn how to:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Refactor F# code&amp;hellip; because it just feels a little different to refactoring OO code. I&amp;rsquo;m sure the answer is with currying/partial application and/or composition.&lt;/li&gt;
+&lt;li&gt;Application structure&amp;hellip; when to use modules and namespaces, how to separate out responsibilities etc. Again it feels a little different to structuring an OO application code base.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#IWDev 4</title>
+      <link>http://mattdrivendev.github.io/post/iwdev-04/</link>
+      <pubDate>Tue, 09 Oct 2012 22:01:03 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/iwdev-04/</guid>
+      <description>&lt;p&gt;The 4th #IWDev meet-up happened a week ago tonight. Checkout my write-up in the local online media:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.yoppul.co.uk/yoppulv1/2012/10/iwdev-4-the-round-up/&#34;&gt;#IWDev 4: The round-up Yoppul&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I also pushed my presentation and source to GitHub for those who are interested:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/IWDev/IWDev4-BDD&#34;&gt;IWDev4-BDD GitHub&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The presentation wasn&amp;rsquo;t overly awesome (I&amp;rsquo;m a massive critique of my own work) - but the simple code examples and Q&amp;amp;A really seemed to light up a few eyes. Some really good questions came in as well.&lt;/p&gt;
+
+&lt;p&gt;On a personal note, one of the main things that I personally wanted from #IWDev was a channel for me to improve my presentation and &amp;ldquo;public&amp;rdquo; speaking techniques. The rest of this year is booked up for presentations now - but I&amp;rsquo;ll get another in for January 2013.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>#IWDev 3</title>
+      <link>http://mattdrivendev.github.io/post/iwdev-03/</link>
+      <pubDate>Fri, 07 Sep 2012 21:59:53 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/iwdev-03/</guid>
+      <description>&lt;p&gt;So I&amp;rsquo;ve been a little quiet for a while now. There have been good reasons - life has just got really &lt;strong&gt;really&lt;/strong&gt; busy again. One of the things keeping me on my toes is &lt;strong&gt;#IWDev&lt;/strong&gt; (Isle of Wight Developers). One (code enthused) night I thought to myself - hell there are a whole bunch of web and software guys on the Isle of Wight (where I live and work); but we barely ever talk, we barely ever meet and we almost never work on anything together.&lt;/p&gt;
+
+&lt;p&gt;So I spawned #IWDev to help with that. Starting with a new Facebook group, hash-tag on Twitter (#IWDev, obviously) - and then promoted it through word of mouth. I almost immediately planned our first &amp;ldquo;get together&amp;rdquo; in a typical English pub to socialize and network&amp;hellip; and see if the members wanted to take it somewhere.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ve just had our 3rd meet where 19 members turned up. We had two seriously awesome presentations and plenty of good talking. Here is my write-up on the even on a local news website:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.yoppul.co.uk/yoppulv1/2012/09/iw-dev-3-the-post-gathering-round-up/&#34;&gt;#IWDev 3: Post meet write-up Yoppul&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;If you are reading this, and are interested - feel free to leave a comment here or pop me an email; alternatively just &lt;a href=&#34;https://www.facebook.com/groups/324200920990417/&#34;&gt;join the group on Facebook&lt;/a&gt; or get &lt;a href=&#34;https://twitter.com/#!/search/realtime/%23IWDev&#34;&gt;talking about it on Twitter&lt;/a&gt;. The next event is 7:30pm on Tuesday 2nd October, at The Castle Inn, Newport, Isle of Wight.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Testing Debt</title>
+      <link>http://mattdrivendev.github.io/post/testing-debt/</link>
+      <pubDate>Thu, 26 Apr 2012 21:57:39 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/testing-debt/</guid>
+      <description>&lt;p&gt;There isn&amp;rsquo;t a whole lot that I can see out on the big wide world web on what I am calling Testing Debt (or &lt;a href=&#34;https://www.google.co.uk/search?ix=acb&amp;amp;sourceid=chrome&amp;amp;ie=UTF-8&amp;amp;q=testing+debt&#34;&gt;so says Google&lt;/a&gt;). Perhaps most folks call it something different. I&amp;rsquo;m seriously open to debate about what exactly Testing Debt is, and/or how it should be defined.&lt;/p&gt;
+
+&lt;p&gt;I would currently define it to be the debt of testing that is accumulated when development of a production code-base outstrips development of testing mechanisms.&lt;/p&gt;
+
+&lt;p&gt;As a software developer this means a debt of automated test code that needs to be written in order to cover production code that has already been written. The longer this is ignored, the greater the debt that is built. But as a larger I.T. solutions delivery team in a business, this would include all kinds of other testing mechanisms and methodologies (automated testing, user acceptance testing, exploratory testing etc).&lt;/p&gt;
+
+&lt;p&gt;How can Testing Debt be repaid without impacting on development/release deadlines? And how can you ensure that the quality of the Test mechanisms created to repay that debt are to a high and independent standard (i.e. testing what the solution should do, not what it does do)?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Silverlight and the ConvertAll method</title>
+      <link>http://mattdrivendev.github.io/post/silverlight-and-the-convertall-method/</link>
+      <pubDate>Tue, 11 Oct 2011 20:00:50 +0100</pubDate>
+      
+      <guid>http://mattdrivendev.github.io/post/silverlight-and-the-convertall-method/</guid>
+      <description>
+
+&lt;p&gt;I may have already mentioned my woes (here or on Twitter) with the Linq2SQL in a Silverlight for Windows Phone Mango environment.&lt;/p&gt;
+
+&lt;p&gt;I am of the opinion that the following code should work:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Person : IPerson
+{   
+    // Class internals, not relevant for this example.
+}
+
+public class DataContext
+{
+    public DataContext()
+    {
+        // Load data or whatever.
+    }
+
+    public Table&amp;lt;Person&amp;gt; People { get; set; }
+
+    public IEnumerable&amp;lt;IPerson&amp;gt; GetPeople()
+    {
+        return this.People;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I would have assumed this would work, because &lt;code&gt;Table&amp;lt;T&amp;gt;&lt;/code&gt; implements the &lt;code&gt;IEnumerable&amp;lt;T&amp;gt;&lt;/code&gt; interface and the contents of the Table, in this instance Person - implements the IPerson interface.&lt;/p&gt;
+
+&lt;p&gt;But apparently it wouldn&amp;rsquo;t. I cannot recall now if it returned an &lt;code&gt;IEnumerable&amp;lt;T&amp;gt;&lt;/code&gt; that was empty, or if it was just null. In either case it wasn&amp;rsquo;t working.&lt;/p&gt;
+
+&lt;p&gt;So after a little investigation I found a blog post [1] showing you 4 increastingly better ways for doing what I wanted. However I could only get Method 1 to work, because Silverlight does not support the .ConvertAll method&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;I cannot easily find any information why this method wouldn&amp;rsquo;t be available in the Silverlight runtime, one quick read did suggest it was just something that was dropped to make the runtime more lightweight - which seems reasonable I guess, but it didn&amp;rsquo;t seem too heavy an idea in my mind. But whatever.&lt;/p&gt;
+
+&lt;p&gt;So this is what I ended up with, hardly elegant - but it worked:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;	public class Person : IPerson
+	{
+	    // Class internals, not relevant for this example.
+	}
+
+	public class DataContext
+	{
+	    public DataContext()
+	    {
+	        // Load data or whatever.
+	    }
+
+	    public Table&amp;lt;Person&amp;gt; People { get; set; }
+
+	    public IEnumerable&amp;lt;IPerson&amp;gt; GetPeople()
+	    {
+	        IEnumerable&amp;lt;IPerson&amp;gt; people = new List&amp;lt;IPerson&amp;gt;();
+	        foreach (Person p in this.People)
+	            ((List&amp;lt;IPerson&amp;gt;)people).Add(p as IPerson);
+
+	        return people;
+	    }
+	}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Wanting a more elegant solution that didn&amp;rsquo;t mean that I would be writing foreach loops in all of my Get methods - I went on the hunt for something to replace the .ConvertAll method. I found a cool littl blog post [2] that described creating a Silverlight array helper that would implement a static .ConvertAll method that could be used.&lt;/p&gt;
+
+&lt;p&gt;Following that as an example my code can now look like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public class Person : IPerson
+{
+    // Class internals, not relevant for this example.
+}
+
+public class DataContext
+{
+    public DataContext()
+    {
+        // Load data or whatever.
+    }
+
+    public Table&amp;lt;Person&amp;gt; People { get; set; }
+
+    public IEnumerable&amp;lt;IPerson&amp;gt; GetPeople()
+    {
+        return ConvertAll&amp;lt;Person, IPerson&amp;gt;(this.People, new Converter&amp;lt;Person, IPerson&amp;gt;(p =&amp;gt; (IPerson)p));
+    }
+
+    // A re-usable method to ConvertAll items in an IEnumerable... 
+    // probably best if pulled out into a helper class.
+    public static IEnumerable&amp;lt;TOutput&amp;gt; ConvertAll&amp;lt;TInput, TOutput&amp;gt;(IEnumerable&amp;lt;TInput&amp;gt; enumerable, Converter&amp;lt;TInput, TOutput&amp;gt; converter)
+    {
+        return (from item in enumerable select converter(item)).AsEnumerable&amp;lt;TOutput&amp;gt;();
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I&amp;rsquo;ll be interested to see what kind of affect this might have on performance (the target platform for this Silverlight application is Windows Phone 7.5, so performance is important to keep things lightweight, fast and fluid). But I will cross that bridge when I come to it, in the meantime at least my code is cleaner.&lt;/p&gt;
+
+&lt;h3 id=&#34;references:204050b783fe404cb8d0a597875f045e&#34;&gt;References:&lt;/h3&gt;
+
+&lt;p&gt;[1] - &lt;a href=&#34;http://devlicio.us/blogs/derik_whittaker/archive/2008/03/28/simple-way-to-convert-ienumerable-lt-entity-gt-to-list-lt-ientity-gt.aspx&#34;&gt;http://devlicio.us/blogs/derik_whittaker/archive/2008/03/28/simple-way-to-convert-ienumerable-lt-entity-gt-to-list-lt-ientity-gt.aspx&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[2] - &lt;a href=&#34;http://michaelsync.net/2009/03/22/silverlight-3-array-helper&#34;&gt;http://michaelsync.net/2009/03/22/silverlight-3-array-helper&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

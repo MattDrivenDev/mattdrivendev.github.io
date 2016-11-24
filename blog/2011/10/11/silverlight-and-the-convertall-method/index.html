@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Silverlight and the ConvertAll method &middot; Matt Ball</title>
+
+  
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-x.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mattdrivendev.github.io/touch-icon-144-precomposed.png">
+  <link href="http://mattdrivendev.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+</head>
+<body class="theme-base-08">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/da7bcb58b36bd8c0e29fe2be0eb1c8ff?s=200"
+             alt="gravatar" title="Matt Ball">
+      
+      <h1>strongly typed</h1>
+      <p class="lead">Matt Ball: Amateur Strongman, Software Development, Coaching, F#, Functional Programming.</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://mattdrivendev.github.io/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/mattdrivendev"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/MattDrivenDev"><i class="fa fa-twitter-square fa-3x"></i></a>
+      <a href="https://www.youtube.com/channel/UCA5cXOM8EPfs7uI82XrFq-A"><i class="fa fa-youtube-square fa-3x"></i></a>
+      <a href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://mattdrivendev.github.io/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Silverlight and the ConvertAll method</h1>
+    <span class="post-date">Oct 11, 2011 &middot; 3 minute read
+    </span>
+    <p>I may have already mentioned my woes (here or on Twitter) with the Linq2SQL in a Silverlight for Windows Phone Mango environment.</p>
+
+<p>I am of the opinion that the following code should work:</p>
+
+<pre><code>public class Person : IPerson
+{   
+    // Class internals, not relevant for this example.
+}
+
+public class DataContext
+{
+    public DataContext()
+    {
+        // Load data or whatever.
+    }
+
+    public Table&lt;Person&gt; People { get; set; }
+
+    public IEnumerable&lt;IPerson&gt; GetPeople()
+    {
+        return this.People;
+    }
+}
+</code></pre>
+
+<p>I would have assumed this would work, because <code>Table&lt;T&gt;</code> implements the <code>IEnumerable&lt;T&gt;</code> interface and the contents of the Table, in this instance Person - implements the IPerson interface.</p>
+
+<p>But apparently it wouldn&rsquo;t. I cannot recall now if it returned an <code>IEnumerable&lt;T&gt;</code> that was empty, or if it was just null. In either case it wasn&rsquo;t working.</p>
+
+<p></p>
+
+<p>So after a little investigation I found a blog post [1] showing you 4 increastingly better ways for doing what I wanted. However I could only get Method 1 to work, because Silverlight does not support the .ConvertAll method&hellip;</p>
+
+<p>I cannot easily find any information why this method wouldn&rsquo;t be available in the Silverlight runtime, one quick read did suggest it was just something that was dropped to make the runtime more lightweight - which seems reasonable I guess, but it didn&rsquo;t seem too heavy an idea in my mind. But whatever.</p>
+
+<p>So this is what I ended up with, hardly elegant - but it worked:</p>
+
+<pre><code>	public class Person : IPerson
+	{
+	    // Class internals, not relevant for this example.
+	}
+
+	public class DataContext
+	{
+	    public DataContext()
+	    {
+	        // Load data or whatever.
+	    }
+
+	    public Table&lt;Person&gt; People { get; set; }
+
+	    public IEnumerable&lt;IPerson&gt; GetPeople()
+	    {
+	        IEnumerable&lt;IPerson&gt; people = new List&lt;IPerson&gt;();
+	        foreach (Person p in this.People)
+	            ((List&lt;IPerson&gt;)people).Add(p as IPerson);
+
+	        return people;
+	    }
+	}
+</code></pre>
+
+<p>Wanting a more elegant solution that didn&rsquo;t mean that I would be writing foreach loops in all of my Get methods - I went on the hunt for something to replace the .ConvertAll method. I found a cool littl blog post [2] that described creating a Silverlight array helper that would implement a static .ConvertAll method that could be used.</p>
+
+<p>Following that as an example my code can now look like:</p>
+
+<pre><code>public class Person : IPerson
+{
+    // Class internals, not relevant for this example.
+}
+
+public class DataContext
+{
+    public DataContext()
+    {
+        // Load data or whatever.
+    }
+
+    public Table&lt;Person&gt; People { get; set; }
+
+    public IEnumerable&lt;IPerson&gt; GetPeople()
+    {
+        return ConvertAll&lt;Person, IPerson&gt;(this.People, new Converter&lt;Person, IPerson&gt;(p =&gt; (IPerson)p));
+    }
+
+    // A re-usable method to ConvertAll items in an IEnumerable... 
+    // probably best if pulled out into a helper class.
+    public static IEnumerable&lt;TOutput&gt; ConvertAll&lt;TInput, TOutput&gt;(IEnumerable&lt;TInput&gt; enumerable, Converter&lt;TInput, TOutput&gt; converter)
+    {
+        return (from item in enumerable select converter(item)).AsEnumerable&lt;TOutput&gt;();
+    }
+}
+</code></pre>
+
+<p>I&rsquo;ll be interested to see what kind of affect this might have on performance (the target platform for this Silverlight application is Windows Phone 7.5, so performance is important to keep things lightweight, fast and fluid). But I will cross that bridge when I come to it, in the meantime at least my code is cleaner.</p>
+
+<h3 id="references">References:</h3>
+
+<p>[1] - <a href="http://devlicio.us/blogs/derik_whittaker/archive/2008/03/28/simple-way-to-convert-ienumerable-lt-entity-gt-to-list-lt-ientity-gt.aspx">http://devlicio.us/blogs/derik_whittaker/archive/2008/03/28/simple-way-to-convert-ienumerable-lt-entity-gt-to-list-lt-ientity-gt.aspx</a></p>
+
+<p>[2] - <a href="http://michaelsync.net/2009/03/22/silverlight-3-array-helper">http://michaelsync.net/2009/03/22/silverlight-3-array-helper</a></p>
+  </div>
+  
+</div>
+
+
+
+
+<script src="http://mattdrivendev.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

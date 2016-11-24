@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Adopting F#, part 3 &middot; Matt Ball</title>
+
+  
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-x.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mattdrivendev.github.io/touch-icon-144-precomposed.png">
+  <link href="http://mattdrivendev.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+</head>
+<body class="theme-base-08">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/da7bcb58b36bd8c0e29fe2be0eb1c8ff?s=200"
+             alt="gravatar" title="Matt Ball">
+      
+      <h1>strongly typed</h1>
+      <p class="lead">Matt Ball: Amateur Strongman, Software Development, Coaching, F#, Functional Programming.</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://mattdrivendev.github.io/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/mattdrivendev"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/MattDrivenDev"><i class="fa fa-twitter-square fa-3x"></i></a>
+      <a href="https://www.youtube.com/channel/UCA5cXOM8EPfs7uI82XrFq-A"><i class="fa fa-youtube-square fa-3x"></i></a>
+      <a href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://mattdrivendev.github.io/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Adopting F#, part 3</h1>
+    <span class="post-date">Oct 10, 2013 &middot; 3 minute read
+    </span>
+    <p>Back in January when I blogged <a href="/2013/01/adopting-fsharp.html">Adopting F#</a> - I didn&rsquo;t really anticipate it being something of a series; but before too long I blogged again <a href="/2013/01/adopting-fsharp.html">Adopting F#, part II</a>. As it goes I think it is interesting to document the journey I&rsquo;ve been able to take from <code>C#</code> to <code>F#</code> as my bread-and-butter language.</p>
+
+<p>Since I started <strong>part II</strong> with a <em>&rdquo;&hellip;what has changed since&hellip;&rdquo;</em>, I don&rsquo;t see much of a problem in doing the same again:</p>
+
+<ul>
+<li>Got married (life part 1).</li>
+<li>Sold a flat. Bought a house. Moved. <a href="2012/10/moving-house-dot-dot-dot.html">This time for real&hellip;</a> (life part 2).</li>
+<li>More F# tools and scripts.</li>
+<li>Fixed <strong>zero bugs</strong> in my <a href="/2013/01/adopting-fsharp.html">first production service written in F#</a>.</li>
+<li>Helped a few colleagues and friends learn some F#.</li>
+<li>Learned a heap more about software development.</li>
+<li>Played around with <a href="/2013/07/service-stack-fsharp-mono-fastcgi-nginx.html">F# on Linux with Mono</a> etc</li>
+<li>Spent a couple of nights creating a <a href="https://github.com/saxonmatt/Fsssss">clone of Snake with F#</a>.</li>
+</ul>
+
+<p></p>
+
+<h3 id="f-tools-and-scripts">F# tools and scripts</h3>
+
+<p>I thought I&rsquo;d delve into scripting a little more since I absolutely believe that one of the best features of <code>F#</code> is the interative experience - both as a <a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a> while developing code; and as a way of running F# script files (<code>.fsx</code>). I also think it is worth giving a bit of a shout out to some of the libraries and tools that I&rsquo;ve used both privately and as part of my working life.</p>
+
+<p>I&rsquo;ve now lost count of the number of scripts that I have knocked up to do some of the following:</p>
+
+<ul>
+<li>ETL</li>
+<li>SQL script generation</li>
+<li>Build/Test/Deployment automation</li>
+<li>Command line tools</li>
+</ul>
+
+<p>&hellip;using some of the following libraries etc:</p>
+
+<ul>
+<li>WSDL Type Providers (see: <a href="http://msdn.microsoft.com/en-us/library/vstudio/hh362328.aspx">official</a>, and: <a href="/2013/01/fsharp-wsdl-typeprovider-and-untrusted-server-certificates.html">more</a>)</li>
+<li>JSON, XML and CSV Type Providers (see: <a href="http://fsharp.github.io/FSharp.Data/">FSharp.Data</a>)</li>
+<li>FAKE - F# Make (see: <a href="http://fsharp.github.io/FAKE/">official</a>)</li>
+<li>SQL Generation/CI (see: <a href="https://github.com/saxonmatt/DbProject/tree/tools">tools</a>, makes heavy use of FAKE above)</li>
+</ul>
+
+<p>Basically my go to language for any scripting work is F#.</p>
+
+<h3 id="games-dev">Games dev</h3>
+
+<p>I played around for a couple of evenings with F# as a lanuage to do some games development, using the XNA framework. Largely inspired by <a href="https://twitter.com/GarethIW">GarethIW&rsquo;s</a> efforts for <a href="http://www.garethpw.co.uk/search/label/1GAM">1 Game a Month</a>.</p>
+
+<p>So I built a little clone of Snake. XNA was completely overkill for the occasion - but I really want to get into XNA/MonoGame more - so the more exposure I get to it, the better.</p>
+
+<p>One of the more interesting things for me was how the memory allocation would affect performance. Turns out that the performance tools built into Visual Studio 2012 are pretty reasonable and was able to track down some performance issues (or rather, unnecessary memory allocation issues) in the following lines of code:</p>
+
+<pre><code>/// Collision detection between the head and tail of the snake.
+let touchingSelf (Snakey (direction, body, eating)) = 
+    body.Tail |&gt; List.map(fun part -&gt;
+        body.Head.Intersects(part)
+    )
+    |&gt; List.reduce (||)  
+
+/// Collision detection between the snake and the garden wall.
+let touchingWall (Snakey (direction, body, eating)) wall = 
+    wall |&gt; List.map(fun brick -&gt;
+        body.Head.Intersects(brick)
+    )
+    |&gt; List.reduce (||)
+</code></pre>
+
+<p><a href="https://github.com/saxonmatt/Fsssss/blob/master/src/Fsssss/Snake.fs#L127-L139">source</a></p>
+
+<p>I also talked about my efforts at an <a href="/iwdev/">#IWDev</a> meet in October:</p>
+
+<script async class="speakerdeck-embed" data-id="218a81300cc501310c903a30d744b908" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p>I&rsquo;m trying to build another game now with it, again something incredibly simple - but struggling to find the time.</p>
+
+<h3 id="part-4">Part 4?</h3>
+
+<p>Maybe&hellip;</p>
+  </div>
+  
+</div>
+
+
+
+
+<script src="http://mattdrivendev.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

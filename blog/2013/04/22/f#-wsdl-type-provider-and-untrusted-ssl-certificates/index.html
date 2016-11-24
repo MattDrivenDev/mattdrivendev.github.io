@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>F# WSDL Type Provider and untrusted SSL certificates &middot; Matt Ball</title>
+
+  
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-x.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mattdrivendev.github.io/touch-icon-144-precomposed.png">
+  <link href="http://mattdrivendev.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+</head>
+<body class="theme-base-08">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/da7bcb58b36bd8c0e29fe2be0eb1c8ff?s=200"
+             alt="gravatar" title="Matt Ball">
+      
+      <h1>strongly typed</h1>
+      <p class="lead">Matt Ball: Amateur Strongman, Software Development, Coaching, F#, Functional Programming.</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://mattdrivendev.github.io/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/mattdrivendev"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/MattDrivenDev"><i class="fa fa-twitter-square fa-3x"></i></a>
+      <a href="https://www.youtube.com/channel/UCA5cXOM8EPfs7uI82XrFq-A"><i class="fa fa-youtube-square fa-3x"></i></a>
+      <a href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://mattdrivendev.github.io/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">F# WSDL Type Provider and untrusted SSL certificates</h1>
+    <span class="post-date">Apr 22, 2013 &middot; 3 minute read
+    </span>
+    <p>I came across something of a pain while using the Microsoft Wsdl Type Provider (<code>Microsoft.FSharp.Data.TypeProviders.WsdlService</code>) at work yesterday.</p>
+
+<p>The problem that I was facing was that the Wsdl Type Provider just would not play ball with one of our web services. The reason as it turns out was the fact that it used <code>https</code> and the certification isn&rsquo;t properly signed.</p>
+
+<p>So when working with the Type Provider in code - using the default method of just pointing at the service&rsquo;s Wsdl; just doesn&rsquo;t do the trick. Documentation for a fix was a little thin on the ground - and it wasn&rsquo;t until I did a <code>#fsharp</code> shout out on Twitter that I got some clues.</p>
+
+<p></p>
+
+<p>Thankfully <a href="https://twitter.com/sergey_tihon">Sergey Tihon</a> responded to my call for help, and pointed me to one of his <a href="http://sergeytihon.wordpress.com/2013/01/07/f-and-fast-search-for-sharepoint-2010/">blog posts</a>.</p>
+
+<p>In particular, his use of the <code>BasicHttpBinding</code> which alongside a different <code>EndpointAddress</code>, gets passed into the Service client was most useful. Couple that with setting the <code>ServerCertificateValidationCallback</code> on the <code>System.Net.ServicePointManager</code>.</p>
+
+<p>But despite making these changes I still couldn&rsquo;t get the Wsdl Type Provider to provide me anything in <em>design time</em> (i.e. script file in VS212). Hovering over the red squiggly line under the <code>WsdlService</code> type declaration told me it still couldn&rsquo;t access the service.</p>
+
+<p>Sadly there is no way (to my knowledge) to tell the Type Provider (as it runs in the VS2012 runtime) to do any of this stuff.</p>
+
+<p>The answer involves a little more manual work than I should like - but hey, that&rsquo;s fine. At least the resulting code base isn&rsquo;t littered with generated code etc.</p>
+
+<ol>
+<li>Use your browser to go and grab the Wsdl from the web service - using whatever credentials you need to and accepting the untrusted server certificate.</li>
+<li>Save that Wsdl into a file you can access from your F# app/script, it&rsquo;ll need a <code>.wsdlschema</code> file extension (e.g. <code>myservice.wsdlschema</code>).</li>
+<li>Declare your Type Provider service type in F# using the service url, and the additional optional parameters <code>LocalSchemaFile</code> (pointing at your <code>.wsdlschema</code> file) and <code>ForceUpdate</code> set to <code>false</code> (defaults to <code>true</code>).</li>
+<li>Then when using the new service type, we can alter the bindings etc, set up authentication/credentials and force the untrusted server certificate to be accepted.</li>
+</ol>
+
+<p>Here&rsquo;s an example of where I&rsquo;ve ended up:</p>
+
+<pre><code>#r &quot;System.ServiceModel&quot;
+#r &quot;System.Runtime.Serialization&quot;
+#r &quot;FSharp.Data.TypeProviders&quot;
+
+open System.Net
+open System.Net.Security
+open System.ServiceModel
+open Microsoft.FSharp.Data.TypeProviders
+
+ServicePointManager.ServerCertificateValidationCallback &lt;- new RemoteCertificateValidationCallback(fun _ _ _ _ -&gt; true)
+
+[&lt;Literal&gt;]
+let ServiceUrl = &quot;https://our.domain.org/web.application/MyService.asmx&quot;
+[&lt;Literal&gt;]
+let SchemaFile = &quot;MyService.wsdlschema&quot;
+
+// Note the LocalSchemaFile and ForceUpdate parameters
+type MyService = WsdlService&lt;ServiceUrl, LocalSchemaFile=SchemaFile, ForceUpdate=false&gt;
+
+let binding = 
+    let mutable b = new BasicHttpBinding()
+    b.MaxReceivedMessageSize &lt;- 10000000L
+    b.Security.Mode &lt;- BasicHttpSecurityMode.Transport
+    b.Security.Transport.ClientCredentialType &lt;- HttpClientCredentialType.Ntlm    
+    b
+
+let serviceClient = 
+    let mutable s = new MyService.ServiceTypes.MyServiceClient(binding, EndpointAddress(ServiceUrl))
+    s.ClientCredentials.Windows.ClientCredential &lt;- (Net.NetworkCredential(&quot;UserName&quot;, &quot;Password&quot;))
+    s.ClientCredentials.Windows.AllowedImpersonationLevel &lt;- System.Security.Principal.TokenImpersonationLevel.Delegation
+    s
+
+let request = 
+    let mutable r = MyService.ServiceTypes.MyServiceMethodRequest()
+    r.Parameter1 &lt;- &quot;Some value&quot;
+    r
+
+let response = serviceClient.MyServiceMethod(request)
+
+let myQuery = query { for x in response.Items do
+                      where (x.Name.Contains(&quot;Matt&quot;))
+                      sortBy x.Name
+                      select x }
+
+myQuery
+|&gt; Seq.iter (fun x -&gt; printfn &quot;%s&quot; x.Name)
+</code></pre>
+
+<p>The result? Not <em>quite</em> as simple as it said on the tin&hellip; but you know what? Its sill 100 times better than the non-TypeProvider route.</p>
+  </div>
+  
+</div>
+
+
+
+
+<script src="http://mattdrivendev.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

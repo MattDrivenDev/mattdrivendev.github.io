@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Code Comparison: C# v.s. F# &middot; Matt Ball</title>
+
+  
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-x.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mattdrivendev.github.io/touch-icon-144-precomposed.png">
+  <link href="http://mattdrivendev.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+</head>
+<body class="theme-base-08">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/da7bcb58b36bd8c0e29fe2be0eb1c8ff?s=200"
+             alt="gravatar" title="Matt Ball">
+      
+      <h1>strongly typed</h1>
+      <p class="lead">Matt Ball: Amateur Strongman, Software Development, Coaching, F#, Functional Programming.</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://mattdrivendev.github.io/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/mattdrivendev"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/MattDrivenDev"><i class="fa fa-twitter-square fa-3x"></i></a>
+      <a href="https://www.youtube.com/channel/UCA5cXOM8EPfs7uI82XrFq-A"><i class="fa fa-youtube-square fa-3x"></i></a>
+      <a href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://mattdrivendev.github.io/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Code Comparison: C# v.s. F#</h1>
+    <span class="post-date">Apr 3, 2013 &middot; 2 minute read
+    </span>
+    <p>Since I found using yesterday&rsquo;s lunchtime to write a blog post so good - I&rsquo;m following that up with another lunchtime blog post.</p>
+
+<p>Yesterday I continued what I think will slowly become something of an anecdotal series on adopting <code>F#</code>, in which I briefly talked about a new service I&rsquo;d worked on using F# (see <a href="/2013/04/adopting-fsharp-part-ii.html">Adopting F#, Part II</a>).</p>
+
+<p>Inspired by <a href="http://www.simontylercousins.net/journal/2013/2/22/does-the-language-you-choose-make-a-difference.html">&lsquo;Does the language you choose make a difference?&rsquo; by simontcousins</a> I&rsquo;m throwing up a comparison of lines of code.</p>
+
+<p></p>
+
+<h3 id="first-with-some-charts">First with some charts:</h3>
+
+<p><img alt="CSharp Chart" width="684" height="662" src="/images/code.comparison.csharp.jpg" /></p>
+
+<p><img alt="FSharp Chart" width="684" height="662" src="/images/code.comparison.fsharp.jpg" /></p>
+
+<h3 id="now-for-some-numbers">Now for some numbers:</h3>
+
+<table>
+    <thead>
+        <td><strong>Metric</strong></td>
+        <td><strong>C#</strong></td>
+        <td><strong>F#</strong></td>
+        <td><strong>The F# difference</strong></td>
+    </thead>
+    <tr>
+        <td>Useful lines</td>
+        <td>6548</td>
+        <td>1004</td>
+        <td>6x</td>
+    </tr>
+    <tr>
+        <td>Comment lines</td>
+        <td>3496</td>
+        <td>7</td>
+        <td>350x</td>
+    </tr>
+    <tr>
+        <td>Null check lines</td>
+        <td>137</td>
+        <td>4</td>
+        <td>34x</td>
+    </tr>
+    <tr>
+        <td>Blank lines</td>
+        <td>2283</td>
+        <td>182</td>
+        <td>12x</td>
+    </tr>
+    <tr>
+        <td>Brace lines</td>
+        <td>3066</td>
+        <td>0</td>
+        <td>n/a</td>
+    </tr>
+    <tr>
+        <td><strong>TOTALS:</strong></td>
+        <td><strong>15530</strong></td>
+        <td><strong>1197</strong></td>
+        <td><strong>12x</strong></td>
+    </tr>
+</table>
+
+<p>(Unlike Simon&rsquo;s post I&rsquo;m not comparing team size, bugs and time taken - there are way too many process/people/priority changes involved to paint an accurate picture.)</p>
+
+<h3 id="what-does-it-all-mean">What does it all mean?</h3>
+
+<p>Well you should probably take this comparison with a pinch of salt. Code comparisons are normally laced with some bias.</p>
+
+<p>But there are a few key points that you should note:</p>
+
+<ul>
+<li>This is a fairly small service.</li>
+<li>The <code>C#</code> code base <strong>should</strong> be larger because that is where all the XSD generated classes live, and there is some additional code for configuration etc. BUT! I think even if you half those <code>C#</code> numbers above, and assume that the ratios (the chart) stay the same - then the comparision is still rather stark.</li>
+<li>The <code>F#</code> code does have some extra weight to make interop with the calling <code>C#</code> code easier - to the tally of maybe ~100 lines.</li>
+<li>Both code bases essentially deliver 3 business requirements/behaviours (which are obviously broken down into lots of smaller requirements).</li>
+</ul>
+
+<p>It is fair to say that so far as developing solutions is concerned, <code>C#</code> will work <em>just fine</em> and there is nothing you cannot deliver in <code>F#</code> that you cannot do in <code>C#</code> (or Assembler for that matter!). The key here is really that <code>F#</code> is just another language - a tool for delivering value to somebody (in this case a business); and I think that this rather anecdotal comparison helps show that <code>F#</code> can be a more efficient tool available for the job.</p>
+
+<p>Thanks to <em>Kit Eason</em> for his cool <a href="http://fssnip.net/h4">Count noise-lines script</a>!</p>
+
+<p>If you&rsquo;re interested in learning more about <code>F#</code> I urge you to take a look at <a href="http://fsharp.org/">The F# Software Foundation</a> and <a href="http://fsharpforfunandprofit.com/">F# for Fun and Profit</a>.</p>
+  </div>
+  
+</div>
+
+
+
+
+<script src="http://mattdrivendev.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

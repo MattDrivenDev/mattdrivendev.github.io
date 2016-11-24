@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>An agile process improvement braindump &middot; Matt Ball</title>
+
+  
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-x.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mattdrivendev.github.io/touch-icon-144-precomposed.png">
+  <link href="http://mattdrivendev.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+</head>
+<body class="theme-base-08">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/da7bcb58b36bd8c0e29fe2be0eb1c8ff?s=200"
+             alt="gravatar" title="Matt Ball">
+      
+      <h1>strongly typed</h1>
+      <p class="lead">Matt Ball: Amateur Strongman, Software Development, Coaching, F#, Functional Programming.</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://mattdrivendev.github.io/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/mattdrivendev"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/MattDrivenDev"><i class="fa fa-twitter-square fa-3x"></i></a>
+      <a href="https://www.youtube.com/channel/UCA5cXOM8EPfs7uI82XrFq-A"><i class="fa fa-youtube-square fa-3x"></i></a>
+      <a href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://mattdrivendev.github.io/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">An agile process improvement braindump</h1>
+    <span class="post-date">Apr 2, 2013 &middot; 4 minute read
+    </span>
+    <p>At work, I&rsquo;m trying (where I can) to help push process improvement all the time. When things are slow, inefficient and painful I get grumpy. I&rsquo;m not the only one, and I have the privilege to work with some great people with great minds and ideas. Together we are making, and have made some good progress.</p>
+
+<p>I&rsquo;ve been meaning to write something about continuous integration and/or delivery, agile methods etc. General development/software processes etc. How to do things right. But I don&rsquo;t think I am yet qualified to write with any authority on these subjects - so I am going to settle for this&hellip;</p>
+
+<p></p>
+
+<p>Warning to the reader - this is nothing but a brain dump&hellip; Just a list of (no-brainers) things that I&rsquo;ve been involved in as part of process improvement that have proven to be really successful to-date:</p>
+
+<ul>
+<li><p><strong>Requirements are a business requirement</strong>: No brainer, right?</p></li>
+
+<li><p><strong>Everyone is a customer</strong> (or stakeholder): our customers, the business, the helpdesk/support team, operations/infrastructure team, data/reporting services, the testing team and us - the developers. We <em>all</em> have first-class requirements. Even technical requirements end up being business requirements if it helps a system running smoothly.</p></li>
+
+<li><p><strong>Test First Approach</strong>: call it whatever you want, it should involve as much as time can afford and include anything you can justify automating. Testing functionality, behaviours, requirements, performance, logging, application black-box, end-2-end systems and integration. Do whatever you can to get the most bang for your buck.</p></li>
+
+<li><p><strong>Peer-review of code</strong>: okay not every line of code needs to be looked at. But if you focus on some of the following, you&rsquo;ll do well from it: schemas/contracts/interfaces, automated test cases, algorithms (the real meat of the matter parts). Try using a Pull Request in git to force this as part of the development process.</p></li>
+
+<li><p><strong>A good version control process</strong>: version control should be considered the back-bone of a good development process. Without it you&rsquo;re dead in the water. There are no excuses in this day and age. But you should (as a team) take the time to discover a process/workflow that suits you and your projects, document it, understand it and use it to your advantage.</p></li>
+
+<li><p><strong>Continuous integration</strong>: I don&rsquo;t just mean installing a CI server somewhere and automating builds. Don&rsquo;t be scared of introducing new functionality (or removing it in fact). Don&rsquo;t work on something new all alone and then struggle for a week trying to re-integrate that work into the main development line. Understand how to introduce changes without breaking the software and do it as often as possible.</p></li>
+
+<li><p><strong>Practice Failover and Rollback</strong>: Things shouldn&rsquo;t go wrong - but when they do, how you respond is incredibly important. Have understood failure and rollback plans in place - and actively test them. If you have plans and are too scared to test them on your production systems, then you obviously are not confident that they work. If failover and rollback are fast and seamless - you will appear error free.</p></li>
+
+<li><p><strong>Monitoring and Logging</strong>: are first-class business requirements. You need to know what is going on, and when. If (or rather when) your systems fail (and you&rsquo;ve handled it with a failover or rollback plan!) - it is incredibly important to be able to look at the reasons why.</p></li>
+
+<li><p><strong>Script everything</strong>: If you do something once, fine, manually is okay. If you do something twice - write a script for it already. Even if you don&rsquo;t use the script again, or it is broken by the next time you come to it - it will at least serve as a method of documenting how and what you did.</p></li>
+
+<li><p><strong>No process is perfect</strong>: Review and question what and how you do everything - every week you should aim to be better than last week. Review existing processes - pick something that is bad, and try and make them better. Don&rsquo;t always strive for perfection - take baby steps; every single week. Given a few months and you&rsquo;ll be in a better place.</p></li>
+</ul>
+  </div>
+  
+</div>
+
+
+
+
+<script src="http://mattdrivendev.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

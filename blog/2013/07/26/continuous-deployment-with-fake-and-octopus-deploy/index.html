@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>Continuous Deployment with FAKE and Octopus Deploy &middot; Matt Ball</title>
+
+  
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/poole-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-overrides.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/hyde-x.css">
+  <link rel="stylesheet" href="http://mattdrivendev.github.io/css/highlight/monokai.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://mattdrivendev.github.io/touch-icon-144-precomposed.png">
+  <link href="http://mattdrivendev.github.io/favicon.png" rel="icon">
+
+  
+  
+  
+  
+
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  
+</head>
+<body class="theme-base-08">
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      
+        <img src="https://www.gravatar.com/avatar/da7bcb58b36bd8c0e29fe2be0eb1c8ff?s=200"
+             alt="gravatar" title="Matt Ball">
+      
+      <h1>strongly typed</h1>
+      <p class="lead">Matt Ball: Amateur Strongman, Software Development, Coaching, F#, Functional Programming.</p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item"><a href="http://mattdrivendev.github.io/">Blog</a></li>
+      
+    </ul>
+
+    <ul class="sidebar-nav">
+      <li class="sidebar-nav-item">
+      <a href="https://github.com/mattdrivendev"><i class="fa fa-github-square fa-3x"></i></a>
+      
+      
+      
+      
+      
+      <a href="https://twitter.com/MattDrivenDev"><i class="fa fa-twitter-square fa-3x"></i></a>
+      <a href="https://www.youtube.com/channel/UCA5cXOM8EPfs7uI82XrFq-A"><i class="fa fa-youtube-square fa-3x"></i></a>
+      <a href="http://mattdrivendev.github.io/index.xml" type="application/rss+xml"><i class="fa fa-rss-square fa-3x"></i></a>
+      </li>
+    </ul>
+
+    
+
+    <p>Copyright &copy; 2016 <a href="http://mattdrivendev.github.io/license/">License</a><br/>
+       Powered by <a href="http://gohugo.io">Hugo</a> and <a href="https://github.com/zyro/hyde-x">Hyde-X</a></p>
+  </div>
+</div>
+
+
+<div class="content container">
+  <div class="post">
+    <h1 class="post-title">Continuous Deployment with FAKE and Octopus Deploy</h1>
+    <span class="post-date">Jul 26, 2013 &middot; 4 minute read
+    </span>
+    <p>It&rsquo;s a nice day today, and I&rsquo;ve just sat outside for a short break while the other guys ate their lunch (I don&rsquo;t eat during the day, mostly). It struck me that I&rsquo;ve not been blogging much of late, and that I&rsquo;ve managed to use my lunch times to get some content out on the web before; so I&rsquo;m back at my desk and hammering <code>rake new_post</code> again.</p>
+
+<p>So in recent-ish times I&rsquo;ve been evaluating <a href="http://octopusdeploy.com/">Octpus Deploy</a>:</p>
+
+<p><img alt="Octopus deploy dashboard" width="527" height="219" src="/images/octopus-dashboard-big.png" /></p>
+
+<p>If you&rsquo;re in the business deploying web/service based .NET systems to Windows environments - do yourself a favour and take a look; I think it is a really sound product.</p>
+
+<p></p>
+
+<h2 id="octopus-tools">Octopus Tools</h2>
+
+<p>One of the great things about the product, is the RESTful API that is exposed that allows you to control software releases and deployments remotely. There is a toolset out of the box for doing so: <strong>Octopus Tools</strong> (available on <a href="https://github.com/OctopusDeploy/Octopus-Tools">GitHub</a> and <a href="http://www.nuget.org/packages/OctopusTools/">NuGet</a>) - all from the command line.</p>
+
+<p>This has been great and I&rsquo;ve been using this with various <code>.cmd</code> scripts to automate release and deployment from <a href="http://www.jetbrains.com/teamcity/">TeamCity</a> build steps.</p>
+
+<h2 id="but">but&hellip;</h2>
+
+<ol>
+<li>I don&rsquo;t like having too many build steps set-up in my CI server. I like a CI server to be the system of build automation (scheduling, permissions, selecting the correct source code etc). But I prefer to have the process by which it all happens to be in 1 single script file, that can be properly versioned etc - and could be repeatable by a human on another machine if the CI server were to go <strong>pop!</strong> one day&hellip; of if we want to move to another CI system.</li>
+<li>I wanted to do some automated testing against deployed applications and services - as they are hosted; in a <em>production-like environment</em>, where systems are connected to one another and we can get a feeling of how healthy a system is <em>as a whole</em>. <strong>BUT</strong> I didn&rsquo;t want my build script to finish, use a separate process to deploy, and then jump back into a second script to run more tests. I want it in one script, fired off in one process (parametized, of course for granular control).</li>
+<li>I use <a href="http://fsharp.org/">F#</a> and <a href="http://fsharp.github.io/FAKE/">FAKE</a> for doing such things, and saw no reason why this should escape too!</li>
+</ol>
+
+<h2 id="and-so">&hellip;and so</h2>
+
+<p>A couple of hours later I was able to open a pull request back to the FAKE repo on GitHub, and am able to add a few more <code>Target</code>&rsquo;s to my build scripts:</p>
+
+<pre><code>Target &quot;Clean&quot; (fun _ -&gt;
+    // Clean build output folders.
+)
+
+Target &quot;BuildService&quot; (fun _ -&gt;
+    // Build the web service from source.
+)
+
+Target &quot;BuildUnitTestSuite&quot; (fun _ -&gt;
+    // Build the unit test suite from source.
+)
+
+Target &quot;RunUnitTestSuite&quot; (fun _ -&gt;
+    // Run the Unit Test suite using your favourite test runner.
+    // These tests directly interact with the production code.
+)
+
+Target &quot;NuGetPackageAndPublish&quot; (fun _ -&gt;
+    // Package and Publish the web service with NuGet to some kind of NuGet
+    // repository somewhere.
+)
+
+Target &quot;ReleaseAndDeployToTestEnv&quot; (fun _ -&gt;
+
+    let release = { releaseOptions with Project = &quot;My Web Service&quot; }
+    let deploy  = { deployOptions with DeployTo = &quot;TestEnv&quot; }    
+
+    Octo (fun octoParams -&gt; 
+        { octoParams with
+                     ToolPath = &quot;./packages/octopustools&quot;;
+                     Server = { Server = &quot;http://octopus.com/api&quot;; ApiKey = &quot;YOUR-CI-API-KEY-HERE&quot; };
+                     Command = CreateRelease (release, Some deploy); }
+    ) 
+
+)
+
+Target &quot;BuildIntegrationTestSuite&quot; (fun _ -&gt;
+    // Build the integration test suite from source.
+)
+
+Target &quot;RunIntegrationTestSuite&quot; (fun _ -&gt;
+    // Run the Integration Test suite using your favourite test runner.
+    // These tests talk the the system as a whole, interacting with the service
+    // in the &quot;TestEnv&quot;.
+)
+
+Target &quot;ReleaseAndDeployToUatEnv&quot; (fun _ -&gt;
+
+    let deploy  = { deployOptions with Project = &quot;My Web Service&quot;; DeployTo = &quot;UatEnv&quot; }    
+
+    Octo (fun octoParams -&gt; 
+        { octoParams with
+                     ToolPath = &quot;./packages/octopustools&quot;;
+                     Server = { Server = &quot;http://octopus.com/api&quot;; ApiKey = &quot;YOUR-CI-API-KEY-HERE&quot; };
+                     Command = DeployRelease deploy; }
+    ) 
+
+)
+
+Target &quot;DeveloperBuild&quot; (fun _ -&gt;
+    // Empty target for a developer build
+)
+
+Target &quot;CIBuild&quot; (fun _ -&gt;
+    // Empty target for a CI build
+)
+
+&quot;Clean&quot;
+    ==&gt; &quot;BuildService&quot;
+    ==&gt; &quot;BuildUnitTestSuite&quot;
+    ==&gt; &quot;RunUnitTestSuite&quot;
+    ==&gt; &quot;DeveloperBuild&quot;
+    ==&gt; &quot;NuGetPackageAndPublish&quot;
+    ==&gt; &quot;ReleaseAndDeployToTestEnv&quot;
+    ==&gt; &quot;BuildIntegrationTestSuite&quot;
+    ==&gt; &quot;RunIntegrationTestSuite&quot;
+    ==&gt; &quot;CIBuild&quot;
+
+RunParameterTargetOrDefault &quot;target&quot; &quot;DeveloperBuild&quot;
+</code></pre>
+
+<h2 id="give-it-a-go">Give it a go</h2>
+
+<p>You&rsquo;ll need <a href="http://www.nuget.org/packages/FAKE/1.74.215.0">FAKE version 1.74.214+</a> (not sure if it is included in the version 2 alphas - probably not) to make use of the <code>OctoTools</code> helper module.</p>
+
+<h2 id="thanks">Thanks</h2>
+
+<p>Thanks really goes to <a href="https://twitter.com/sforkmann">sforkmann</a> for maintaining FAKE so well - it is super easy to contribute to the project; and the deployment pipeline to NuGet is seamless and fast. I pulled the latest build from NuGet less than 10 minutes after opening the pull request.</p>
+
+<p>Awesome.</p>
+  </div>
+  
+</div>
+
+
+
+
+<script src="http://mattdrivendev.github.io/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
+

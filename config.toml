@@ -1,9 +1,29 @@
 baseurl = "http://mattdrivendev.github.io/"
 languageCode = "en-gb"
-title = "strongly-typed"
+title = "strongly typed"
+theme = "hyde-x"
+MetaDataFormat = "toml"
+paginate = 10
+
+[params]
+    theme = "theme-base-08"
+    layoutReverse = true
+    highlight = "monokai"
+    tagline = "Amateur Strongman, Software Development, Coaching, F#, Functional Programming."
+    gravatarHash = "da7bcb58b36bd8c0e29fe2be0eb1c8ff"
+    github = "https://github.com/mattdrivendev"
+    twitter = "https://twitter.com/MattDrivenDev"
+    youtube = "https://www.youtube.com/channel/UCA5cXOM8EPfs7uI82XrFq-A"
+    rss = true
+
+[taxonomies]
+    category = "categories"
+
+[permalinks]
+    post = "/blog/:year/:month/:day/:title/"
 
 [author]
-name = "Matt Ball"
-twitter = "MattDrivenDev"
-github = "MattDrivenDev"
-linkedin = "matt-ball-98120940"
+    name = "Matt Ball"
+    twitter = "MattDrivenDev"
+    github = "MattDrivenDev"
+    linkedin = "matt-ball-98120940"

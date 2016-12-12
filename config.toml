@@ -4,6 +4,7 @@ title = "strongly typed"
 theme = "hyde-x"
 MetaDataFormat = "toml"
 paginate = 10
+DisqusShortname = "stronglytyped"
 
 [params]
     theme = "theme-base-08"
@@ -15,6 +16,7 @@ paginate = 10
     twitter = "https://twitter.com/MattDrivenDev"
     youtube = "https://www.youtube.com/channel/UCA5cXOM8EPfs7uI82XrFq-A"
     rss = true
+    googleAnalytics = "UA-26103642-1"
 
 [taxonomies]
     category = "categories"

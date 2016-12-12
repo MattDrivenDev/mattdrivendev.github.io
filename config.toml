@@ -1,4 +1,4 @@
-baseurl = "http://mattdrivendev.github.io/"
+baseurl = "http://stronglytyped.me/"
 languageCode = "en-gb"
 title = "strongly typed"
 theme = "hyde-x"

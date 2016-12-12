@@ -1,6 +1,6 @@
 baseurl = "http://stronglytyped.me/"
 languageCode = "en-gb"
-title = "strongly typed"
+title = "Isle of Wight Strongman and Software Development"
 theme = "hyde-x"
 MetaDataFormat = "toml"
 paginate = 10

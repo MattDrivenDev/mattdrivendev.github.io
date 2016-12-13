@@ -4,7 +4,7 @@ title = "Isle of Wight Strongman and Software Development"
 theme = "hyde-x"
 MetaDataFormat = "toml"
 paginate = 10
-DisqusShortname = "stronglytyped"
+DisqusShortname = "saxonmatt"
 
 [params]
     theme = "theme-base-08"
@@ -15,6 +15,7 @@ DisqusShortname = "stronglytyped"
     github = "https://github.com/mattdrivendev"
     twitter = "https://twitter.com/MattDrivenDev"
     youtube = "https://www.youtube.com/channel/UCA5cXOM8EPfs7uI82XrFq-A"
+    instagram = "https://www.instagram.com/strongly.typed/"
     rss = true
     googleAnalytics = "UA-26103642-1"
 

@@ -1,6 +1,6 @@
 baseurl = "http://stronglytyped.me/"
 languageCode = "en-gb"
-title = "Isle of Wight Strongman and Software Development"
+title = "strongly typed"
 theme = "hyde-x"
 MetaDataFormat = "toml"
 paginate = 10
@@ -10,7 +10,7 @@ DisqusShortname = "saxonmatt"
     theme = "theme-base-08"
     layoutReverse = true
     highlight = "monokai"
-    tagline = "Amateur Strongman, Software Development, Coaching, F#, Functional Programming."
+    tagline = "husband, father, nerd, strong person, code monkey, coach and teller of stories"
     gravatarHash = "da7bcb58b36bd8c0e29fe2be0eb1c8ff"
     github = "https://github.com/mattdrivendev"
     twitter = "https://twitter.com/MattDrivenDev"

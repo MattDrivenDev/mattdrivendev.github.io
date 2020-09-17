@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Isle of Wight Strongman and Software Development</title>
-    <link>http://stronglytyped.me/index.xml</link>
-    <description>Recent content on Isle of Wight Strongman and Software Development</description>
+    <title>strongly typed</title>
+    <link>https://stronglytyped.me/index.xml</link>
+    <description>Recent content on strongly typed</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 14 Feb 2017 12:50:01 +0000</lastBuildDate>
-    <atom:link href="http://stronglytyped.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Sep 2020 20:42:00 +0100</lastBuildDate>
+    <atom:link href="https://stronglytyped.me/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hello world?</title>
+      <link>https://stronglytyped.me/blog/2020/09/16/hello-world/</link>
+      <pubDate>Wed, 16 Sep 2020 20:42:00 +0100</pubDate>
+      
+      <guid>https://stronglytyped.me/blog/2020/09/16/hello-world/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m still alive. I still do things. I write about them less. But I might write about them once more.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Competition Write-up: Back to the 80s</title>
-      <link>http://stronglytyped.me/blog/2017/02/14/competition-write-up-back-to-the-80s/</link>
+      <link>https://stronglytyped.me/blog/2017/02/14/competition-write-up-back-to-the-80s/</link>
       <pubDate>Tue, 14 Feb 2017 12:50:01 +0000</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2017/02/14/competition-write-up-back-to-the-80s/</guid>
+      <guid>https://stronglytyped.me/blog/2017/02/14/competition-write-up-back-to-the-80s/</guid>
       <description>&lt;p&gt;On the weekend (Saturday 11th Feb) I travelled along the coast to &lt;a href=&#34;https://www.google.co.uk/maps/place/Inner+Strength/@50.8513194,0.5259647,15z/data=!4m5!3m4!1s0x0:0x3b7650ad1c396c7d!8m2!3d50.8513194!4d0.5259647&#34;&gt;Inner Strength Gym&lt;/a&gt; in Hastings with my training buddies Dave and Shane - accompanied by my supportive wife, Emma and friend-come-coach Jon.&lt;/p&gt;
 
 &lt;p&gt;I never really intended to compete in this competition - when it came up on my Facebook feed and I saw Shane throw his name into the hat I took a look at the Intermediate level contest and while it sounded fun, it really looked a little too light. Certainly on paper:&lt;/p&gt;
@@ -101,10 +111,10 @@
     
     <item>
       <title>Log Press 531: How I put over 20kg on my log in 2016</title>
-      <link>http://stronglytyped.me/blog/2017/01/06/log-press-531-how-i-put-over-20kg-on-my-log-in-2016/</link>
+      <link>https://stronglytyped.me/blog/2017/01/06/log-press-531-how-i-put-over-20kg-on-my-log-in-2016/</link>
       <pubDate>Fri, 06 Jan 2017 20:36:40 +0000</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2017/01/06/log-press-531-how-i-put-over-20kg-on-my-log-in-2016/</guid>
+      <guid>https://stronglytyped.me/blog/2017/01/06/log-press-531-how-i-put-over-20kg-on-my-log-in-2016/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve been looking back on my training from 2016 like everyone probably does (or certainly should) - seeing what worked and what didn&amp;rsquo;t as I go about planning my programming for 2017.&lt;/p&gt;
 
 &lt;p&gt;As it turns out I hit a 100kg log clean &amp;amp; press for the first time on &lt;strong&gt;6th January, 2016&lt;/strong&gt;. Getting into triple digits was kind of a big deal, and the milestone had been playing on my mind for quite some time as I floated around the 90-95kg mark chasing the number and testing too often and not training to surpass if often enough. But yeah I finally hit it.&lt;/p&gt;
@@ -212,10 +222,10 @@
     
     <item>
       <title>Competition Write-up: Worthing&#39;s Strongest Man 2016</title>
-      <link>http://stronglytyped.me/blog/2016/12/12/competition-write-up-worthings-strongest-man-2016/</link>
+      <link>https://stronglytyped.me/blog/2016/12/12/competition-write-up-worthings-strongest-man-2016/</link>
       <pubDate>Mon, 12 Dec 2016 12:20:01 +0000</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2016/12/12/competition-write-up-worthings-strongest-man-2016/</guid>
+      <guid>https://stronglytyped.me/blog/2016/12/12/competition-write-up-worthings-strongest-man-2016/</guid>
       <description>&lt;p&gt;On a cold, windy and occasionally wet August Sunday (bank holiday weekend) I took part in my second strongman competition down on Worthing&amp;rsquo;s seafront.&lt;/p&gt;
 
 &lt;p&gt;I put a lot of preparation into this competition and placed absolute rock bottom. Like 10th out of 10 bottom. But I&amp;rsquo;ve had a lot of time to come to terms with what I think is basically a worst-case-scenario, but also accept it and move on with some positives.&lt;/p&gt;
@@ -325,10 +335,10 @@
     
     <item>
       <title>Why I&#39;m Strongly Typed</title>
-      <link>http://stronglytyped.me/blog/2016/11/22/why-im-strongly-typed/</link>
+      <link>https://stronglytyped.me/blog/2016/11/22/why-im-strongly-typed/</link>
       <pubDate>Tue, 22 Nov 2016 12:43:27 +0000</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2016/11/22/why-im-strongly-typed/</guid>
+      <guid>https://stronglytyped.me/blog/2016/11/22/why-im-strongly-typed/</guid>
       <description>&lt;p&gt;Another re-branding? Another new blog? I don&amp;rsquo;t know Matt - you&amp;rsquo;ve got some kind of identity issues or something!&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;
@@ -350,10 +360,10 @@
     
     <item>
       <title>10 things I learned from my first hackathon</title>
-      <link>http://stronglytyped.me/blog/2016/05/24/10-things-i-learned-from-my-first-hackathon/</link>
+      <link>https://stronglytyped.me/blog/2016/05/24/10-things-i-learned-from-my-first-hackathon/</link>
       <pubDate>Tue, 24 May 2016 22:43:27 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2016/05/24/10-things-i-learned-from-my-first-hackathon/</guid>
+      <guid>https://stronglytyped.me/blog/2016/05/24/10-things-i-learned-from-my-first-hackathon/</guid>
       <description>&lt;p&gt;Or rather: 10 excuses why I failed.&lt;/p&gt;
 
 &lt;p&gt;So today I took part in (and I guess, ran) my first full hackathon - &lt;a href=&#34;https://github.com/IWDev/coffeehack&#34;&gt;IWDev Crimbo Coffeehack&lt;/a&gt;. We kicked off at 9am today, and finished at 4pm and apparently threw some code together in the middle of it. We had a &lt;em&gt;random&lt;/em&gt; theme which we announced shortly after getting together and then flew at it. Since it was our first hack day at a coffee shop - we rolled with &lt;strong&gt;coffee&lt;/strong&gt; as the theme.&lt;/p&gt;
@@ -466,10 +476,10 @@
     
     <item>
       <title>Test-first F# with Acceptance tests and the REPL</title>
-      <link>http://stronglytyped.me/blog/2013/10/15/test-first-f</link>
+      <link>https://stronglytyped.me/blog/2013/10/15/test-first-f</link>
       <pubDate>Tue, 15 Oct 2013 22:29:48 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2013/10/15/test-first-f</guid>
+      <guid>https://stronglytyped.me/blog/2013/10/15/test-first-f</guid>
       <description>&lt;p&gt;Lunchtime blogging strikes again - this post has probably been brought to you over the course of a few lunch times.&lt;/p&gt;
 
 &lt;p&gt;Like most of my posts on the subject of &lt;code&gt;F#&lt;/code&gt; there really isn&amp;rsquo;t much I&amp;rsquo;m adding to the wealth of the community, but I feel as if contributing to the community in blog posts from an &lt;em&gt;average .NET developer&amp;rsquo;s&lt;/em&gt; perspective does have value. F# is pegged and marketed as a great language for niche problem domains (just look at the &lt;a href=&#34;http://www.tryfsharp.org/Learn&#34;&gt;Try F#: Learn page&lt;/a&gt;) - but I&amp;rsquo;m all about using F# as a great general purpose language, instead of C# or VB.NET.&lt;/p&gt;
@@ -585,11 +595,11 @@
     
     <item>
       <title>Adopting F#, part 3</title>
-      <link>http://stronglytyped.me/blog/2013/10/10/adopting-f</link>
+      <link>https://stronglytyped.me/blog/2013/10/10/adopting-f</link>
       <pubDate>Thu, 10 Oct 2013 22:17:34 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2013/10/10/adopting-f</guid>
-      <description>&lt;p&gt;Back in January when I blogged &lt;a href=&#34;http://stronglytyped.me/2013/01/adopting-fsharp.html&#34;&gt;Adopting F#&lt;/a&gt; - I didn&amp;rsquo;t really anticipate it being something of a series; but before too long I blogged again &lt;a href=&#34;http://stronglytyped.me/2013/01/adopting-fsharp.html&#34;&gt;Adopting F#, part II&lt;/a&gt;. As it goes I think it is interesting to document the journey I&amp;rsquo;ve been able to take from &lt;code&gt;C#&lt;/code&gt; to &lt;code&gt;F#&lt;/code&gt; as my bread-and-butter language.&lt;/p&gt;
+      <guid>https://stronglytyped.me/blog/2013/10/10/adopting-f</guid>
+      <description>&lt;p&gt;Back in January when I blogged &lt;a href=&#34;https://stronglytyped.me/2013/01/adopting-fsharp.html&#34;&gt;Adopting F#&lt;/a&gt; - I didn&amp;rsquo;t really anticipate it being something of a series; but before too long I blogged again &lt;a href=&#34;https://stronglytyped.me/2013/01/adopting-fsharp.html&#34;&gt;Adopting F#, part II&lt;/a&gt;. As it goes I think it is interesting to document the journey I&amp;rsquo;ve been able to take from &lt;code&gt;C#&lt;/code&gt; to &lt;code&gt;F#&lt;/code&gt; as my bread-and-butter language.&lt;/p&gt;
 
 &lt;p&gt;Since I started &lt;strong&gt;part II&lt;/strong&gt; with a &lt;em&gt;&amp;rdquo;&amp;hellip;what has changed since&amp;hellip;&amp;rdquo;&lt;/em&gt;, I don&amp;rsquo;t see much of a problem in doing the same again:&lt;/p&gt;
 
@@ -597,10 +607,10 @@
 &lt;li&gt;Got married (life part 1).&lt;/li&gt;
 &lt;li&gt;Sold a flat. Bought a house. Moved. &lt;a href=&#34;2012/10/moving-house-dot-dot-dot.html&#34;&gt;This time for real&amp;hellip;&lt;/a&gt; (life part 2).&lt;/li&gt;
 &lt;li&gt;More F# tools and scripts.&lt;/li&gt;
-&lt;li&gt;Fixed &lt;strong&gt;zero bugs&lt;/strong&gt; in my &lt;a href=&#34;http://stronglytyped.me/2013/01/adopting-fsharp.html&#34;&gt;first production service written in F#&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Fixed &lt;strong&gt;zero bugs&lt;/strong&gt; in my &lt;a href=&#34;https://stronglytyped.me/2013/01/adopting-fsharp.html&#34;&gt;first production service written in F#&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;Helped a few colleagues and friends learn some F#.&lt;/li&gt;
 &lt;li&gt;Learned a heap more about software development.&lt;/li&gt;
-&lt;li&gt;Played around with &lt;a href=&#34;http://stronglytyped.me/2013/07/service-stack-fsharp-mono-fastcgi-nginx.html&#34;&gt;F# on Linux with Mono&lt;/a&gt; etc&lt;/li&gt;
+&lt;li&gt;Played around with &lt;a href=&#34;https://stronglytyped.me/2013/07/service-stack-fsharp-mono-fastcgi-nginx.html&#34;&gt;F# on Linux with Mono&lt;/a&gt; etc&lt;/li&gt;
 &lt;li&gt;Spent a couple of nights creating a &lt;a href=&#34;https://github.com/saxonmatt/Fsssss&#34;&gt;clone of Snake with F#&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -622,7 +632,7 @@
 &lt;p&gt;&amp;hellip;using some of the following libraries etc:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;WSDL Type Providers (see: &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/vstudio/hh362328.aspx&#34;&gt;official&lt;/a&gt;, and: &lt;a href=&#34;http://stronglytyped.me/2013/01/fsharp-wsdl-typeprovider-and-untrusted-server-certificates.html&#34;&gt;more&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;WSDL Type Providers (see: &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/vstudio/hh362328.aspx&#34;&gt;official&lt;/a&gt;, and: &lt;a href=&#34;https://stronglytyped.me/2013/01/fsharp-wsdl-typeprovider-and-untrusted-server-certificates.html&#34;&gt;more&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;JSON, XML and CSV Type Providers (see: &lt;a href=&#34;http://fsharp.github.io/FSharp.Data/&#34;&gt;FSharp.Data&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;FAKE - F# Make (see: &lt;a href=&#34;http://fsharp.github.io/FAKE/&#34;&gt;official&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;SQL Generation/CI (see: &lt;a href=&#34;https://github.com/saxonmatt/DbProject/tree/tools&#34;&gt;tools&lt;/a&gt;, makes heavy use of FAKE above)&lt;/li&gt;
@@ -655,7 +665,7 @@ let touchingWall (Snakey (direction, body, eating)) wall =
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/saxonmatt/Fsssss/blob/master/src/Fsssss/Snake.fs#L127-L139&#34;&gt;source&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;I also talked about my efforts at an &lt;a href=&#34;http://stronglytyped.me/iwdev/&#34;&gt;#IWDev&lt;/a&gt; meet in October:&lt;/p&gt;
+&lt;p&gt;I also talked about my efforts at an &lt;a href=&#34;https://stronglytyped.me/iwdev/&#34;&gt;#IWDev&lt;/a&gt; meet in October:&lt;/p&gt;
 
 &lt;script async class=&#34;speakerdeck-embed&#34; data-id=&#34;218a81300cc501310c903a30d744b908&#34; data-ratio=&#34;1.33333333333333&#34; src=&#34;//speakerdeck.com/assets/embed.js&#34;&gt;&lt;/script&gt;
 
@@ -668,15 +678,15 @@ let touchingWall (Snakey (direction, body, eating)) wall =
     
     <item>
       <title>Continuous Deployment with FAKE and Octopus Deploy</title>
-      <link>http://stronglytyped.me/blog/2013/07/26/continuous-deployment-with-fake-and-octopus-deploy/</link>
+      <link>https://stronglytyped.me/blog/2013/07/26/continuous-deployment-with-fake-and-octopus-deploy/</link>
       <pubDate>Fri, 26 Jul 2013 22:22:22 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2013/07/26/continuous-deployment-with-fake-and-octopus-deploy/</guid>
+      <guid>https://stronglytyped.me/blog/2013/07/26/continuous-deployment-with-fake-and-octopus-deploy/</guid>
       <description>&lt;p&gt;It&amp;rsquo;s a nice day today, and I&amp;rsquo;ve just sat outside for a short break while the other guys ate their lunch (I don&amp;rsquo;t eat during the day, mostly). It struck me that I&amp;rsquo;ve not been blogging much of late, and that I&amp;rsquo;ve managed to use my lunch times to get some content out on the web before; so I&amp;rsquo;m back at my desk and hammering &lt;code&gt;rake new_post&lt;/code&gt; again.&lt;/p&gt;
 
 &lt;p&gt;So in recent-ish times I&amp;rsquo;ve been evaluating &lt;a href=&#34;http://octopusdeploy.com/&#34;&gt;Octpus Deploy&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&#34;Octopus deploy dashboard&#34; width=&#34;527&#34; height=&#34;219&#34; src=&#34;http://stronglytyped.me/images/octopus-dashboard-big.png&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;Octopus deploy dashboard&#34; width=&#34;527&#34; height=&#34;219&#34; src=&#34;https://stronglytyped.me/images/octopus-dashboard-big.png&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you&amp;rsquo;re in the business deploying web/service based .NET systems to Windows environments - do yourself a favour and take a look; I think it is a really sound product.&lt;/p&gt;
 
@@ -794,10 +804,10 @@ RunParameterTargetOrDefault &amp;quot;target&amp;quot; &amp;quot;DeveloperBuild&
     
     <item>
       <title>F# Service Stack using Mono and NGinx</title>
-      <link>http://stronglytyped.me/blog/2013/07/09/f</link>
+      <link>https://stronglytyped.me/blog/2013/07/09/f</link>
       <pubDate>Tue, 09 Jul 2013 22:27:36 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2013/07/09/f</guid>
+      <guid>https://stronglytyped.me/blog/2013/07/09/f</guid>
       <description>&lt;p&gt;Man am I busy right now! I&amp;rsquo;ve a &lt;strong&gt;todo&lt;/strong&gt; list a mile long. Mosty self-inflicted, and entirely a life choice for me. I can&amp;rsquo;t (won&amp;rsquo;t, rather) go into it all - most of it has more to do with &lt;em&gt;life&lt;/em&gt; than cutting code or lifting weights (not that I&amp;rsquo;m doing much of the latter, I can tell you!).&lt;/p&gt;
 
 &lt;p&gt;One thing that I have been doing is messing around with &lt;a href=&#34;http://www.servicestack.net/&#34;&gt;Service Stack&lt;/a&gt; some more - obviously using &lt;a href=&#34;http://fsharp.org/&#34;&gt;F#&lt;/a&gt;. Very nice.&lt;/p&gt;
@@ -844,10 +854,10 @@ RunParameterTargetOrDefault &amp;quot;target&amp;quot; &amp;quot;DeveloperBuild&
     
     <item>
       <title>F# WSDL Type Provider and untrusted SSL certificates</title>
-      <link>http://stronglytyped.me/blog/2013/04/22/f</link>
+      <link>https://stronglytyped.me/blog/2013/04/22/f</link>
       <pubDate>Mon, 22 Apr 2013 22:25:46 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2013/04/22/f</guid>
+      <guid>https://stronglytyped.me/blog/2013/04/22/f</guid>
       <description>&lt;p&gt;I came across something of a pain while using the Microsoft Wsdl Type Provider (&lt;code&gt;Microsoft.FSharp.Data.TypeProviders.WsdlService&lt;/code&gt;) at work yesterday.&lt;/p&gt;
 
 &lt;p&gt;The problem that I was facing was that the Wsdl Type Provider just would not play ball with one of our web services. The reason as it turns out was the fact that it used &lt;code&gt;https&lt;/code&gt; and the certification isn&amp;rsquo;t properly signed.&lt;/p&gt;
@@ -928,10 +938,10 @@ myQuery
     
     <item>
       <title>Fake it until you make it!</title>
-      <link>http://stronglytyped.me/blog/2013/04/22/fake-it-until-you-make-it/</link>
+      <link>https://stronglytyped.me/blog/2013/04/22/fake-it-until-you-make-it/</link>
       <pubDate>Mon, 22 Apr 2013 22:24:21 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2013/04/22/fake-it-until-you-make-it/</guid>
+      <guid>https://stronglytyped.me/blog/2013/04/22/fake-it-until-you-make-it/</guid>
       <description>&lt;p&gt;This is a post that I&amp;rsquo;ve had floating around in my head for a long time. The title might be a little misleading, but I hope that the content remains somewhat relevant to it in some ways (that will hopefully become clear as you read through).&lt;/p&gt;
 
 &lt;p&gt;I want to talk (write?) about how similar powerlifting (or any strength sports, I guess) is to software development.&lt;/p&gt;
@@ -981,13 +991,13 @@ myQuery
     
     <item>
       <title>Code Comparison: C# v.s. F#</title>
-      <link>http://stronglytyped.me/blog/2013/04/03/code-comparison-c</link>
+      <link>https://stronglytyped.me/blog/2013/04/03/code-comparison-c</link>
       <pubDate>Wed, 03 Apr 2013 22:11:15 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2013/04/03/code-comparison-c</guid>
+      <guid>https://stronglytyped.me/blog/2013/04/03/code-comparison-c</guid>
       <description>&lt;p&gt;Since I found using yesterday&amp;rsquo;s lunchtime to write a blog post so good - I&amp;rsquo;m following that up with another lunchtime blog post.&lt;/p&gt;
 
-&lt;p&gt;Yesterday I continued what I think will slowly become something of an anecdotal series on adopting &lt;code&gt;F#&lt;/code&gt;, in which I briefly talked about a new service I&amp;rsquo;d worked on using F# (see &lt;a href=&#34;http://stronglytyped.me/2013/04/adopting-fsharp-part-ii.html&#34;&gt;Adopting F#, Part II&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;Yesterday I continued what I think will slowly become something of an anecdotal series on adopting &lt;code&gt;F#&lt;/code&gt;, in which I briefly talked about a new service I&amp;rsquo;d worked on using F# (see &lt;a href=&#34;https://stronglytyped.me/2013/04/adopting-fsharp-part-ii.html&#34;&gt;Adopting F#, Part II&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;Inspired by &lt;a href=&#34;http://www.simontylercousins.net/journal/2013/2/22/does-the-language-you-choose-make-a-difference.html&#34;&gt;&amp;lsquo;Does the language you choose make a difference?&amp;rsquo; by simontcousins&lt;/a&gt; I&amp;rsquo;m throwing up a comparison of lines of code.&lt;/p&gt;
 
@@ -995,9 +1005,9 @@ myQuery
 
 &lt;h3 id=&#34;first-with-some-charts&#34;&gt;First with some charts:&lt;/h3&gt;
 
-&lt;p&gt;&lt;img alt=&#34;CSharp Chart&#34; width=&#34;684&#34; height=&#34;662&#34; src=&#34;http://stronglytyped.me/images/code.comparison.csharp.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;CSharp Chart&#34; width=&#34;684&#34; height=&#34;662&#34; src=&#34;https://stronglytyped.me/images/code.comparison.csharp.jpg&#34; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img alt=&#34;FSharp Chart&#34; width=&#34;684&#34; height=&#34;662&#34; src=&#34;http://stronglytyped.me/images/code.comparison.fsharp.jpg&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;FSharp Chart&#34; width=&#34;684&#34; height=&#34;662&#34; src=&#34;https://stronglytyped.me/images/code.comparison.fsharp.jpg&#34; /&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;now-for-some-numbers&#34;&gt;Now for some numbers:&lt;/h3&gt;
 
@@ -1070,13 +1080,13 @@ myQuery
     
     <item>
       <title>Adopting F#, part 2</title>
-      <link>http://stronglytyped.me/blog/2013/04/02/adopting-f</link>
+      <link>https://stronglytyped.me/blog/2013/04/02/adopting-f</link>
       <pubDate>Tue, 02 Apr 2013 22:15:56 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2013/04/02/adopting-f</guid>
+      <guid>https://stronglytyped.me/blog/2013/04/02/adopting-f</guid>
       <description>&lt;p&gt;This post has been a long time coming. I&amp;rsquo;ve a few floating around in various &lt;em&gt;draft&lt;/em&gt; states and some that exist only in my head at the moment. But I&amp;rsquo;ve decided to use today&amp;rsquo;s lunchtime to try and drive this one home.&lt;/p&gt;
 
-&lt;p&gt;I&amp;rsquo;ve &lt;a href=&#34;http://stronglytyped.me/2013/01/adopting-fsharp.html&#34;&gt;previously talked about my journey so far with adopting F#&lt;/a&gt;, and have decided that as things for me have moved on some since then; it was worth me writing a follow-up.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve &lt;a href=&#34;https://stronglytyped.me/2013/01/adopting-fsharp.html&#34;&gt;previously talked about my journey so far with adopting F#&lt;/a&gt;, and have decided that as things for me have moved on some since then; it was worth me writing a follow-up.&lt;/p&gt;
 
 &lt;p&gt;So what has changed since January?&lt;/p&gt;
 
@@ -1102,7 +1112,7 @@ myQuery
 &lt;li&gt;Built using &lt;code&gt;FAKE&lt;/code&gt; and automated with TeamCity.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;The development process was quite interesting, using some of the &lt;a href=&#34;http://stronglytyped.me/2013/02/agile-process-improvement-brain-dump.html&#34;&gt;process improvement&lt;/a&gt; methods we&amp;rsquo;ve identified and committed to - we (me and the guy developing the first client code to use the new service) decided to front-load all the hard parts. I spent 2 of the of the 3 week sprint building supporting tools (self-serve, ETL etc) and it wasn&amp;rsquo;t until the final week that I actually got on to the service code itself.&lt;/p&gt;
+&lt;p&gt;The development process was quite interesting, using some of the &lt;a href=&#34;https://stronglytyped.me/2013/02/agile-process-improvement-brain-dump.html&#34;&gt;process improvement&lt;/a&gt; methods we&amp;rsquo;ve identified and committed to - we (me and the guy developing the first client code to use the new service) decided to front-load all the hard parts. I spent 2 of the of the 3 week sprint building supporting tools (self-serve, ETL etc) and it wasn&amp;rsquo;t until the final week that I actually got on to the service code itself.&lt;/p&gt;
 
 &lt;p&gt;One whole day of the final week developing the &lt;code&gt;F#&lt;/code&gt; service was also done as pair-programming with a 3rd member of the team who is also learning the language. We worked in from some requirements written gherkin and ended up with a completed piece of functionality. That was a great experience as well, and we should certainly commit more time to things like this.&lt;/p&gt;
 
@@ -1138,10 +1148,10 @@ myQuery
     
     <item>
       <title>An agile process improvement braindump</title>
-      <link>http://stronglytyped.me/blog/2013/04/02/an-agile-process-improvement-braindump/</link>
+      <link>https://stronglytyped.me/blog/2013/04/02/an-agile-process-improvement-braindump/</link>
       <pubDate>Tue, 02 Apr 2013 21:19:49 +0100</pubDate>
       
-      <guid>http://stronglytyped.me/blog/2013/04/02/an-agile-process-improvement-braindump/</guid>
+      <guid>https://stronglytyped.me/blog/2013/04/02/an-agile-process-improvement-braindump/</guid>
       <description>&lt;p&gt;At work, I&amp;rsquo;m trying (where I can) to help push process improvement all the time. When things are slow, inefficient and painful I get grumpy. I&amp;rsquo;m not the only one, and I have the privilege to work with some great people with great minds and ideas. Together we are making, and have made some good progress.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ve been meaning to write something about continuous integration and/or delivery, agile methods etc. General development/software processes etc. How to do things right. But I don&amp;rsquo;t think I am yet qualified to write with any authority on these subjects - so I am going to settle for this&amp;hellip;&lt;/p&gt;
@@ -1170,75 +1180,6 @@ myQuery
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Script everything&lt;/strong&gt;: If you do something once, fine, manually is okay. If you do something twice - write a script for it already. Even if you don&amp;rsquo;t use the script again, or it is broken by the next time you come to it - it will at least serve as a method of documenting how and what you did.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;No process is perfect&lt;/strong&gt;: Review and question what and how you do everything - every week you should aim to be better than last week. Review existing processes - pick something that is bad, and try and make them better. Don&amp;rsquo;t always strive for perfection - take baby steps; every single week. Given a few months and you&amp;rsquo;ll be in a better place.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    
-    <item>
-      <title>Adopting F#, part 1</title>
-      <link>http://stronglytyped.me/blog/2013/01/13/adopting-f</link>
-      <pubDate>Sun, 13 Jan 2013 22:14:03 +0100</pubDate>
-      
-      <guid>http://stronglytyped.me/blog/2013/01/13/adopting-f</guid>
-      <description>&lt;p&gt;A second blog post of the day? Barely - I ran &lt;code&gt;rake new_post&lt;/code&gt; at 23:59. Odd. Anyway&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been thinking a little about my foray into the world of function programming, specifically F# - and thought it might be potentially useful to others &lt;strong&gt;how *I&lt;/strong&gt;* have progressed from knowing nothing; to the point that I (and others) feel confident that I can ship production code in the work place using the language.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m &lt;strong&gt;not&lt;/strong&gt; really going to cover the following:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Benefits of Functional Programming &amp;amp; F#&lt;/li&gt;
-&lt;li&gt;How-2-F#&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&amp;hellip;largely because there are a great many resources out there for those that want to know more about what it all is, why you should care and how you go about learning it. A great starting place for that sort of information is the &lt;a href=&#34;http://fsharp.org&#34;&gt;F# Software Foundation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;What I will focus on is how I&amp;rsquo;ve gone from the point of learning, to the point of using.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;The main thing arch that I&amp;rsquo;ve followed is trying to avoid biting off more than I can chew. To that end I stayed away from building anything resembling an application in F# to begin with (although the temptation was certainly there). Instead I decided to use it for those little scripting jobs that I needed - instead of using Powershell or whatever.&lt;/p&gt;
-
-&lt;p&gt;F# is a great language for tackling those &amp;ldquo;little jobs&amp;rdquo;. Why? Firstly it can be used as a scripting language instead/as well as a compiled code base (&lt;code&gt;.fsx&lt;/code&gt; files can be run through the F# Interative executable). Secondly it lacks the required code structuring that a language like C# has - you don&amp;rsquo;t have to build up classes etc; you can get straight in there write a few functions and call it. Thirdly due to the nature of the language and the compiler - duff code simply doesn&amp;rsquo;t work, and it shouts at you before running; this makes it safer (and by the time you&amp;rsquo;re done working on it, it&amp;rsquo;s likely to work perfectly).&lt;/p&gt;
-
-&lt;h3 id=&#34;1-build-scripts&#34;&gt;1. Build Scripts&lt;/h3&gt;
-
-&lt;p&gt;My first adventure into using F# for something &amp;ldquo;real&amp;rdquo; was build/test scripting, and subsequently automation in a CI server (TeamCity for those that care). I won&amp;rsquo;t go into why build/test scripts are important - that&amp;rsquo;s a whole different topic and obviously other people will have covered that better than I can.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;d been told about &lt;a href=&#34;http://fsharp.github.com/FAKE/&#34;&gt;FAKE (F# Make)&lt;/a&gt; - so looked into it and started using it on the project that I was working on at the time. It was simple to read, quick to get up off the ground and had next to no code &amp;ldquo;noise&amp;rdquo; (like XML markup). Take a look at &lt;a href=&#34;https://github.com/fsharp/FAKE/blob/develop/Samples/Calculator/completeBuild.fsx&#34;&gt;this example build script&lt;/a&gt; - Clean. Concise. Human readable.&lt;/p&gt;
-
-&lt;p&gt;Because FAKE is nice and extensible - I was able to do some extra bits that I needed as well. Some of which has been pushed back into the OSS project (SpecFlow helper code) and some of it that needs to stay in-house at work and really is bespoke for our needs (CSV-to-Gherkin work that helped our software testers easily generate 1000 tests that would re-use my own acceptance test code). But this gave me a little more exposure to F# as a language - and was still a small enough component that I didn&amp;rsquo;t get lost.&lt;/p&gt;
-
-&lt;p&gt;Since then I&amp;rsquo;ve retro-fitted FAKE build scripts on almost all of our .NET projects at work, and used it personally as well. Normally with something new the FAKE build scripts are in the 2nd or 3rd commit, without fail.&lt;/p&gt;
-
-&lt;h3 id=&#34;2-non-etl-scripts&#34;&gt;2. Non-ETL Scripts&lt;/h3&gt;
-
-&lt;p&gt;I&amp;rsquo;ve dubbed them Non-ETL scripts because they are not really ETL scripts as we know from SQL land - but they do the same job. Grab some data, transform it and load it elsewhere. But I was dealing with SOAP web services as a data source, XSL transformations and pushing the output to wherever it was needed (either another SOAP web service or a document repository).&lt;/p&gt;
-
-&lt;p&gt;Again F# scripts were perfect for this job. I could leverage all the power of the .NET framework - while making something that was compact, clear, concise, human readable and very easy to configure (inline rather than config files). Wrap them with a &lt;code&gt;.bat&lt;/code&gt; file and allow operations to set up scheduled tasks using their favourite task scheduler.&lt;/p&gt;
-
-&lt;p&gt;The result was generally 1 main script that does the heavy lifting, generally with 1 entry point function with some params as the single variable - and 1 wrapper script that had configuration that created the params and called the function.&lt;/p&gt;
-
-&lt;p&gt;Since then I&amp;rsquo;ve done about a half-dozen of these little jobs - and I have to say that F# is now my go-to scripting language without a doubt.&lt;/p&gt;
-
-&lt;h3 id=&#34;3-tests&#34;&gt;3. Tests&lt;/h3&gt;
-
-&lt;p&gt;I&amp;rsquo;ve now taken to writing my tests with F#. A few reasons: firstly I like writing F#, secondly because it is clear and concise and very easy to read the code of each test and see what is going on and finally because of the ability to name types and functions with string values (wrapped in double back-ticks) &lt;a href=&#34;https://github.com/saxonmatt/HouseViewing/blob/master/HouseViewing/HouseViewingTests/Health.fs&#34;&gt;example (crude, but shows what I mean)&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This final point allows you to better express your test code as readable requirements - and helps others read your test results and better see your intentions etc.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m now quite interested in using some of the F# Type Providers (go Google that) to help use F# test frameworks to test code that doesn&amp;rsquo;t necessarily lend itself to be otherwise easily tested.&lt;/p&gt;
-
-&lt;p&gt;E.g. testing ETL jobs (real ones) - using the SQL Type Provider to quickly (and very cheaply) just query the loaded data to assert everything is in order. Or using the Wsdl type provider to quickly (and very cheaply) check to make sure that changes to a system are correctly exposed in a web service.&lt;/p&gt;
-
-&lt;h3 id=&#34;onwards&#34;&gt;Onwards&lt;/h3&gt;
-
-&lt;p&gt;I&amp;rsquo;m looking forwards to this year - we&amp;rsquo;re now looking at projects coming up and identifying parts that can easily be separated out into components; and seriously considering using F# instead of C#.&lt;/p&gt;
-
-&lt;p&gt;The things that most interest me now are trying to learn how to:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Refactor F# code&amp;hellip; because it just feels a little different to refactoring OO code. I&amp;rsquo;m sure the answer is with currying/partial application and/or composition.&lt;/li&gt;
-&lt;li&gt;Application structure&amp;hellip; when to use modules and namespaces, how to separate out responsibilities etc. Again it feels a little different to structuring an OO application code base.&lt;/li&gt;
 &lt;/ul&gt;</description>
     </item>
     

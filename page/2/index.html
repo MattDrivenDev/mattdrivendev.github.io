@@ -87,6 +87,26 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="https://stronglytyped.me/blog/2013/07/09/f">F# Service Stack using Mono and NGinx</a>
+      </h1>
+      <span class="post-date">Jul 9, 2013 &middot; 3 minute read &middot; <a href="https://stronglytyped.me/blog/2013/07/09/f#disqus_thread">Comments</a>
+      </span>
+      
+      <p>Man am I busy right now! I&rsquo;ve a <strong>todo</strong> list a mile long. Mosty self-inflicted, and entirely a life choice for me. I can&rsquo;t (won&rsquo;t, rather) go into it all - most of it has more to do with <em>life</em> than cutting code or lifting weights (not that I&rsquo;m doing much of the latter, I can tell you!).</p>
+
+<p>One thing that I have been doing is messing around with <a href="http://www.servicestack.net/">Service Stack</a> some more - obviously using <a href="http://fsharp.org/">F#</a>. Very nice.</p>
+
+<p>There is a <a href="https://github.com/ServiceStack/ServiceStack/wiki/Run-ServiceStack-in-Fastcgi-hosted-on-nginx">little guide</a> for running Service Stack with <code>fastcgi</code>, <code>mono</code> hosted on <code>nginx</code>. But getting that up and running felt a little dirty.</p>
+
+<p>So I needed to find some homeless guy to help me out&hellip;</p>
+
+<p></p>
+      <a href="https://stronglytyped.me/blog/2013/07/09/f">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="https://stronglytyped.me/blog/2013/04/22/f">F# WSDL Type Provider and untrusted SSL certificates</a>
       </h1>
       <span class="post-date">Apr 22, 2013 &middot; 3 minute read &middot; <a href="https://stronglytyped.me/blog/2013/04/22/f#disqus_thread">Comments</a>
@@ -250,47 +270,6 @@
 
 <p></p>
       <a href="https://stronglytyped.me/blog/2012/04/26/testing-debt/">Read On &rarr;</a>
-      
-    </div>
-    
-    <div class="post">
-      <h1 class="post-title">
-        <a href="https://stronglytyped.me/blog/2011/10/11/silverlight-and-the-convertall-method/">Silverlight and the ConvertAll method</a>
-      </h1>
-      <span class="post-date">Oct 11, 2011 &middot; 3 minute read &middot; <a href="https://stronglytyped.me/blog/2011/10/11/silverlight-and-the-convertall-method/#disqus_thread">Comments</a>
-      </span>
-      
-      <p>I may have already mentioned my woes (here or on Twitter) with the Linq2SQL in a Silverlight for Windows Phone Mango environment.</p>
-
-<p>I am of the opinion that the following code should work:</p>
-
-<pre><code>public class Person : IPerson
-{   
-    // Class internals, not relevant for this example.
-}
-
-public class DataContext
-{
-    public DataContext()
-    {
-        // Load data or whatever.
-    }
-
-    public Table&lt;Person&gt; People { get; set; }
-
-    public IEnumerable&lt;IPerson&gt; GetPeople()
-    {
-        return this.People;
-    }
-}
-</code></pre>
-
-<p>I would have assumed this would work, because <code>Table&lt;T&gt;</code> implements the <code>IEnumerable&lt;T&gt;</code> interface and the contents of the Table, in this instance Person - implements the IPerson interface.</p>
-
-<p>But apparently it wouldn&rsquo;t. I cannot recall now if it returned an <code>IEnumerable&lt;T&gt;</code> that was empty, or if it was just null. In either case it wasn&rsquo;t working.</p>
-
-<p></p>
-      <a href="https://stronglytyped.me/blog/2011/10/11/silverlight-and-the-convertall-method/">Read On &rarr;</a>
       
     </div>
     

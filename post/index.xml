@@ -6,8 +6,37 @@
     <description>Recent content in Posts on strongly typed</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 16 Sep 2020 20:42:00 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2020 21:24:51 +0100</lastBuildDate>
     <atom:link href="https://stronglytyped.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Teller of Stories</title>
+      <link>https://stronglytyped.me/blog/2020/09/20/teller-of-stories/</link>
+      <pubDate>Sun, 20 Sep 2020 21:24:51 +0100</pubDate>
+      
+      <guid>https://stronglytyped.me/blog/2020/09/20/teller-of-stories/</guid>
+      <description>&lt;p&gt;I like to tell stories. Paradoxically I&amp;rsquo;m &lt;strong&gt;&lt;em&gt;really not&lt;/em&gt;&lt;/strong&gt; a big reader at all. Fiction anyway. Novels certainly.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been led to believe that the world&amp;rsquo;s greatest stories have all been committed to writing, and arranged into books. Of course, a book can come in digital format&amp;rsquo;s these days, and don&amp;rsquo;t always have to be printed on dead trees - but there is definitely more to stories than just the written word.&lt;/p&gt;
+
+&lt;p&gt;Music, film, spoken, television, and even computer games are all ways in which people are able to tell stories to each other. Some of these stories are big business - movies and TV earn mega money and have crazy budgets. Obviously I don&amp;rsquo;t have the means or money to tell the stories that fill my head in those ways, but I still love telling a good story.&lt;/p&gt;
+
+&lt;p&gt;In the past couple of years, I&amp;rsquo;ve picked up an old hobby, which has stuck with me on-and-off since I was 14 years old, perhaps longer: roleplaying games!&lt;/p&gt;
+
+&lt;p&gt;Yep - this husband, father, nerd, strong person, code monkey, and coach is also a roleplayer. My poison? Games set in the &lt;a href=&#34;https://www.worldofdarkness.com/&#34;&gt;World of Darkness&lt;/a&gt; - which is a series of games set in a contemporary parallel of our own world, where there really are monsters lurking in the shadows. The cool twist is that &lt;em&gt;you&lt;/em&gt; play the role of the monsters.&lt;/p&gt;
+
+&lt;p&gt;This started for me with &lt;strong&gt;Vampire the Masquerade&lt;/strong&gt; but moved onto some of the other titles like &lt;strong&gt;Werewolf the Apocalypse&lt;/strong&gt;. I never played more than a session or two of the other 3 titles (&lt;em&gt;Changeling the Dreaming&lt;/em&gt;, &lt;em&gt;Wraith the Oblivion&lt;/em&gt;, and &lt;em&gt;Mage the Ascension&lt;/em&gt;), but I owned all of them and took a great deal of inspiration from them into the 2 other lines that I &lt;em&gt;did&lt;/em&gt; get a chance to play.&lt;/p&gt;
+
+&lt;p&gt;After a short while of playing these games, I soon took up the mantle of &lt;strong&gt;Storyteller&lt;/strong&gt; - which is to the World of Darkness what the &lt;em&gt;Dungeon Master&lt;/em&gt; was to &lt;em&gt;Dungeons &amp;amp; Dragons&lt;/em&gt;. I loved the world-building aspect, designing the setting, writing the plot, creating the supporting cast of characters and then guiding the players and their characters through the stories that were in my head. By the time I was 17, I joined a Vampire the Masquerade &lt;strong&gt;LARP&lt;/strong&gt;, and then about a year or so in at the age of 18 I started to help running that game too.&lt;/p&gt;
+
+&lt;p&gt;So on and off, with different players sitting at the table or joining me out and about at different venues, I have been acting in the role of a &lt;em&gt;Storyteller&lt;/em&gt; for these games for anything from 2 to 20 or more players.&lt;/p&gt;
+
+&lt;p&gt;Covid-19 has thrown something of a spanner in the works for actually getting together and playing these games - and so play has moved online, for the most part, telling stories with my friends, either on Discord or Facebook Messenger. Occasionally we&amp;rsquo;ll use voice/video chat, but more often than not we&amp;rsquo;re using a &lt;em&gt;play-by-post&lt;/em&gt; style, which has it&amp;rsquo;s benefits and drawbacks certainly.&lt;/p&gt;
+
+&lt;p&gt;What&amp;rsquo;s the purpose of this post? Probably nothing, except to write something down on my blog that relates to the &lt;em&gt;teller of stories&lt;/em&gt; that I have in the bar on the left-hand side of the site. My head is quite far into this creative space at the moment, and so perhaps I&amp;rsquo;ll write about it more often going forward.&lt;/p&gt;
+
+&lt;p&gt;But perhaps I&amp;rsquo;ll just write more plot instead.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Hello world?</title>
@@ -1144,43 +1173,6 @@ myQuery
 &lt;p&gt;I&amp;rsquo;ve found that &lt;code&gt;F#&lt;/code&gt; is the perfect lanugage to do some of this work. You can get a lot done, quite cleanly in very little code. You&amp;rsquo;ve the option of packaging it up as a little application, using it as a library or just rolling out scripts (with batch files etc). And with the Type Providers you can get a whole lot done in a very short space of time.&lt;/p&gt;
 
 &lt;p&gt;Most of the scripted tools come with a &lt;code&gt;config.fsx&lt;/code&gt; as well, which is very easily read/edited by anyone with technical knowledge (even if they don&amp;rsquo;t have any experience with &lt;code&gt;F#&lt;/code&gt;).&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>An agile process improvement braindump</title>
-      <link>https://stronglytyped.me/blog/2013/04/02/an-agile-process-improvement-braindump/</link>
-      <pubDate>Tue, 02 Apr 2013 21:19:49 +0100</pubDate>
-      
-      <guid>https://stronglytyped.me/blog/2013/04/02/an-agile-process-improvement-braindump/</guid>
-      <description>&lt;p&gt;At work, I&amp;rsquo;m trying (where I can) to help push process improvement all the time. When things are slow, inefficient and painful I get grumpy. I&amp;rsquo;m not the only one, and I have the privilege to work with some great people with great minds and ideas. Together we are making, and have made some good progress.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve been meaning to write something about continuous integration and/or delivery, agile methods etc. General development/software processes etc. How to do things right. But I don&amp;rsquo;t think I am yet qualified to write with any authority on these subjects - so I am going to settle for this&amp;hellip;&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;p&gt;Warning to the reader - this is nothing but a brain dump&amp;hellip; Just a list of (no-brainers) things that I&amp;rsquo;ve been involved in as part of process improvement that have proven to be really successful to-date:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Requirements are a business requirement&lt;/strong&gt;: No brainer, right?&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Everyone is a customer&lt;/strong&gt; (or stakeholder): our customers, the business, the helpdesk/support team, operations/infrastructure team, data/reporting services, the testing team and us - the developers. We &lt;em&gt;all&lt;/em&gt; have first-class requirements. Even technical requirements end up being business requirements if it helps a system running smoothly.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Test First Approach&lt;/strong&gt;: call it whatever you want, it should involve as much as time can afford and include anything you can justify automating. Testing functionality, behaviours, requirements, performance, logging, application black-box, end-2-end systems and integration. Do whatever you can to get the most bang for your buck.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Peer-review of code&lt;/strong&gt;: okay not every line of code needs to be looked at. But if you focus on some of the following, you&amp;rsquo;ll do well from it: schemas/contracts/interfaces, automated test cases, algorithms (the real meat of the matter parts). Try using a Pull Request in git to force this as part of the development process.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;A good version control process&lt;/strong&gt;: version control should be considered the back-bone of a good development process. Without it you&amp;rsquo;re dead in the water. There are no excuses in this day and age. But you should (as a team) take the time to discover a process/workflow that suits you and your projects, document it, understand it and use it to your advantage.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Continuous integration&lt;/strong&gt;: I don&amp;rsquo;t just mean installing a CI server somewhere and automating builds. Don&amp;rsquo;t be scared of introducing new functionality (or removing it in fact). Don&amp;rsquo;t work on something new all alone and then struggle for a week trying to re-integrate that work into the main development line. Understand how to introduce changes without breaking the software and do it as often as possible.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Practice Failover and Rollback&lt;/strong&gt;: Things shouldn&amp;rsquo;t go wrong - but when they do, how you respond is incredibly important. Have understood failure and rollback plans in place - and actively test them. If you have plans and are too scared to test them on your production systems, then you obviously are not confident that they work. If failover and rollback are fast and seamless - you will appear error free.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Monitoring and Logging&lt;/strong&gt;: are first-class business requirements. You need to know what is going on, and when. If (or rather when) your systems fail (and you&amp;rsquo;ve handled it with a failover or rollback plan!) - it is incredibly important to be able to look at the reasons why.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Script everything&lt;/strong&gt;: If you do something once, fine, manually is okay. If you do something twice - write a script for it already. Even if you don&amp;rsquo;t use the script again, or it is broken by the next time you come to it - it will at least serve as a method of documenting how and what you did.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;No process is perfect&lt;/strong&gt;: Review and question what and how you do everything - every week you should aim to be better than last week. Review existing processes - pick something that is bad, and try and make them better. Don&amp;rsquo;t always strive for perfection - take baby steps; every single week. Given a few months and you&amp;rsquo;ll be in a better place.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;</description>
     </item>
     
   </channel>

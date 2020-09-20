@@ -87,6 +87,47 @@
     
     <div class="post">
       <h1 class="post-title">
+        <a href="https://stronglytyped.me/blog/2011/10/11/silverlight-and-the-convertall-method/">Silverlight and the ConvertAll method</a>
+      </h1>
+      <span class="post-date">Oct 11, 2011 &middot; 3 minute read &middot; <a href="https://stronglytyped.me/blog/2011/10/11/silverlight-and-the-convertall-method/#disqus_thread">Comments</a>
+      </span>
+      
+      <p>I may have already mentioned my woes (here or on Twitter) with the Linq2SQL in a Silverlight for Windows Phone Mango environment.</p>
+
+<p>I am of the opinion that the following code should work:</p>
+
+<pre><code>public class Person : IPerson
+{   
+    // Class internals, not relevant for this example.
+}
+
+public class DataContext
+{
+    public DataContext()
+    {
+        // Load data or whatever.
+    }
+
+    public Table&lt;Person&gt; People { get; set; }
+
+    public IEnumerable&lt;IPerson&gt; GetPeople()
+    {
+        return this.People;
+    }
+}
+</code></pre>
+
+<p>I would have assumed this would work, because <code>Table&lt;T&gt;</code> implements the <code>IEnumerable&lt;T&gt;</code> interface and the contents of the Table, in this instance Person - implements the IPerson interface.</p>
+
+<p>But apparently it wouldn&rsquo;t. I cannot recall now if it returned an <code>IEnumerable&lt;T&gt;</code> that was empty, or if it was just null. In either case it wasn&rsquo;t working.</p>
+
+<p></p>
+      <a href="https://stronglytyped.me/blog/2011/10/11/silverlight-and-the-convertall-method/">Read On &rarr;</a>
+      
+    </div>
+    
+    <div class="post">
+      <h1 class="post-title">
         <a href="https://stronglytyped.me/blog/2011/09/26/more-pbs/">More PBs</a>
       </h1>
       <span class="post-date">Sep 26, 2011 &middot; 1 minute read &middot; <a href="https://stronglytyped.me/blog/2011/09/26/more-pbs/#disqus_thread">Comments</a>

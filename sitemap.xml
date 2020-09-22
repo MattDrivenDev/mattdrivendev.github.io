@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://stronglytyped.me/blog/2020/09/22/monthly-character-folio---september-2020/</loc>
+    <lastmod>2020-09-22T22:25:02+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://stronglytyped.me/blog/2020/09/20/teller-of-stories/</loc>
     <lastmod>2020-09-20T21:24:51+01:00</lastmod>
   </url>
@@ -117,14 +122,31 @@
   </url>
   
   <url>
+    <loc>https://stronglytyped.me/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stronglytyped.me/categories/character-folio/</loc>
+    <lastmod>2020-09-22T22:25:02+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://stronglytyped.me/post/</loc>
-    <lastmod>2020-09-20T21:24:51+01:00</lastmod>
+    <lastmod>2020-09-22T22:25:02+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://stronglytyped.me/categories/v5/</loc>
+    <lastmod>2020-09-22T22:25:02+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://stronglytyped.me/</loc>
-    <lastmod>2020-09-20T21:24:51+01:00</lastmod>
+    <lastmod>2020-09-22T22:25:02+01:00</lastmod>
     <priority>0</priority>
   </url>
   

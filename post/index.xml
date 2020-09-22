@@ -6,8 +6,27 @@
     <description>Recent content in Posts on strongly typed</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 20 Sep 2020 21:24:51 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2020 22:25:02 +0100</lastBuildDate>
     <atom:link href="https://stronglytyped.me/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Monthly Character Folio - September 2020</title>
+      <link>https://stronglytyped.me/blog/2020/09/22/monthly-character-folio---september-2020/</link>
+      <pubDate>Tue, 22 Sep 2020 22:25:02 +0100</pubDate>
+      
+      <guid>https://stronglytyped.me/blog/2020/09/22/monthly-character-folio---september-2020/</guid>
+      <description>&lt;p&gt;&lt;img alt=&#34;Hughes&#34; width=&#34;335&#34; height=&#34;240&#34; src=&#34;https://stronglytyped.me/images/2020-September-Character-Folio.png&#34; style=&#34;float: left; margin: 5px;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;m going to try and do a thing. I&amp;rsquo;m going to try and publish &lt;strong&gt;at least&lt;/strong&gt; one character folio per month. It forces me to write, and it gives something back to the community. Hell, I&amp;rsquo;ll probably even use them.&lt;/p&gt;
+
+&lt;p&gt;First up is a &lt;a href=&#34;https://whitewolf.fandom.com/wiki/Ventrue_(VTM)&#34;&gt;Ventrue&lt;/a&gt; Childer - King of the Tower Block.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;I wanted to create somebody that was slightly based on the &lt;a href=&#34;https://whitewolf.fandom.com/wiki/Tzimisce&#34;&gt;Tzimisce&lt;/a&gt; &lt;em&gt;Lord of the Ghetto&lt;/em&gt; example character from the revised clan book - but with a rather insidious twist from the &lt;a href=&#34;https://whitewolf.fandom.com/wiki/Predator_Type_(VTM)#Sandman&#34;&gt;Sandman Predator Type&lt;/a&gt;. Coupled with some use of &lt;a href=&#34;https://whitewolf.fandom.com/wiki/Presence_(VTM)#Standard_Powers_.28V5.29&#34;&gt;Presence: Lingering Kiss&lt;/a&gt;, you&amp;rsquo;ve got yourself a truely creepy monster that calls the tower his own.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://stronglytyped.me/pdf/2020-September-Character-Folio.pdf&#34;&gt;Download the Character Folio PDF&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Teller of Stories</title>
@@ -1105,74 +1124,6 @@ myQuery
 &lt;p&gt;Thanks to &lt;em&gt;Kit Eason&lt;/em&gt; for his cool &lt;a href=&#34;http://fssnip.net/h4&#34;&gt;Count noise-lines script&lt;/a&gt;!&lt;/p&gt;
 
 &lt;p&gt;If you&amp;rsquo;re interested in learning more about &lt;code&gt;F#&lt;/code&gt; I urge you to take a look at &lt;a href=&#34;http://fsharp.org/&#34;&gt;The F# Software Foundation&lt;/a&gt; and &lt;a href=&#34;http://fsharpforfunandprofit.com/&#34;&gt;F# for Fun and Profit&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Adopting F#, part 2</title>
-      <link>https://stronglytyped.me/blog/2013/04/02/adopting-f</link>
-      <pubDate>Tue, 02 Apr 2013 22:15:56 +0100</pubDate>
-      
-      <guid>https://stronglytyped.me/blog/2013/04/02/adopting-f</guid>
-      <description>&lt;p&gt;This post has been a long time coming. I&amp;rsquo;ve a few floating around in various &lt;em&gt;draft&lt;/em&gt; states and some that exist only in my head at the moment. But I&amp;rsquo;ve decided to use today&amp;rsquo;s lunchtime to try and drive this one home.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;ve &lt;a href=&#34;https://stronglytyped.me/2013/01/adopting-fsharp.html&#34;&gt;previously talked about my journey so far with adopting F#&lt;/a&gt;, and have decided that as things for me have moved on some since then; it was worth me writing a follow-up.&lt;/p&gt;
-
-&lt;p&gt;So what has changed since January?&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Written a new web service in &lt;code&gt;F#&lt;/code&gt; and seen it deployed to a production environment&lt;/li&gt;
-&lt;li&gt;Spent a day doing some pair-programming to help a colleague learn some more about &lt;code&gt;F#&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Written a few more &lt;code&gt;F#&lt;/code&gt; ETL processes that help us slice-and-dice data and move it around&lt;/li&gt;
-&lt;li&gt;Written a couple of very little tools in &lt;code&gt;F#&lt;/code&gt; that help automate and/or provide self-serve functionality to others.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;new-web-service&#34;&gt;New Web Service&lt;/h3&gt;
-
-&lt;p&gt;Or rather a new component (or logical service) within an existing web service (or physical service, I guess). Here is a little technical information:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;New component (or logical service interface) completely written in &lt;code&gt;F#&lt;/code&gt; that lives inside an existing &lt;code&gt;C#&lt;/code&gt; SOAP web service.&lt;/li&gt;
-&lt;li&gt;Service is stateless (except for a few health/monitoring counters).&lt;/li&gt;
-&lt;li&gt;Service is required to be high-performant.&lt;/li&gt;
-&lt;li&gt;Message-based SOAP API.&lt;/li&gt;
-&lt;li&gt;Requirements/behaviour(s) documented and automated in Gherkin with SpecFlow, coupled with a fairly extensive unit testing suite.&lt;/li&gt;
-&lt;li&gt;Built using &lt;code&gt;FAKE&lt;/code&gt; and automated with TeamCity.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The development process was quite interesting, using some of the &lt;a href=&#34;https://stronglytyped.me/2013/02/agile-process-improvement-brain-dump.html&#34;&gt;process improvement&lt;/a&gt; methods we&amp;rsquo;ve identified and committed to - we (me and the guy developing the first client code to use the new service) decided to front-load all the hard parts. I spent 2 of the of the 3 week sprint building supporting tools (self-serve, ETL etc) and it wasn&amp;rsquo;t until the final week that I actually got on to the service code itself.&lt;/p&gt;
-
-&lt;p&gt;One whole day of the final week developing the &lt;code&gt;F#&lt;/code&gt; service was also done as pair-programming with a 3rd member of the team who is also learning the language. We worked in from some requirements written gherkin and ended up with a completed piece of functionality. That was a great experience as well, and we should certainly commit more time to things like this.&lt;/p&gt;
-
-&lt;p&gt;The new service was deployed just over a month ago now, and has been stable and without bugs since (I know it is still &lt;em&gt;really&lt;/em&gt; early days, but I&amp;rsquo;m confident).&lt;/p&gt;
-
-&lt;p&gt;I did have some interesting observations, some which I&amp;rsquo;ve seen and read about elsewhere - but worth repeating:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Writing &lt;code&gt;F#&lt;/code&gt; code as part of a test-driven process breaks that process, but in a good way. By the time you&amp;rsquo;ve thought about your domain model and have everything in place - when the code finally compiles it normally passes the first test first time. By the time we got around to hoooking up further tests, it all went green without making any changes. As it is still early days I decided to really look into it as I didn&amp;rsquo;t &lt;em&gt;fully&lt;/em&gt; trust it - but my distrust was proven misplaced and everything was fine.&lt;/li&gt;
-&lt;li&gt;Because we were working in a world without &lt;code&gt;null&lt;/code&gt;&amp;rsquo;s and with a very strict type system - we actually uncovered a few nasty bugs in existing/surrounding &lt;code&gt;C#&lt;/code&gt; code.&lt;/li&gt;
-&lt;li&gt;It was rather easy to build a kind of fluent DSL of modules and functions that allowed us to compose the over-arching functionality in a way that was very readable and easy to follow - and in places even read like some of the requirements.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This is our first &lt;em&gt;production ready&lt;/em&gt; &lt;code&gt;F#&lt;/code&gt; application code, used as something of a pilot to test the waters (we&amp;rsquo;re already really fond of the language and use it personally, but we needed to prove to the business that it would be of benefit).&lt;/p&gt;
-
-&lt;p&gt;So far, so good. And I think it&amp;rsquo;ll be the first of many new &lt;code&gt;F#&lt;/code&gt; developments.&lt;/p&gt;
-
-&lt;h3 id=&#34;etl-and-other-little-tools&#34;&gt;ETL and other little tools&lt;/h3&gt;
-
-&lt;p&gt;I&amp;rsquo;ll skim over this topic rather as it is generally more of the same as I mentioned in the first part of this &amp;lsquo;series&amp;rsquo;.&lt;/p&gt;
-
-&lt;p&gt;The interesting new part for me here is that we&amp;rsquo;ve agreed that for little tools like this (i.e. non-mission critial), we&amp;rsquo;re happy to make use of some of the new Type Provider work being done:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;WSDL Type Provider (&lt;a href=&#34;http://msdn.microsoft.com/en-gb/library/hh362328.aspx&#34;&gt;read more&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;CSV Type Provider (&lt;a href=&#34;http://tpetricek.github.com/FSharp.Data/&#34;&gt;read more&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;I&amp;rsquo;ve found that &lt;code&gt;F#&lt;/code&gt; is the perfect lanugage to do some of this work. You can get a lot done, quite cleanly in very little code. You&amp;rsquo;ve the option of packaging it up as a little application, using it as a library or just rolling out scripts (with batch files etc). And with the Type Providers you can get a whole lot done in a very short space of time.&lt;/p&gt;
-
-&lt;p&gt;Most of the scripted tools come with a &lt;code&gt;config.fsx&lt;/code&gt; as well, which is very easily read/edited by anyone with technical knowledge (even if they don&amp;rsquo;t have any experience with &lt;code&gt;F#&lt;/code&gt;).&lt;/p&gt;</description>
     </item>
     
   </channel>

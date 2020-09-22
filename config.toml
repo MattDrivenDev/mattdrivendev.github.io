@@ -21,6 +21,7 @@ DisqusShortname = "saxonmatt"
 
 [taxonomies]
     category = "categories"
+    tags = "tags"
 
 [permalinks]
     post = "/blog/:year/:month/:day/:title/"
